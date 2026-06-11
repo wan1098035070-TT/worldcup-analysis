@@ -61,9 +61,20 @@ globalThis.WorldCupData = (() => {
 
   const bookmakerReferences = ["Oddschecker", "OddsPortal", "Oddspedia", "DraftKings", "FanDuel", "BetMGM", "bet365"];
   const teamImpacts = Object.fromEntries(teams.map((team) => [team.name, 0]));
+  const teamFlags = {
+    法国: "🇫🇷", 西班牙: "🇪🇸", 阿根廷: "🇦🇷", 英格兰: "🏴", 葡萄牙: "🇵🇹", 巴西: "🇧🇷",
+    荷兰: "🇳🇱", 摩洛哥: "🇲🇦", 比利时: "🇧🇪", 德国: "🇩🇪", 克罗地亚: "🇭🇷", 哥伦比亚: "🇨🇴",
+    塞内加尔: "🇸🇳", 墨西哥: "🇲🇽", 乌拉圭: "🇺🇾", 日本: "🇯🇵", 瑞士: "🇨🇭", 美国: "🇺🇸",
+    伊朗: "🇮🇷", 奥地利: "🇦🇹", 韩国: "🇰🇷", 厄瓜多尔: "🇪🇨", 澳大利亚: "🇦🇺", 土耳其: "🇹🇷",
+    苏格兰: "🏴", 瑞典: "🇸🇪", 埃及: "🇪🇬", 挪威: "🇳🇴", 阿尔及利亚: "🇩🇿", 捷克: "🇨🇿",
+    卡塔尔: "🇶🇦", 科特迪瓦: "🇨🇮", 突尼斯: "🇹🇳", 加拿大: "🇨🇦", 巴拉圭: "🇵🇾", 沙特阿拉伯: "🇸🇦",
+    伊拉克: "🇮🇶", 乌兹别克斯坦: "🇺🇿", 南非: "🇿🇦", 民主刚果: "🇨🇩", 巴拿马: "🇵🇦", 约旦: "🇯🇴",
+    加纳: "🇬🇭", 波黑: "🇧🇦", 佛得角: "🇨🇻", 库拉索: "🇨🇼", 海地: "🇭🇹", 新西兰: "🇳🇿"
+  };
 
   const pct = (value) => `${(value * 100).toFixed(1)}%`;
   const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
+  const flagFor = (teamName) => teamFlags[teamName] || "🏳";
 
   function impliedProb(decimalOdds) {
     return decimalOdds && decimalOdds > 1 ? 1 / decimalOdds : 0;
@@ -136,7 +147,9 @@ globalThis.WorldCupData = (() => {
     confedNames,
     bookmakerReferences,
     teamImpacts,
+    teamFlags,
     pct,
+    flagFor,
     baseStrength,
     titleProbabilities,
     matchProbability,

@@ -63,8 +63,21 @@ const impactLedger = [];
 const teamImpacts = Object.fromEntries(teams.map((team) => [team.name, 0]));
 let followedTeamNames = JSON.parse(localStorage.getItem("worldcup-followed-teams") || "null") || ["法国", "巴西", "日本", "美国"];
 
+const teamFlags = {
+  法国: "🇫🇷", 西班牙: "🇪🇸", 阿根廷: "🇦🇷", 英格兰: "🏴", 葡萄牙: "🇵🇹", 巴西: "🇧🇷",
+  荷兰: "🇳🇱", 摩洛哥: "🇲🇦", 比利时: "🇧🇪", 德国: "🇩🇪", 克罗地亚: "🇭🇷", 哥伦比亚: "🇨🇴",
+  塞内加尔: "🇸🇳", 墨西哥: "🇲🇽", 乌拉圭: "🇺🇾", 日本: "🇯🇵", 瑞士: "🇨🇭", 美国: "🇺🇸",
+  伊朗: "🇮🇷", 奥地利: "🇦🇹", 韩国: "🇰🇷", 厄瓜多尔: "🇪🇨", 澳大利亚: "🇦🇺", 土耳其: "🇹🇷",
+  苏格兰: "🏴", 瑞典: "🇸🇪", 埃及: "🇪🇬", 挪威: "🇳🇴", 阿尔及利亚: "🇩🇿", 捷克: "🇨🇿",
+  卡塔尔: "🇶🇦", 科特迪瓦: "🇨🇮", 突尼斯: "🇹🇳", 加拿大: "🇨🇦", 巴拉圭: "🇵🇾", 沙特阿拉伯: "🇸🇦",
+  伊拉克: "🇮🇶", 乌兹别克斯坦: "🇺🇿", 南非: "🇿🇦", 民主刚果: "🇨🇩", 巴拿马: "🇵🇦", 约旦: "🇯🇴",
+  加纳: "🇬🇭", 波黑: "🇧🇦", 佛得角: "🇨🇻", 库拉索: "🇨🇼", 海地: "🇭🇹", 新西兰: "🇳🇿"
+};
+
 const pct = (value) => `${(value * 100).toFixed(1)}%`;
 const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
+const flagFor = (teamName) => teamFlags[teamName] || "🏳";
+const teamLabel = (teamName) => `<span class="flag-mark" aria-hidden="true">${flagFor(teamName)}</span><span>${teamName}</span>`;
 
 function decimalFromInput(value, format) {
   const text = String(value).trim();
@@ -188,12 +201,14 @@ function teamNextMatch(teamName) {
 function fillSelectors() {
   const manualTeam = document.querySelector("#manualTeam");
   const teamFilter = document.querySelector("#teamFilter");
+  const followTeamFilter = document.querySelector("#followTeamFilter");
   teams
     .slice()
     .sort((a, b) => a.rank - b.rank)
     .forEach((team) => {
       manualTeam.add(new Option(team.name, team.name));
       teamFilter.add(new Option(team.name, team.name));
+      followTeamFilter?.add(new Option(`${flagFor(team.name)} ${team.name}`, team.name));
     });
   unique("group").forEach((group) => document.querySelector("#groupFilter").add(new Option(`${group}组`, group)));
 }
@@ -204,13 +219,13 @@ function renderTitleChart() {
   const max = top[0]?.titleProb || 1;
   document.querySelector("#titleChart").innerHTML = top.map((team, index) => `
     <div class="prob-row">
-      <div class="prob-name">${team.name}</div>
+      <div class="prob-name">${teamLabel(team.name)}</div>
       <div class="bar-track"><div class="bar-fill" style="width:${Math.max(4, team.titleProb / max * 100)}%"></div></div>
       <div class="prob-value">${pct(team.titleProb)}</div>
       <div class="prob-rank">#${index + 1}</div>
     </div>
   `).join("");
-  document.querySelector("#heroFavorite").textContent = ranked[0].name;
+  document.querySelector("#heroFavorite").innerHTML = teamLabel(ranked[0].name);
   document.querySelector("#heroProbability").textContent = `夺冠概率 ${pct(ranked[0].titleProb)}`;
   document.querySelector("#modelNarrative").textContent = `当前冠军概率最高为${ranked[0].name}，前四为${ranked.slice(0, 4).map((team) => team.name).join("、")}。`;
 }
@@ -225,7 +240,7 @@ function renderOddsRows() {
       const model = byName[team.name];
       return `
         <tr>
-          <td><strong>${team.name}</strong></td>
+          <td><strong class="team-inline">${teamLabel(team.name)}</strong></td>
           <td><input class="odds-input" data-team="${team.name}" value="${team.odds}" /></td>
           <td>${pct(model.market)}</td>
           <td>${pct(model.titleProb)}</td>
@@ -277,16 +292,16 @@ function renderFeaturedMatches() {
   const hotFeatured = allMatches
     .filter((match) => !seen.has(`${match.group}:${match.a.name}:${match.b.name}`))
     .sort((a, b) => (followedMatchWeight(b) + matchHeat(b)) - (followedMatchWeight(a) + matchHeat(a)));
-  const featured = [...followedFeatured, ...hotFeatured].slice(0, 4);
+  const featured = [...followedFeatured, ...hotFeatured].slice(0, 8);
   document.querySelector("#featuredMatches").innerHTML = featured.map((match, index) => {
     const href = `match.html?group=${encodeURIComponent(match.group)}&a=${encodeURIComponent(match.a.name)}&b=${encodeURIComponent(match.b.name)}`;
     const topProb = Math.max(match.probabilities.home, match.probabilities.away);
     const followedTeam = [match.a.name, match.b.name].find((name) => followedTeamNames.includes(name));
     return `
       <a class="featured-card" href="${href}">
-        <div class="feature-rank">0${index + 1}</div>
+        <div class="feature-rank">${String(index + 1).padStart(2, "0")}</div>
         <div>
-          <strong>${match.a.name} vs ${match.b.name}</strong>
+          <strong>${teamLabel(match.a.name)} <em>vs</em> ${teamLabel(match.b.name)}</strong>
           <span>${followedTeam ? `关注 ${followedTeam} · ` : ""}${MatchSchedule.formatChinaTime(match.schedule)} · ${match.schedule.city}</span>
         </div>
         <div class="feature-prob">${pct(topProb)}</div>
@@ -332,13 +347,13 @@ function renderFollowedTeams() {
   const summary = document.querySelector("#followSummary");
   if (summary) summary.textContent = `已关注 ${followedTeamNames.length}/6`;
   const rankedByTitle = Object.fromEntries(titleProbabilities().map((team) => [team.name, team]));
-  const followed = followedTeamNames
-    .map((name) => teams.find((team) => team.name === name))
-    .filter(Boolean);
-  const suggestions = titleProbabilities()
-    .filter((team) => !followedTeamNames.includes(team.name))
-    .slice(0, Math.max(0, 6 - followed.length));
-  const rows = [...followed, ...suggestions].slice(0, 6);
+  const filterValue = document.querySelector("#followTeamFilter")?.value || "all";
+  const rankedTeams = titleProbabilities();
+  const followed = followedTeamNames.map((name) => rankedTeams.find((team) => team.name === name)).filter(Boolean);
+  const pool = filterValue === "all" ? rankedTeams : rankedTeams.filter((team) => team.name === filterValue);
+  const rows = filterValue === "all"
+    ? [...followed, ...pool.filter((team) => !followedTeamNames.includes(team.name))]
+    : pool;
   document.querySelector("#followedTeams").innerHTML = rows.map((team) => {
     const active = followedTeamNames.includes(team.name);
     const nextMatch = teamNextMatch(team.name);
@@ -348,7 +363,7 @@ function renderFollowedTeams() {
     return `
       <div class="follow-row ${active ? "active" : ""}">
         <a href="${href}">
-          <strong>${team.name}</strong>
+          <strong>${teamLabel(team.name)}</strong>
           <span>${team.group}组 · 下场 vs ${opponent} · 夺冠 ${pct(rankedByTitle[team.name].titleProb)}</span>
         </a>
         <div class="follow-actions">
@@ -403,13 +418,13 @@ function renderMatches() {
     <a class="match-card match-link" href="${detailHref}" aria-label="查看${match.a.name}对${match.b.name}的赔率、阵容和历史数据">
       <div><span class="group-badge">${match.group}</span></div>
       <div class="fixture">
-        ${match.a.name} vs ${match.b.name}
+        ${teamLabel(match.a.name)} <em>vs</em> ${teamLabel(match.b.name)}
         <small>${MatchSchedule.formatChinaTime(match.schedule)} · ${match.schedule.stadium} · ${match.schedule.city}</small>
       </div>
       <div class="prob-split">
-        <div class="match-prob"><span>${match.a.name}胜</span>${pct(match.probabilities.home)}</div>
+        <div class="match-prob"><span>${flagFor(match.a.name)} ${match.a.name}胜</span>${pct(match.probabilities.home)}</div>
         <div class="match-prob"><span>平局</span>${pct(match.probabilities.draw)}</div>
-        <div class="match-prob"><span>${match.b.name}胜</span>${pct(match.probabilities.away)}</div>
+        <div class="match-prob"><span>${flagFor(match.b.name)} ${match.b.name}胜</span>${pct(match.probabilities.away)}</div>
       </div>
     </a>
   `;
@@ -543,6 +558,7 @@ function init() {
   document.querySelector("#refreshMatchday").addEventListener("click", renderMatchday);
   document.querySelector("#groupFilter").addEventListener("change", renderMatches);
   document.querySelector("#teamFilter").addEventListener("change", renderMatches);
+  document.querySelector("#followTeamFilter")?.addEventListener("change", renderFollowedTeams);
   document.querySelector("#oddsFormat").addEventListener("change", () => {
     document.querySelectorAll(".odds-input").forEach((input) => { input.value = ""; });
   });

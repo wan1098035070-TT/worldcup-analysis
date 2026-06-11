@@ -4,6 +4,7 @@ const aName = params.get("a") || "墨西哥";
 const bName = params.get("b") || "南非";
 
 const { teams, confedNames, bookmakerReferences, pct, findTeam, findMatch, baseStrength } = WorldCupData;
+const flagFor = WorldCupData.flagFor || (() => "🏳");
 const teamA = findTeam(aName) || teams[0];
 const teamB = findTeam(bName) || teams[1];
 const match = findMatch(group, teamA.name, teamB.name) || {
@@ -88,14 +89,14 @@ function emptyPlayerCard(team, role, index, side) {
 function renderHeader() {
   document.title = `${teamA.name} vs ${teamB.name} · 比赛风暴中心`;
   document.querySelector("#matchGroup").textContent = `${match.group}组 · ${scheduledInfo ? MatchSchedule.formatChinaTime(scheduledInfo) : "Match Center"}`;
-  document.querySelector("#matchTitle").textContent = `${teamA.name} vs ${teamB.name}`;
+  document.querySelector("#matchTitle").innerHTML = `<span class="flag-mark">${flagFor(teamA.name)}</span>${teamA.name} vs <span class="flag-mark">${flagFor(teamB.name)}</span>${teamB.name}`;
   const venueLine = scheduledInfo ? `比赛时间 ${MatchSchedule.formatChinaTime(scheduledInfo)}，地点 ${scheduledInfo.stadium} · ${scheduledInfo.city}。` : "";
   document.querySelector("#matchSubtitle").textContent = `${venueLine}${confedNames[teamA.confed]} FIFA ${teamA.rank} 对 ${confedNames[teamB.confed]} FIFA ${teamB.rank}，胜率、阵容、赔率、交锋和临场情报集中追踪。`;
   document.querySelector("#detailAWin").textContent = pct(match.probabilities.home);
   document.querySelector("#detailDraw").textContent = pct(match.probabilities.draw);
   document.querySelector("#detailBWin").textContent = pct(match.probabilities.away);
-  document.querySelector("#detailALabel").textContent = `${teamA.name}胜`;
-  document.querySelector("#detailBLabel").textContent = `${teamB.name}胜`;
+  document.querySelector("#detailALabel").textContent = `${flagFor(teamA.name)} ${teamA.name}胜`;
+  document.querySelector("#detailBLabel").textContent = `${flagFor(teamB.name)} ${teamB.name}胜`;
   document.querySelector("#detailDate").textContent = scheduledInfo ? `开球：${MatchSchedule.formatChinaTime(scheduledInfo)} · 每日更新` : `模型日期：${new Date().toISOString().slice(0, 10)} · 每日更新`;
 }
 

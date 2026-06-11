@@ -1,16 +1,16 @@
 :root {
-  --ink: #eef7f8;
-  --muted: #8ea3a9;
-  --paper: #071112;
-  --panel: rgba(13, 27, 30, 0.82);
-  --panel-strong: rgba(17, 37, 41, 0.94);
-  --line: rgba(136, 230, 218, 0.2);
-  --line-strong: rgba(136, 230, 218, 0.45);
-  --teal: #28dcc8;
+  --ink: #fff8e7;
+  --muted: #a9b7ca;
+  --paper: #050914;
+  --panel: rgba(9, 21, 39, 0.84);
+  --panel-strong: rgba(10, 24, 47, 0.96);
+  --line: rgba(255, 207, 94, 0.2);
+  --line-strong: rgba(255, 207, 94, 0.5);
+  --teal: #2ee7d4;
   --teal-2: #0e8f87;
-  --gold: #f2c14e;
+  --gold: #ffc94f;
   --coral: #ff6b57;
-  --blue: #52a8ff;
+  --blue: #58a9ff;
   --olive: #a9c75d;
   --soft: rgba(40, 220, 200, 0.09);
   --field: rgba(8, 20, 23, 0.9);
@@ -27,10 +27,11 @@ body {
   margin: 0;
   color: var(--ink);
   background:
-    linear-gradient(rgba(40, 220, 200, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(40, 220, 200, 0.035) 1px, transparent 1px),
-    radial-gradient(circle at 20% 0%, rgba(82, 168, 255, 0.12), transparent 34%),
-    linear-gradient(180deg, #071112 0%, #0b181a 52%, #071112 100%);
+    linear-gradient(rgba(255, 201, 79, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(88, 169, 255, 0.035) 1px, transparent 1px),
+    radial-gradient(circle at 50% -10%, rgba(255, 201, 79, 0.2), transparent 30%),
+    radial-gradient(circle at 86% 8%, rgba(255, 107, 87, 0.16), transparent 28%),
+    linear-gradient(180deg, #061733 0%, #050914 54%, #04060d 100%);
   background-size: 44px 44px, 44px 44px, auto, auto;
   font-family: var(--sport-font);
   text-rendering: geometricPrecision;
@@ -53,8 +54,9 @@ button {
   padding: 24px clamp(18px, 4vw, 56px) 46px;
   color: #f9fbf8;
   background:
-    linear-gradient(90deg, rgba(4, 14, 16, 0.94), rgba(4, 14, 16, 0.72)),
-    url("assets/sports-tech-hero.png");
+    linear-gradient(180deg, rgba(2, 7, 20, 0.4), rgba(4, 7, 15, 0.92)),
+    linear-gradient(110deg, rgba(4, 12, 28, 0.96) 0 28%, rgba(7, 20, 45, 0.72) 52%, rgba(255, 141, 41, 0.2)),
+    url("assets/world-cup-hero.png");
   background-position: center;
   background-size: cover;
   overflow: hidden;
@@ -137,9 +139,10 @@ button {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(115deg, transparent 0 44%, rgba(40, 220, 200, 0.16) 44.2% 44.5%, transparent 44.7%),
-    linear-gradient(rgba(136, 230, 218, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(136, 230, 218, 0.08) 1px, transparent 1px);
+    linear-gradient(115deg, transparent 0 42%, rgba(255, 201, 79, 0.28) 42.2% 42.55%, transparent 42.8%),
+    linear-gradient(74deg, transparent 0 62%, rgba(88, 169, 255, 0.18) 62.1% 62.45%, transparent 62.7%),
+    linear-gradient(rgba(255, 201, 79, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(88, 169, 255, 0.07) 1px, transparent 1px);
   background-size: auto, 74px 74px, 74px 74px;
   pointer-events: none;
 }
@@ -230,7 +233,8 @@ h1 {
   font-size: clamp(38px, 5.8vw, 72px);
   line-height: 1.04;
   letter-spacing: 0;
-  text-shadow: 0 0 34px rgba(40, 220, 200, 0.12);
+  text-transform: uppercase;
+  text-shadow: 0 5px 0 rgba(0, 0, 0, 0.18), 0 0 34px rgba(255, 201, 79, 0.18);
   filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.34));
   overflow-wrap: break-word;
 }
@@ -251,9 +255,9 @@ h1 {
   border: 1px solid rgba(136, 230, 218, 0.42);
   border-radius: 8px;
   background:
-    linear-gradient(145deg, rgba(10, 28, 31, 0.9), rgba(7, 18, 22, 0.72)),
-    linear-gradient(rgba(136, 230, 218, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(136, 230, 218, 0.1) 1px, transparent 1px);
+    linear-gradient(145deg, rgba(8, 24, 50, 0.94), rgba(4, 11, 24, 0.76)),
+    linear-gradient(rgba(255, 201, 79, 0.09) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(88, 169, 255, 0.09) 1px, transparent 1px);
   background-size: auto, 28px 28px, 28px 28px;
   box-shadow: var(--shadow), var(--glow);
   overflow: hidden;
@@ -555,6 +559,40 @@ footer,
   color: #ffffff;
 }
 
+.flag-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 1.75em;
+  height: 1.75em;
+  margin-right: 7px;
+  border: 1px solid rgba(255, 201, 79, 0.24);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 0 12px rgba(255, 201, 79, 0.08);
+  font-size: 0.82em;
+  line-height: 1;
+  vertical-align: -0.16em;
+}
+
+.team-inline,
+.prob-name,
+.featured-card strong,
+.follow-row strong {
+  display: inline-flex;
+  align-items: center;
+  min-width: 0;
+  gap: 4px;
+}
+
+.fixture em,
+.featured-card strong em {
+  color: var(--gold);
+  font-style: normal;
+  font-size: 0.78em;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
 .featured-card span,
 .follow-row span,
 .mover-row span,
@@ -615,12 +653,29 @@ footer,
   font-weight: 900;
 }
 
+.follow-filter {
+  margin-bottom: 12px;
+}
+
+.follow-filter select {
+  min-height: 42px;
+  border-color: rgba(255, 201, 79, 0.24);
+  background: rgba(4, 12, 28, 0.76);
+  font-weight: 900;
+}
+
+.followed-teams {
+  max-height: 560px;
+  overflow: auto;
+  padding-right: 3px;
+}
+
 .follow-row.active {
-  border-color: rgba(40, 220, 200, 0.34);
+  border-color: rgba(255, 201, 79, 0.46);
   background:
-    linear-gradient(90deg, rgba(40, 220, 200, 0.14), transparent 46%),
+    linear-gradient(90deg, rgba(255, 201, 79, 0.16), transparent 46%),
     rgba(255, 255, 255, 0.045);
-  box-shadow: inset 3px 0 0 var(--teal);
+  box-shadow: inset 3px 0 0 var(--gold);
 }
 
 .follow-row a {
@@ -657,8 +712,8 @@ footer,
 }
 
 .follow-button.active {
-  color: #041113;
-  background: var(--teal);
+  color: #1d1200;
+  background: var(--gold);
 }
 
 .mover-row b {
@@ -701,7 +756,7 @@ input,
 select,
 textarea {
   width: 100%;
-  border: 1px solid rgba(136, 230, 218, 0.24);
+  border: 1px solid rgba(255, 201, 79, 0.2);
   border-radius: 6px;
   padding: 11px 12px;
   color: var(--ink);
