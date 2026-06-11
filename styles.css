@@ -207,7 +207,7 @@ footer {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) 340px;
+  grid-template-columns: minmax(0, 1fr);
   align-items: center;
   gap: clamp(24px, 6vw, 84px);
 }
@@ -216,7 +216,7 @@ footer {
   position: relative;
   z-index: 2;
   min-width: 0;
-  max-width: 680px;
+  max-width: 760px;
   padding-left: clamp(4px, 1vw, 12px);
 }
 

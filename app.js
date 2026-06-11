@@ -225,8 +225,10 @@ function renderTitleChart() {
       <div class="prob-rank">#${index + 1}</div>
     </div>
   `).join("");
-  document.querySelector("#heroFavorite").innerHTML = teamLabel(ranked[0].name);
-  document.querySelector("#heroProbability").textContent = `夺冠概率 ${pct(ranked[0].titleProb)}`;
+  const heroFavorite = document.querySelector("#heroFavorite");
+  const heroProbability = document.querySelector("#heroProbability");
+  if (heroFavorite) heroFavorite.innerHTML = teamLabel(ranked[0].name);
+  if (heroProbability) heroProbability.textContent = `夺冠概率 ${pct(ranked[0].titleProb)}`;
   document.querySelector("#modelNarrative").textContent = `当前冠军概率最高为${ranked[0].name}，前四为${ranked.slice(0, 4).map((team) => team.name).join("、")}。`;
 }
 
