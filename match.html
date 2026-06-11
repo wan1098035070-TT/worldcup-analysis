@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>比赛风暴中心 | 阵容、赔率与交锋数据</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="detail-page">
+    <header class="match-hero">
+      <div class="match-3d" aria-label="可交互三维阵型态势">
+        <canvas id="match3d" data-scene="pitch"></canvas>
+        <div class="tactical-mode" aria-label="战术态势">
+          <button class="active" data-tactic-phase="0">PRESS</button>
+          <button data-tactic-phase="1">BREAK</button>
+          <button data-tactic-phase="2">BLOCK</button>
+        </div>
+      </div>
+      <nav class="topbar" aria-label="页面导航">
+        <a class="brand brand-link" href="index.html">赛前风暴</a>
+        <div class="source-note" id="detailDate">每日自动更新 · 比赛详情</div>
+      </nav>
+      <section class="match-hero-grid">
+        <div>
+          <p class="eyebrow" id="matchGroup">Group</p>
+          <h1 id="matchTitle">比赛风暴中心</h1>
+          <p class="lede" id="matchSubtitle">阵容、盘口、历史交锋和临场风险一次看清。</p>
+        </div>
+        <div class="score-orbit" aria-label="比赛胜率">
+          <div>
+            <span id="detailAWin">--</span>
+            <small id="detailALabel">主胜</small>
+          </div>
+          <div>
+            <span id="detailDraw">--</span>
+            <small>平局</small>
+          </div>
+          <div>
+            <span id="detailBWin">--</span>
+            <small id="detailBLabel">客胜</small>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main class="detail-main">
+      <nav class="match-tabs" aria-label="比赛中心栏目">
+        <button class="tab-button active" data-tab="overview">概览</button>
+        <button class="tab-button" data-tab="lineup">阵容</button>
+        <button class="tab-button" data-tab="odds">赔率</button>
+        <button class="tab-button" data-tab="intel">情报</button>
+        <button class="tab-button" data-tab="history">交锋</button>
+        <button class="tab-button" data-tab="data">数据</button>
+      </nav>
+
+      <section class="tab-panel active" data-tab-panel="overview">
+        <section class="grid-two">
+          <article class="panel">
+            <div class="panel-head">
+              <div>
+                <h2>比赛概览</h2>
+                <p>胜率、盘口分歧和赛前关键变量。</p>
+              </div>
+            </div>
+            <div class="overview-grid" id="overviewGrid"></div>
+          </article>
+          <article class="panel">
+            <div class="panel-head">
+              <div>
+                <h2>情报置信度</h2>
+                <p>将新闻、阵容和赔率信号转成可读评分。</p>
+              </div>
+            </div>
+            <div class="confidence-stack" id="confidenceStack"></div>
+          </article>
+        </section>
+      </section>
+
+      <section class="tab-panel" data-tab-panel="lineup">
+      <section class="detail-grid">
+        <article class="panel pitch-panel">
+          <div class="panel-head">
+            <div>
+              <h2>首发阵容</h2>
+              <p>阵型、球员状态和关键对位。</p>
+            </div>
+          </div>
+          <div class="lineup-board" id="lineupBoard"></div>
+        </article>
+
+        <aside class="detail-side">
+          <article class="panel">
+            <div class="panel-head">
+              <div>
+                <h2>赔率矩阵</h2>
+                <p>主流盘口的胜平负价格。</p>
+              </div>
+            </div>
+            <div class="bookmaker-grid" id="bookmakerGrid"></div>
+          </article>
+
+          <article class="panel">
+            <div class="panel-head">
+              <div>
+                <h2>伤停与新闻</h2>
+                <p>临场阵容、舆情和盘口异动。</p>
+              </div>
+            </div>
+            <div class="news-stack" id="newsStack"></div>
+          </article>
+        </aside>
+      </section>
+      </section>
+
+      <section class="tab-panel" data-tab-panel="odds">
+        <section class="grid-two">
+          <article class="panel">
+            <div class="panel-head">
+              <div>
+                <h2>赔率矩阵</h2>
+                <p>比较不同公司胜平负赔率。</p>
+              </div>
+            </div>
+            <div class="bookmaker-grid" id="bookmakerGridTab"></div>
+          </article>
+          <article class="panel">
+            <div class="panel-head">
+              <div>
+                <h2>赔率走势</h2>
+                <p>初盘、即时盘和市场方向。</p>
+              </div>
+            </div>
+            <div class="odds-trend" id="oddsTrend"></div>
+          </article>
+        </section>
+      </section>
+
+      <section class="tab-panel" data-tab-panel="intel">
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <h2>赛前情报</h2>
+              <p>伤停、舆情、临场和阵容信号。</p>
+            </div>
+          </div>
+          <div class="news-stack" id="newsStackTab"></div>
+        </section>
+      </section>
+
+      <section class="tab-panel" data-tab-panel="history">
+      <section class="grid-two">
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <h2>历史交锋</h2>
+              <p>近期交手、赛事背景和比分走势。</p>
+            </div>
+          </div>
+          <div class="h2h-list" id="h2hList"></div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <h2>关键战术指标</h2>
+              <p>用排名、评分差和盘口推导赛前风险画像。</p>
+            </div>
+          </div>
+          <div class="tactical-grid" id="tacticalGrid"></div>
+        </article>
+      </section>
+      </section>
+
+      <section class="tab-panel" data-tab-panel="data">
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <h2>模型数据卡</h2>
+              <p>把市场概率、模型概率和评分差放在一起看。</p>
+            </div>
+          </div>
+          <div class="model-card-grid" id="modelCardGrid"></div>
+        </section>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <div>
+            <h2>数据入口</h2>
+            <p>阵容、赛况、赔率和历史资料。</p>
+          </div>
+        </div>
+        <div class="source-links">
+          <a href="https://www.sofascore.com/" target="_blank" rel="noreferrer">Sofascore</a>
+          <a href="https://www.fotmob.com/" target="_blank" rel="noreferrer">FotMob</a>
+          <a href="https://www.flashscore.com/" target="_blank" rel="noreferrer">Flashscore</a>
+          <a href="https://www.oddschecker.com/" target="_blank" rel="noreferrer">Oddschecker</a>
+          <a href="https://www.oddsportal.com/" target="_blank" rel="noreferrer">OddsPortal</a>
+          <a href="https://www.oddspedia.com/" target="_blank" rel="noreferrer">Oddspedia</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>数据每日刷新；临场首发、伤停和赔率以官方与市场最新发布为准。</p>
+    </footer>
+
+    <script src="worldcup-data.js"></script>
+    <script src="schedule-data.js"></script>
+    <script src="squad-data.js"></script>
+    <script src="match.js"></script>
+    <script src="three-loader.js"></script>
+  </body>
+</html>

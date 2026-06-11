@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>赛前风暴 | 世界杯情报、赔率风向与胜率预测</title>
+    <meta name="description" content="世界杯赛前情报、真实赛程、赔率走势、阵容与胜率预测聚合看板。" />
+    <meta property="og:title" content="赛前风暴 | 世界杯情报风向站" />
+    <meta property="og:description" content="每天追踪赛程、阵容、伤停、盘口和舆情，把赛前情报转成看得懂的胜率变化。" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/world-cup-hero.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="赛前风暴 | 世界杯情报风向站" />
+    <meta name="twitter:description" content="真实赛程、赔率走势、阵容情报和胜率预测，一页看懂今日世界杯。" />
+    <meta name="twitter:image" content="assets/world-cup-hero.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-3d" aria-label="可交互三维赛程地球">
+        <canvas id="hero3d" data-scene="globe"></canvas>
+        <span>HOST MAP 2026</span>
+      </div>
+      <nav class="topbar" aria-label="页面导航">
+        <div class="brand">赛前风暴</div>
+        <div class="source-note">模型日期：2026-06-09 · 可每日更新</div>
+      </nav>
+      <section class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">MATCHDAY INTEL · ODDS PULSE · LINEUP WATCH</p>
+          <h1>世界杯情报风向站</h1>
+          <p class="lede">
+            盯住阵容、伤停、盘口和赛前舆情，把每天的足球情报转成看得懂的胜率变化。
+          </p>
+        </div>
+        <div class="live-board" aria-label="实时模型状态">
+          <div class="signal-label">
+            <span>LIVE MODEL</span>
+            <b>Market adjusted</b>
+          </div>
+          <strong id="heroFavorite">法国</strong>
+          <small id="heroProbability">夺冠概率 13.6%</small>
+          <div class="signal-grid" aria-hidden="true">
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+          </div>
+          <div class="live-metrics" aria-label="模型输入状态">
+            <span>赔率</span>
+            <span>赛程</span>
+            <span>新闻</span>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="kpis" aria-label="核心概率指标">
+        <article>
+          <span>样本球队</span>
+          <strong id="teamCount">48</strong>
+        </article>
+        <article>
+          <span>生成赛程</span>
+          <strong id="matchCount">72</strong>
+        </article>
+        <article>
+          <span>赔率源</span>
+          <strong id="oddsBookCount">4</strong>
+        </article>
+        <article>
+          <span>新闻冲击</span>
+          <strong id="impactCount">0</strong>
+        </article>
+      </section>
+
+      <section class="matchday" aria-label="比赛日工作台">
+        <article class="panel matchday-main">
+          <div class="panel-head">
+            <div>
+              <h2>今日比赛</h2>
+              <p>按强度、市场热度和出线影响筛出的优先关注场次。</p>
+            </div>
+            <button id="refreshMatchday" class="text-button">刷新工作台</button>
+          </div>
+          <div id="featuredMatches" class="featured-matches"></div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <h2>情报流</h2>
+              <p>伤停、盘口和舆情变化会进入模型冲击。</p>
+            </div>
+          </div>
+          <div id="intelFeed" class="intel-feed"></div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <h2>我的关注</h2>
+              <p>像足球 App 一样优先追踪主队和强相关比赛。</p>
+            </div>
+            <div id="followSummary" class="follow-summary">已关注 4/6</div>
+          </div>
+          <div id="followedTeams" class="followed-teams"></div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <h2>赔率异动</h2>
+              <p>标记市场概率和模型概率分歧最大的球队。</p>
+            </div>
+          </div>
+          <div id="oddsMovers" class="odds-movers"></div>
+        </article>
+      </section>
+
+      <section class="workspace">
+        <aside class="controls" aria-label="模型控制台">
+          <div class="section-title">
+            <h2>精算控制台</h2>
+            <button id="resetModel" class="icon-button" title="重置模型" aria-label="重置模型">↻</button>
+          </div>
+
+          <label>
+            每日动向摘要
+            <textarea id="dailySummary" rows="7" placeholder="例：法国主力前锋伤停；日本近期状态好；美国主场氛围强；巴西核心复出"></textarea>
+          </label>
+          <button id="applySummary" class="primary-button">应用摘要冲击</button>
+
+          <div class="mini-grid">
+            <label>
+              手动调整球队
+              <select id="manualTeam"></select>
+            </label>
+            <label>
+              评级冲击
+              <input id="manualImpact" type="number" value="0" min="-80" max="80" step="5" />
+            </label>
+          </div>
+          <button id="applyManualImpact" class="secondary-button">加入手动冲击</button>
+
+          <label>
+            赔率格式
+            <select id="oddsFormat">
+              <option value="decimal">欧洲盘 Decimal</option>
+              <option value="american">美式 American</option>
+              <option value="fractional">英式 Fractional</option>
+            </select>
+          </label>
+
+          <p class="model-note">
+            赔率用于提取市场共识并校准模型，不构成投注建议。更新盘口后会立即重算。
+          </p>
+        </aside>
+
+        <section class="content">
+          <section class="panel model-panel">
+            <div class="panel-head">
+              <div>
+                <h2>当前模型结论</h2>
+                <p id="modelNarrative">市场与实力模型合成后，法国、西班牙、阿根廷、英格兰处于第一争冠层。</p>
+              </div>
+              <button id="downloadSnapshot" class="text-button">下载快照</button>
+            </div>
+            <div class="probability-bars" id="titleChart"></div>
+          </section>
+
+          <section class="grid-two">
+            <article class="panel">
+              <div class="panel-head">
+                <div>
+                  <h2>冠军赔率池</h2>
+                  <p>可手动覆盖各队冠军赔率，模型会转换为去水后隐含概率。</p>
+                </div>
+              </div>
+              <div class="odds-table-wrap">
+                <table class="odds-table">
+                  <thead>
+                    <tr>
+                      <th>球队</th>
+                      <th>冠军赔率</th>
+                      <th>市场概率</th>
+                      <th>模型概率</th>
+                    </tr>
+                  </thead>
+                  <tbody id="oddsRows"></tbody>
+                </table>
+              </div>
+            </article>
+
+            <article class="panel">
+              <div class="panel-head">
+                <div>
+                  <h2>每日冲击日志</h2>
+                  <p>伤停、轮换、天气、赛程和舆情会转成评级点数。</p>
+                </div>
+              </div>
+              <div id="impactLog" class="impact-log"></div>
+            </article>
+          </section>
+
+          <section id="matches" class="panel">
+            <div class="panel-head table-head">
+              <div>
+                <h2>每场比赛胜率</h2>
+                <p id="matchSummary">显示72场小组赛的胜平负概率、北京时间和比赛场地。</p>
+              </div>
+              <div class="filters">
+                <select id="groupFilter" aria-label="选择小组">
+                  <option value="all">全部小组</option>
+                </select>
+                <select id="teamFilter" aria-label="选择球队">
+                  <option value="all">全部球队</option>
+                </select>
+              </div>
+            </div>
+            <div class="match-list" id="matchList"></div>
+          </section>
+
+          <section class="panel">
+            <div class="panel-head">
+              <div>
+                <h2>模型口径</h2>
+                <p>胜率、赔率和每日冲击的计算框架。</p>
+              </div>
+            </div>
+            <div class="method-grid">
+              <article>
+                <strong>基础实力</strong>
+                <span>由排名映射到 Elo 式评分，东道主加成进入小组赛。</span>
+              </article>
+              <article>
+                <strong>赔率校准</strong>
+                <span>冠军赔率转隐含概率，去水后与基础模型做贝叶斯式加权。</span>
+              </article>
+              <article>
+                <strong>每日动向</strong>
+                <span>摘要中的伤停、复出、状态、疲劳等关键词转为评级冲击。</span>
+              </article>
+              <article>
+                <strong>比赛概率</strong>
+                <span>用评分差估计胜负，再按强弱差动态分配平局概率。</span>
+              </article>
+            </div>
+            <p class="references">
+              盘口可对照 Oddschecker、DraftKings、FanDuel、BetMGM、bet365 等主流市场；请以打开页面当天的盘口为准。
+            </p>
+          </section>
+        </section>
+      </section>
+    </main>
+
+    <footer>
+      <p>免责声明：本页面提供概率分析，不保证结果，不鼓励或建议投注。赔率和新闻需每日核验后录入。</p>
+    </footer>
+
+    <script src="worldcup-data.js"></script>
+    <script src="schedule-data.js"></script>
+    <script src="app.js"></script>
+    <script src="three-loader.js"></script>
+  </body>
+</html>

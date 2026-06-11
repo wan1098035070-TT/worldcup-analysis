@@ -1,0 +1,1 @@
+# Keep GitHub Pages from running Jekyll so static assets and data paths are served as-is.
