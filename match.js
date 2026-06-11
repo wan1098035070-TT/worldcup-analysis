@@ -23,6 +23,19 @@ const roleNames = {
 
 const avatarCache = new Map();
 
+function bindBackButton() {
+  const button = document.querySelector("#backButton");
+  if (!button) return;
+  button.addEventListener("click", () => {
+    const referrer = document.referrer ? new URL(document.referrer) : null;
+    if (referrer && referrer.origin === window.location.origin) {
+      window.history.back();
+      return;
+    }
+    window.location.href = "index.html";
+  });
+}
+
 function pseudo(seed) {
   let hash = 0;
   for (let i = 0; i < seed.length; i += 1) hash = (hash * 31 + seed.charCodeAt(i)) % 9973;
@@ -318,6 +331,7 @@ async function applyDailyFeed() {
 }
 
 function init() {
+  bindBackButton();
   renderHeader();
   renderLineups();
   renderBookmakers();
