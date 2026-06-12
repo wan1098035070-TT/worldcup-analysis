@@ -47,6 +47,49 @@ function decimalOdds(probability, margin = 0.06) {
   return (1 / Math.max(0.02, probability * (1 - margin))).toFixed(2);
 }
 
+function winnerKey() {
+  const { home, draw, away } = match.probabilities;
+  if (draw >= home && draw >= away) return "draw";
+  return home >= away ? "home" : "away";
+}
+
+function predictedScoreline() {
+  const key = winnerKey();
+  const gap = Math.abs(match.probabilities.home - match.probabilities.away);
+  const drawWeight = match.probabilities.draw;
+  if (key === "draw") return drawWeight > 0.27 ? [1, 1] : [0, 0];
+  const favoriteGoals = gap > 0.28 ? 3 : gap > 0.15 ? 2 : 1;
+  const underdogGoals = drawWeight > 0.24 ? 1 : 0;
+  return key === "home" ? [favoriteGoals, underdogGoals] : [underdogGoals, favoriteGoals];
+}
+
+function scorelineCandidates() {
+  const [aGoals, bGoals] = predictedScoreline();
+  const seed = pseudo(`${teamA.name}-${teamB.name}-scorelines`);
+  const closeDraw = match.probabilities.draw > 0.22;
+  const candidates = [
+    { score: `${aGoals}-${bGoals}`, label: "主推", weight: 0.18 + Math.max(match.probabilities.home, match.probabilities.away) * 0.18 },
+    { score: closeDraw ? "1-1" : `${Math.max(1, aGoals)}-${Math.max(0, bGoals - 1)}`, label: "稳态", weight: 0.13 + match.probabilities.draw * 0.16 },
+    { score: winnerKey() === "away" ? "0-2" : "2-0", label: "拉开", weight: 0.1 + Math.abs(match.probabilities.home - match.probabilities.away) * 0.16 },
+    { score: winnerKey() === "away" ? "1-2" : "2-1", label: "对攻", weight: 0.09 + seed * 0.04 },
+    { score: "0-0", label: "低比分", weight: 0.07 + match.probabilities.draw * 0.08 },
+    { score: winnerKey() === "away" ? "0-1" : "1-0", label: "小胜", weight: 0.085 + Math.max(match.probabilities.home, match.probabilities.away) * 0.05 },
+    { score: winnerKey() === "away" ? "1-3" : "3-1", label: "冲刺", weight: 0.065 + Math.abs(match.probabilities.home - match.probabilities.away) * 0.07 },
+    { score: "2-2", label: "开放", weight: 0.055 + match.probabilities.draw * 0.06 }
+  ];
+  const unique = [];
+  candidates.forEach((item) => {
+    if (!unique.some((candidate) => candidate.score === item.score)) unique.push(item);
+  });
+  return unique
+    .sort((a, b) => b.weight - a.weight)
+    .slice(0, 5)
+    .map((item, index) => ({
+      ...item,
+      probability: Math.max(0.06, item.weight - index * 0.012)
+    }));
+}
+
 function initials(name) {
   return name.split(/\s+/).map((part) => part[0]).join("").slice(0, 2).toUpperCase();
 }
@@ -194,6 +237,75 @@ function renderTacticalGrid() {
   `).join("");
 }
 
+function renderScoreForecast() {
+  const deck = document.querySelector("#scoreForecastDeck");
+  if (!deck) return;
+  const [aGoals, bGoals] = predictedScoreline();
+  const scorelines = scorelineCandidates();
+  const kickoff = scheduledInfo ? MatchSchedule.formatChinaTime(scheduledInfo) : "时间待公布";
+  const venue = scheduledInfo ? `${scheduledInfo.stadium} · ${scheduledInfo.city}` : "场地待公布";
+  const aOdds = decimalOdds(match.probabilities.home);
+  const drawOdds = decimalOdds(match.probabilities.draw);
+  const bOdds = decimalOdds(match.probabilities.away);
+  const leader = winnerKey() === "draw" ? "平局保护权重最高" : `${winnerKey() === "home" ? teamA.name : teamB.name}胜面更高`;
+  const marketPulse = Math.round((Math.max(match.probabilities.home, match.probabilities.away) - match.probabilities.draw) * 100);
+
+  deck.innerHTML = `
+    <aside class="forecast-side">
+      <span class="forecast-kicker">WORLD CUP SCORE FORECAST</span>
+      <strong>${flagFor(teamA.name)} ${teamA.name} vs ${flagFor(teamB.name)} ${teamB.name}</strong>
+      <small>${kickoff} · ${venue}</small>
+      <div class="forecast-mini-list">
+        <div><span>市场脉冲</span><b>${marketPulse > 0 ? "+" : ""}${marketPulse}</b></div>
+        <div><span>预测置信</span><b>${Math.round(68 + Math.max(match.probabilities.home, match.probabilities.away) * 24)}%</b></div>
+        <div><span>盘口方向</span><b>${leader}</b></div>
+      </div>
+    </aside>
+
+    <section class="forecast-main">
+      <div class="forecast-team">
+        <span class="forecast-flag">${flagFor(teamA.name)}</span>
+        <strong>${teamA.name}</strong>
+        <small>FIFA ${teamA.rank} · ${confedNames[teamA.confed]}</small>
+      </div>
+      <div class="forecast-score">
+        <span>预测比分</span>
+        <strong>${aGoals}-${bGoals}</strong>
+        <small>${leader}</small>
+      </div>
+      <div class="forecast-team right">
+        <span class="forecast-flag">${flagFor(teamB.name)}</span>
+        <strong>${teamB.name}</strong>
+        <small>FIFA ${teamB.rank} · ${confedNames[teamB.confed]}</small>
+      </div>
+
+      <div class="forecast-probs">
+        <div><span>${teamA.name}胜</span><b>${pct(match.probabilities.home)}</b><i style="width:${match.probabilities.home * 100}%"></i></div>
+        <div><span>平局</span><b>${pct(match.probabilities.draw)}</b><i style="width:${match.probabilities.draw * 100}%"></i></div>
+        <div><span>${teamB.name}胜</span><b>${pct(match.probabilities.away)}</b><i style="width:${match.probabilities.away * 100}%"></i></div>
+      </div>
+
+      <div class="forecast-odds">
+        <article><span>主胜</span><strong>${aOdds}</strong><small>decimal</small></article>
+        <article><span>平局</span><strong>${drawOdds}</strong><small>decimal</small></article>
+        <article><span>客胜</span><strong>${bOdds}</strong><small>decimal</small></article>
+      </div>
+    </section>
+
+    <aside class="forecast-side forecast-scorelines">
+      <span class="forecast-kicker">CORRECT SCORE TOP 5</span>
+      ${scorelines.map((item) => `
+        <div class="scoreline-row">
+          <strong>${item.score}</strong>
+          <span>${item.label}</span>
+          <b>${pct(item.probability)}</b>
+          <i style="width:${item.probability * 100}%"></i>
+        </div>
+      `).join("")}
+    </aside>
+  `;
+}
+
 function renderOverview() {
   const strengthGap = Math.round(baseStrength(teamA) - baseStrength(teamB));
   const rows = [
@@ -339,6 +451,7 @@ function init() {
   renderNews();
   renderH2H();
   renderTacticalGrid();
+  renderScoreForecast();
   renderOverview();
   renderConfidence();
   renderOddsTrend();
