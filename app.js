@@ -62,6 +62,7 @@ const bookmakerReferences = ["Oddschecker", "OddsPortal", "Oddspedia", "DraftKin
 const impactLedger = [];
 const teamImpacts = Object.fromEntries(teams.map((team) => [team.name, 0]));
 let followedTeamNames = JSON.parse(localStorage.getItem("worldcup-followed-teams") || "null") || ["法国", "巴西", "日本", "美国"];
+const realData = globalThis.RealMatchData || { teams: {}, matches: {}, sources: [] };
 
 const teamFlags = {
   法国: "🇫🇷", 西班牙: "🇪🇸", 阿根廷: "🇦🇷", 英格兰: "🏴", 葡萄牙: "🇵🇹", 巴西: "🇧🇷",
@@ -78,6 +79,16 @@ const pct = (value) => `${(value * 100).toFixed(1)}%`;
 const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
 const flagFor = (teamName) => teamFlags[teamName] || "🏳";
 const teamLabel = (teamName) => `<span class="flag-mark" aria-hidden="true">${flagFor(teamName)}</span><span>${teamName}</span>`;
+const realTeamCodes = {
+  法国: "FR", 西班牙: "ES", 阿根廷: "AR", 英格兰: "EN", 葡萄牙: "PT", 巴西: "BR",
+  荷兰: "NL", 摩洛哥: "MA", 比利时: "BE", 德国: "DE", 克罗地亚: "HR", 哥伦比亚: "CO",
+  塞内加尔: "SN", 墨西哥: "MX", 乌拉圭: "UY", 日本: "JP", 瑞士: "CH", 美国: "US",
+  伊朗: "IR", 奥地利: "AT", 韩国: "KR", 厄瓜多尔: "EC", 澳大利亚: "AU", 土耳其: "TR",
+  苏格兰: "SQ", 瑞典: "SE", 埃及: "EG", 挪威: "NO", 阿尔及利亚: "DZ", 捷克: "CZ",
+  卡塔尔: "QA", 科特迪瓦: "CI", 突尼斯: "TN", 加拿大: "CA", 巴拉圭: "PY", 沙特阿拉伯: "SA",
+  伊拉克: "IQ", 乌兹别克斯坦: "UZ", 南非: "ZA", 民主刚果: "CD", 巴拿马: "PA", 约旦: "JO",
+  加纳: "GH", 波黑: "BA", 佛得角: "CV", 库拉索: "CW", 海地: "HT", 新西兰: "NZ"
+};
 const matchTime = (match) => new Date(match.schedule?.dateTime || match.dateTime || 0).getTime();
 const matchEndTime = (match) => matchTime(match) + 2 * 60 * 60 * 1000;
 
@@ -142,6 +153,83 @@ function baseStrength(team) {
   return rankScore + tierBoost + hostBoost + teamImpacts[team.name];
 }
 
+function pseudo(seed) {
+  let hash = 0;
+  for (let i = 0; i < seed.length; i += 1) hash = (hash * 31 + seed.charCodeAt(i)) % 9973;
+  return hash / 9973;
+}
+
+function average(numbers, fallback = 0) {
+  return numbers.length ? numbers.reduce((sum, value) => sum + value, 0) / numbers.length : fallback;
+}
+
+function realTeamInput(teamName) {
+  const code = realTeamCodes[teamName];
+  return realData.teams?.[teamName] || realData.teamsByCode?.[code] || null;
+}
+
+function realMatchInput(aTeam, bTeam) {
+  const direct = realData.matches?.[`${aTeam.name}:${bTeam.name}`];
+  if (direct) return { ...direct, reversed: false };
+  const reverse = realData.matches?.[`${bTeam.name}:${aTeam.name}`];
+  if (reverse) return { ...reverse, reversed: true };
+  const aCode = realTeamCodes[aTeam.name];
+  const bCode = realTeamCodes[bTeam.name];
+  const directCode = realData.matchesByCode?.[`${aCode}:${bCode}`];
+  if (directCode) return { ...directCode, reversed: false };
+  const reverseCode = realData.matchesByCode?.[`${bCode}:${aCode}`];
+  return reverseCode ? { ...reverseCode, reversed: true } : null;
+}
+
+function teamModelProfile(team) {
+  const real = realTeamInput(team.name);
+  const squad = globalThis.SquadData?.getSquad(team.name) || [];
+  const ratings = squad.map((player) => Number(player.rating)).filter(Number.isFinite);
+  const byRole = (role) => squad.filter((player) => player.position === role);
+  const avgRating = average(ratings, 7);
+  const attackRating = average(byRole("FWD").map((player) => Number(player.rating)).filter(Number.isFinite), avgRating);
+  const midRating = average(byRole("MID").map((player) => Number(player.rating)).filter(Number.isFinite), avgRating);
+  const defenseRating = average([...byRole("DEF"), ...byRole("GK")].map((player) => Number(player.rating)).filter(Number.isFinite), avgRating);
+  const elo = real?.elo || baseStrength(team);
+  const eloRank = real?.eloRank || team.rank;
+  const rankIndex = clamp((130 - eloRank) / 129, 0.08, 1);
+  const squadCoverage = clamp(squad.length / 11, 0.62, 1);
+  const injuryRisk = Number.isFinite(real?.injuryRisk)
+    ? clamp(real.injuryRisk, 0, 0.35)
+    : clamp(0.04 + pseudo(`${team.name}-injury-risk`) * 0.12 - squadCoverage * 0.04, 0.02, 0.16);
+  const lineupBoost = (avgRating - 7.2) * 0.09 + (squadCoverage - 0.85) * 0.18 - injuryRisk * 0.5;
+  const attack = clamp(0.76 + rankIndex * 0.54 + (attackRating - 7) * 0.08 + (midRating - 7) * 0.04 + lineupBoost, 0.62, 1.72);
+  const defense = clamp(0.72 + rankIndex * 0.45 + (defenseRating - 7) * 0.08 + lineupBoost * 0.8, 0.58, 1.58);
+  const formSeed = pseudo(`${team.name}-last-10-form`);
+  const recentGf = Number.isFinite(real?.recent?.gf)
+    ? real.recent.gf
+    : clamp(0.85 + attack * 0.64 + formSeed * 0.62, 0.55, 2.8);
+  const recentGa = Number.isFinite(real?.recent?.ga)
+    ? real.recent.ga
+    : clamp(1.95 - defense * 0.62 + (1 - formSeed) * 0.42, 0.45, 2.45);
+  return { elo, attack, defense, recentGf, recentGa, injuryRisk };
+}
+
+function poisson(k, lambda) {
+  let factorial = 1;
+  for (let i = 2; i <= k; i += 1) factorial *= i;
+  return Math.exp(-lambda) * Math.pow(lambda, k) / factorial;
+}
+
+function baseMatchProbability(teamA, teamB) {
+  const a = baseStrength(teamA);
+  const b = baseStrength(teamB);
+  const diff = a - b;
+  const draw = clamp(0.27 - Math.min(Math.abs(diff), 260) / 1400, 0.18, 0.29);
+  const nonDraw = 1 - draw;
+  const aShare = 1 / (1 + Math.pow(10, -diff / 420));
+  return {
+    home: nonDraw * aShare,
+    draw,
+    away: nonDraw * (1 - aShare)
+  };
+}
+
 function titleProbabilities() {
   const market = marketProbabilities();
   const raw = teams.map((team) => {
@@ -158,16 +246,50 @@ function titleProbabilities() {
 }
 
 function matchProbability(teamA, teamB) {
-  const a = baseStrength(teamA);
-  const b = baseStrength(teamB);
-  const diff = a - b;
-  const draw = clamp(0.27 - Math.min(Math.abs(diff), 260) / 1400, 0.18, 0.29);
-  const nonDraw = 1 - draw;
-  const aShare = 1 / (1 + Math.pow(10, -diff / 420));
+  const home = teamModelProfile(teamA);
+  const away = teamModelProfile(teamB);
+  const prior = baseMatchProbability(teamA, teamB);
+  const fixture = realMatchInput(teamA, teamB);
+  const fixtureHomeWin = fixture?.eloFixture
+    ? (fixture.reversed ? 1 - fixture.eloFixture.homeWinExpectation : fixture.eloFixture.homeWinExpectation)
+    : null;
+  const marketTotal = clamp(
+    (Number.isFinite(fixture?.totalLine) ? fixture.totalLine : 2.28)
+      + (home.attack + away.attack - 2.1) * 0.38
+      + (0.25 - prior.draw) * 0.9
+      + (1 - (home.defense + away.defense) / 2) * 0.24,
+    1.75,
+    3.55
+  );
+  const homeEdge = clamp(
+    0.5
+      + (home.elo - away.elo) / 1200
+      + (home.attack - away.defense) * 0.14
+      + (home.recentGf - away.recentGa) * 0.035
+      + (prior.home - prior.away) * 0.28
+      + (fixtureHomeWin === null ? 0 : (fixtureHomeWin - 0.5) * 0.22)
+      - home.injuryRisk * 0.08
+      + away.injuryRisk * 0.08,
+    0.25,
+    0.75
+  );
+  const homeLambda = clamp(marketTotal * homeEdge, 0.35, 3.75);
+  const awayLambda = clamp(marketTotal * (1 - homeEdge), 0.25, 3.35);
+  const result = { home: 0, draw: 0, away: 0 };
+  let total = 0;
+  for (let homeGoals = 0; homeGoals <= 6; homeGoals += 1) {
+    for (let awayGoals = 0; awayGoals <= 6; awayGoals += 1) {
+      const probability = poisson(homeGoals, homeLambda) * poisson(awayGoals, awayLambda);
+      total += probability;
+      if (homeGoals > awayGoals) result.home += probability;
+      else if (homeGoals === awayGoals) result.draw += probability;
+      else result.away += probability;
+    }
+  }
   return {
-    home: nonDraw * aShare,
-    draw,
-    away: nonDraw * (1 - aShare)
+    home: result.home / (total || 1),
+    draw: result.draw / (total || 1),
+    away: result.away / (total || 1)
   };
 }
 
