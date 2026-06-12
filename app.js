@@ -246,6 +246,7 @@ function titleProbabilities() {
 }
 
 function matchProbability(teamA, teamB) {
+  if (globalThis.ScoreModel) return ScoreModel.probabilities(teamA, teamB);
   const home = teamModelProfile(teamA);
   const away = teamModelProfile(teamB);
   const prior = baseMatchProbability(teamA, teamB);

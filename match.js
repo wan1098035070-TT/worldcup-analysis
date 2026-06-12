@@ -229,7 +229,7 @@ function buildPoissonScoreModel() {
   };
 }
 
-const scoreModel = buildPoissonScoreModel();
+const scoreModel = globalThis.ScoreModel ? ScoreModel.build(teamA, teamB) : buildPoissonScoreModel();
 
 function winnerKey() {
   const { home, draw, away } = scoreModel.resultProbs;
