@@ -64,11 +64,21 @@
           <div class="panel-head">
             <div>
               <h2>今日比赛</h2>
-              <p>按强度、市场热度和出线影响筛出的优先关注场次。</p>
+              <p id="featuredMatchSummary">按北京时间开球顺序排列。</p>
             </div>
             <button id="refreshMatchday" class="text-button">刷新工作台</button>
           </div>
           <div id="featuredMatches" class="featured-matches"></div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <h2>已结束归档</h2>
+              <p id="archiveSummary">已完赛场次会自动移入这里。</p>
+            </div>
+          </div>
+          <div id="archivedMatches" class="archived-matches"></div>
         </article>
 
         <article class="panel">

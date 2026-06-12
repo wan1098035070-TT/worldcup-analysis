@@ -78,6 +78,32 @@ const pct = (value) => `${(value * 100).toFixed(1)}%`;
 const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
 const flagFor = (teamName) => teamFlags[teamName] || "🏳";
 const teamLabel = (teamName) => `<span class="flag-mark" aria-hidden="true">${flagFor(teamName)}</span><span>${teamName}</span>`;
+const matchTime = (match) => new Date(match.schedule?.dateTime || match.dateTime || 0).getTime();
+const matchEndTime = (match) => matchTime(match) + 2 * 60 * 60 * 1000;
+
+const chinaDateParts = new Intl.DateTimeFormat("en-CA", {
+  timeZone: "Asia/Shanghai",
+  year: "numeric",
+  month: "2-digit",
+  day: "2-digit"
+});
+
+function chinaDateKey(date = new Date()) {
+  const parts = Object.fromEntries(chinaDateParts.formatToParts(date).map((part) => [part.type, part.value]));
+  return `${parts.year}-${parts.month}-${parts.day}`;
+}
+
+function isMatchEnded(match, now = new Date()) {
+  return matchEndTime(match) <= now.getTime();
+}
+
+function isTodayMatch(match, now = new Date()) {
+  return chinaDateKey(new Date(matchTime(match))) === chinaDateKey(now);
+}
+
+function sortByKickoff(a, b) {
+  return matchTime(a) - matchTime(b);
+}
 
 function decimalFromInput(value, format) {
   const text = String(value).trim();
@@ -195,7 +221,11 @@ function followedMatchWeight(match) {
 }
 
 function teamNextMatch(teamName) {
-  return scheduledMatches().find((match) => match.a.name === teamName || match.b.name === teamName);
+  const now = new Date();
+  return scheduledMatches()
+    .filter((match) => !isMatchEnded(match, now))
+    .sort(sortByKickoff)
+    .find((match) => match.a.name === teamName || match.b.name === teamName);
 }
 
 function fillSelectors() {
@@ -279,22 +309,21 @@ function renderImpactLog() {
 
 function renderFeaturedMatches() {
   const allMatches = scheduledMatches();
-  const seen = new Set();
-  const followedFeatured = followedTeamNames
-    .slice()
-    .reverse()
-    .map((teamName) => allMatches.find((match) => match.a.name === teamName || match.b.name === teamName))
-    .filter(Boolean)
-    .filter((match) => {
-      const key = `${match.group}:${match.a.name}:${match.b.name}`;
-      if (seen.has(key)) return false;
-      seen.add(key);
-      return true;
-    });
-  const hotFeatured = allMatches
-    .filter((match) => !seen.has(`${match.group}:${match.a.name}:${match.b.name}`))
-    .sort((a, b) => (followedMatchWeight(b) + matchHeat(b)) - (followedMatchWeight(a) + matchHeat(a)));
-  const featured = [...followedFeatured, ...hotFeatured].slice(0, 8);
+  const now = new Date();
+  const todayMatches = allMatches
+    .filter((match) => isTodayMatch(match, now) && !isMatchEnded(match, now))
+    .sort(sortByKickoff);
+  const fallbackMatches = allMatches
+    .filter((match) => !isMatchEnded(match, now) && !isTodayMatch(match, now))
+    .sort(sortByKickoff)
+    .slice(0, 8);
+  const featured = todayMatches.length ? todayMatches : fallbackMatches;
+  const summary = document.querySelector("#featuredMatchSummary");
+  if (summary) {
+    summary.textContent = todayMatches.length
+      ? `今日剩余 ${todayMatches.length} 场，按北京时间开球顺序排列。`
+      : `今日暂无未结束比赛，显示接下来 ${featured.length} 场。`;
+  }
   document.querySelector("#featuredMatches").innerHTML = featured.map((match, index) => {
     const href = `match.html?group=${encodeURIComponent(match.group)}&a=${encodeURIComponent(match.a.name)}&b=${encodeURIComponent(match.b.name)}`;
     const topProb = Math.max(match.probabilities.home, match.probabilities.away);
@@ -307,6 +336,31 @@ function renderFeaturedMatches() {
           <span>${followedTeam ? `关注 ${followedTeam} · ` : ""}${MatchSchedule.formatChinaTime(match.schedule)} · ${match.schedule.city}</span>
         </div>
         <div class="feature-prob">${pct(topProb)}</div>
+      </a>
+    `;
+  }).join("");
+}
+
+function renderArchivedMatches() {
+  const archive = document.querySelector("#archivedMatches");
+  if (!archive) return;
+  const now = new Date();
+  const ended = scheduledMatches()
+    .filter((match) => isMatchEnded(match, now))
+    .sort((a, b) => matchTime(b) - matchTime(a));
+  const summary = document.querySelector("#archiveSummary");
+  if (summary) summary.textContent = ended.length ? `已归档 ${ended.length} 场，最近结束的比赛在前。` : "暂无已结束比赛。";
+  if (!ended.length) {
+    archive.innerHTML = `<div class="archive-empty">暂无已结束比赛</div>`;
+    return;
+  }
+  archive.innerHTML = ended.slice(0, 12).map((match) => {
+    const href = `match.html?group=${encodeURIComponent(match.group)}&a=${encodeURIComponent(match.a.name)}&b=${encodeURIComponent(match.b.name)}`;
+    return `
+      <a class="archive-row" href="${href}">
+        <span class="group-badge">${match.group}</span>
+        <strong>${teamLabel(match.a.name)} <em>vs</em> ${teamLabel(match.b.name)}</strong>
+        <small>${MatchSchedule.formatChinaTime(match.schedule)} · ${match.schedule.city}</small>
       </a>
     `;
   }).join("");
@@ -400,6 +454,7 @@ function renderOddsMovers() {
 
 function renderMatchday() {
   renderFeaturedMatches();
+  renderArchivedMatches();
   renderIntelFeed();
   renderFollowedTeams();
   renderOddsMovers();
@@ -408,12 +463,13 @@ function renderMatchday() {
 function renderMatches() {
   const group = document.querySelector("#groupFilter").value;
   const team = document.querySelector("#teamFilter").value;
+  const now = new Date();
   const matches = scheduledMatches().filter((match) => {
     const groupOk = group === "all" || match.group === group;
     const teamOk = team === "all" || match.a.name === team || match.b.name === team;
-    return groupOk && teamOk;
-  });
-  document.querySelector("#matchSummary").textContent = `显示${matches.length}场比赛，时间为北京时间，概率已包含最新冲击。`;
+    return groupOk && teamOk && !isMatchEnded(match, now);
+  }).sort(sortByKickoff);
+  document.querySelector("#matchSummary").textContent = `显示${matches.length}场未结束比赛，时间为北京时间，按开球顺序排列。`;
   document.querySelector("#matchList").innerHTML = matches.map((match) => {
     const detailHref = `match.html?group=${encodeURIComponent(match.group)}&a=${encodeURIComponent(match.a.name)}&b=${encodeURIComponent(match.b.name)}`;
     return `
