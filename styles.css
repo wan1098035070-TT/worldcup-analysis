@@ -1965,6 +1965,37 @@ footer {
   font-size: 12px;
 }
 
+.forecast-factors {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.forecast-factors article {
+  display: grid;
+  gap: 6px;
+  min-height: 78px;
+  padding: 12px;
+  border: 1px solid rgba(93, 125, 255, 0.22);
+  border-radius: 12px;
+  background:
+    linear-gradient(135deg, rgba(40, 244, 220, 0.08), transparent 60%),
+    rgba(255, 255, 255, 0.035);
+}
+
+.forecast-factors span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.forecast-factors strong {
+  color: #ffffff;
+  font-family: var(--display-font);
+  font-size: 22px;
+  line-height: 1.05;
+}
+
 .overview-grid,
 .confidence-stack,
 .odds-trend,
@@ -2147,6 +2178,10 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  .forecast-factors {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .hero {
     min-height: auto;
   }
@@ -2238,7 +2273,8 @@ footer {
   }
 
   .forecast-probs,
-  .forecast-odds {
+  .forecast-odds,
+  .forecast-factors {
     grid-template-columns: 1fr;
   }
 
