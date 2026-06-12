@@ -1,0 +1,35 @@
+name: Update real match data
+
+on:
+  schedule:
+    - cron: "18 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-real-data:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Refresh real match data snapshot
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+          ODDS_API_SPORT_KEY: ${{ vars.ODDS_API_SPORT_KEY }}
+          ODDS_API_REGIONS: ${{ vars.ODDS_API_REGIONS }}
+        run: python scripts/update_real_match_data.py
+      - name: Commit updated snapshot
+        run: |
+          if git diff --quiet -- data/real-data.js; then
+            echo "No data changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/real-data.js
+          git commit -m "Update real match data snapshot"
+          git push
