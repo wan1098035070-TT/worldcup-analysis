@@ -195,10 +195,20 @@ function buildPoissonScoreModel() {
     else acc.away += cell.probability;
     return acc;
   }, { home: 0, draw: 0, away: 0 });
-  const topScorelines = cells
-    .slice()
-    .sort((a, b) => b.probability - a.probability)
-    .slice(0, 5);
+  const resultKey = resultProbs.draw >= resultProbs.home && resultProbs.draw >= resultProbs.away
+    ? "draw"
+    : resultProbs.home >= resultProbs.away ? "home" : "away";
+  const matchesResult = (cell) => {
+    if (resultKey === "home") return cell.homeGoals > cell.awayGoals;
+    if (resultKey === "away") return cell.homeGoals < cell.awayGoals;
+    return cell.homeGoals === cell.awayGoals;
+  };
+  const rankedCells = cells.slice().sort((a, b) => b.probability - a.probability);
+  const predicted = rankedCells.find(matchesResult) || rankedCells[0];
+  const topScorelines = [
+    predicted,
+    ...rankedCells.filter((cell) => cell.score !== predicted.score)
+  ].slice(0, 5);
   const confidence = limit(
     58
       + Math.max(resultProbs.home, resultProbs.away, resultProbs.draw) * 32
@@ -213,7 +223,7 @@ function buildPoissonScoreModel() {
     expectedGoals: { home: homeLambda, away: awayLambda, total: marketTotal },
     resultProbs,
     topScorelines,
-    predicted: topScorelines[0],
+    predicted,
     confidence,
     realMatch,
     factors: [
