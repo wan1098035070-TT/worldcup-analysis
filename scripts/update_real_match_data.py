@@ -9,6 +9,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "real-data.js"
+KNOCKOUT_OUT = ROOT / "data" / "knockout-schedule.js"
 BASE = "https://www.eloratings.net"
 
 TEAM_CODES = {
@@ -141,6 +142,56 @@ def parse_fixtures(team_codes):
     return fixtures
 
 
+def parse_world_cup_knockout(team_codes):
+    rows = fetch_text(f"{BASE}/fixtures.tsv").splitlines()
+    reverse = {code: name for name, code in TEAM_CODES.items()}
+    matches = []
+    for row in rows:
+        fields = row.split("\t")
+        if len(fields) < 12:
+            continue
+        year, month, day, home, away, tournament, host = fields[:7]
+        if tournament != "WC" or home not in team_codes or away not in team_codes:
+            continue
+        try:
+            month_num = int(month)
+            day_num = int(day)
+        except ValueError:
+            continue
+        if (month_num, day_num) < (6, 28):
+            continue
+        home_name = reverse.get(home)
+        away_name = reverse.get(away)
+        if not home_name or not away_name:
+            continue
+        date = f"{year}-{month}-{day}"
+        matches.append({
+            "id": f"KO-{date}-{home}-{away}",
+            "stage": "淘汰赛",
+            "round": "1/16决赛" if month_num < 7 or day_num <= 3 else "淘汰赛",
+            "group": "KO",
+            "home": home_name,
+            "away": away_name,
+            "homeCode": home,
+            "awayCode": away,
+            "date": date,
+            "dateTime": f"{date}T12:00:00-04:00",
+            "timeTbd": True,
+            "stadium": "待官方确认",
+            "city": {"US": "USA", "MX": "Mexico", "CA": "Canada"}.get(host, host or "TBD"),
+            "country": host or "TBD",
+            "source": "World Football Elo fixtures.tsv",
+            "eloFixture": {
+                "homeRank": int(fields[7]),
+                "awayRank": int(fields[8]),
+                "homeElo": int(fields[9]),
+                "awayElo": int(fields[10]),
+                "homeWinExpectation": float(fields[11]) / 100,
+            }
+        })
+    return sorted(matches, key=lambda item: (item["date"], item["homeCode"], item["awayCode"]))
+
+
 def try_fetch_odds():
     api_key = os.getenv("ODDS_API_KEY")
     sport = os.getenv("ODDS_API_SPORT_KEY", "soccer_fifa_world_cup")
@@ -218,7 +269,15 @@ def main():
     data = build_snapshot()
     payload = json.dumps(data, ensure_ascii=False, indent=2)
     OUT.write_text(f"globalThis.RealMatchData = {payload};\n", encoding="utf-8")
+    knockout = {
+        "updatedAt": data["updatedAt"],
+        "source": "World Football Elo fixtures.tsv",
+        "matches": parse_world_cup_knockout(set(TEAM_CODES.values())),
+    }
+    knockout_payload = json.dumps(knockout, ensure_ascii=False, indent=2)
+    KNOCKOUT_OUT.write_text(f"globalThis.KnockoutSchedule = {knockout_payload};\n", encoding="utf-8")
     print(f"Wrote {OUT}")
+    print(f"Wrote {KNOCKOUT_OUT}")
 
 
 if __name__ == "__main__":

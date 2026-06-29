@@ -108,7 +108,31 @@ globalThis.MatchSchedule = (() => {
     weekday: "short"
   });
 
+  function knockoutMatches() {
+    return (globalThis.KnockoutSchedule?.matches || []).map((match, index) => ({
+      id: match.id || `KO${String(index + 1).padStart(2, "0")}`,
+      group: match.group || "KO",
+      home: match.home,
+      away: match.away,
+      date: match.date,
+      dateTime: match.dateTime,
+      stadium: match.stadium || "待官方确认",
+      city: match.city || match.country || "待官方确认",
+      country: match.country || "",
+      stage: match.stage || "淘汰赛",
+      round: match.round || "淘汰赛",
+      timeTbd: Boolean(match.timeTbd),
+      source: match.source || globalThis.KnockoutSchedule?.source || ""
+    })).filter((match) => match.home && match.away && match.dateTime);
+  }
+
+  function allMatches() {
+    return [...matches, ...knockoutMatches()].sort((a, b) => new Date(a.dateTime) - new Date(b.dateTime));
+  }
+
   function formatChinaTime(match) {
+    if (match.timeTbd && match.date) return `${match.date} 时间待定`;
+    if (match.timeTbd) return `${formatChinaDate(match)} 时间待定`;
     return formatter.format(new Date(match.dateTime));
   }
 
@@ -117,14 +141,14 @@ globalThis.MatchSchedule = (() => {
   }
 
   function findMatch(group, aName, bName) {
-    return matches.find((match) => (
+    return allMatches().find((match) => (
       match.group === group &&
       ((match.home === aName && match.away === bName) || (match.home === bName && match.away === aName))
     ));
   }
 
   function teamMatches(teamName) {
-    return matches.filter((match) => match.home === teamName || match.away === teamName);
+    return allMatches().filter((match) => match.home === teamName || match.away === teamName);
   }
 
   function nextTeamMatch(teamName, now = new Date("2026-06-10T00:00:00+08:00")) {
@@ -132,7 +156,11 @@ globalThis.MatchSchedule = (() => {
   }
 
   return {
-    matches,
+    get matches() {
+      return allMatches();
+    },
+    groupMatches: matches,
+    knockoutMatches,
     source,
     timeZone,
     sourceTimeZone,

@@ -355,6 +355,7 @@ function fillSelectors() {
   const manualTeam = document.querySelector("#manualTeam");
   const teamFilter = document.querySelector("#teamFilter");
   const followTeamFilter = document.querySelector("#followTeamFilter");
+  const groupFilter = document.querySelector("#groupFilter");
   teams
     .slice()
     .sort((a, b) => a.rank - b.rank)
@@ -363,7 +364,22 @@ function fillSelectors() {
       teamFilter.add(new Option(team.name, team.name));
       followTeamFilter?.add(new Option(`${flagFor(team.name)} ${team.name}`, team.name));
     });
-  unique("group").forEach((group) => document.querySelector("#groupFilter").add(new Option(`${group}组`, group)));
+  const groupOrder = "ABCDEFGHIJKL".split("");
+  const scheduleGroups = globalThis.MatchSchedule ? MatchSchedule.matches.map((match) => match.group) : [];
+  [...new Set([...unique("group"), ...scheduleGroups])]
+    .filter(Boolean)
+    .sort((a, b) => {
+      const ai = groupOrder.indexOf(a);
+      const bi = groupOrder.indexOf(b);
+      if (a === "KO") return 1;
+      if (b === "KO") return -1;
+      if (ai === -1 || bi === -1) return a.localeCompare(b);
+      return ai - bi;
+    })
+    .forEach((group) => {
+      const label = group === "KO" ? "\u6dd8\u6c70\u8d5b" : `${group}\u7ec4`;
+      groupFilter.add(new Option(label, group));
+    });
 }
 
 function renderTitleChart() {

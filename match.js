@@ -300,7 +300,8 @@ function emptyPlayerCard(team, role, index, side) {
 
 function renderHeader() {
   document.title = `${teamA.name} vs ${teamB.name} · 比赛风暴中心`;
-  document.querySelector("#matchGroup").textContent = `${match.group}组 · ${scheduledInfo ? MatchSchedule.formatChinaTime(scheduledInfo) : "Match Center"}`;
+  const stageLabel = scheduledInfo?.round || scheduledInfo?.stage || `${match.group}组`;
+  document.querySelector("#matchGroup").textContent = `${stageLabel} · ${scheduledInfo ? MatchSchedule.formatChinaTime(scheduledInfo) : "Match Center"}`;
   document.querySelector("#matchTitle").innerHTML = `<span class="flag-mark">${flagFor(teamA.name)}</span>${teamA.name} vs <span class="flag-mark">${flagFor(teamB.name)}</span>${teamB.name}`;
   const venueLine = scheduledInfo ? `比赛时间 ${MatchSchedule.formatChinaTime(scheduledInfo)}，地点 ${scheduledInfo.stadium} · ${scheduledInfo.city}。` : "";
   document.querySelector("#matchSubtitle").textContent = `${venueLine}${confedNames[teamA.confed]} FIFA ${teamA.rank} 对 ${confedNames[teamB.confed]} FIFA ${teamB.rank}，胜率、阵容、赔率、交锋和临场情报集中追踪。`;
