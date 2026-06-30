@@ -104,12 +104,20 @@ function chinaDateKey(date = new Date()) {
   return `${parts.year}-${parts.month}-${parts.day}`;
 }
 
+function matchDateKey(match) {
+  if (match.schedule?.timeTbd && match.schedule?.date) return match.schedule.date;
+  return chinaDateKey(new Date(matchTime(match)));
+}
+
 function isMatchEnded(match, now = new Date()) {
+  if (match.schedule?.timeTbd && match.schedule?.date) {
+    return match.schedule.date < chinaDateKey(now);
+  }
   return matchEndTime(match) <= now.getTime();
 }
 
 function isTodayMatch(match, now = new Date()) {
-  return chinaDateKey(new Date(matchTime(match))) === chinaDateKey(now);
+  return matchDateKey(match) === chinaDateKey(now);
 }
 
 function sortByKickoff(a, b) {
