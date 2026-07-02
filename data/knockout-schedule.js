@@ -1,103 +1,7 @@
 globalThis.KnockoutSchedule = {
-  "updatedAt": "2026-07-01T04:53:43.012423+00:00",
+  "updatedAt": "2026-07-02T04:30:56.768493+00:00",
   "source": "World Football Elo fixtures.tsv",
   "matches": [
-    {
-      "id": "KO-2026-06-30-MX-EC",
-      "stage": "淘汰赛",
-      "round": "1/16决赛",
-      "group": "KO",
-      "home": "墨西哥",
-      "away": "厄瓜多尔",
-      "homeCode": "MX",
-      "awayCode": "EC",
-      "date": "2026-06-30",
-      "dateTime": "2026-06-30T12:00:00-04:00",
-      "timeTbd": true,
-      "stadium": "待官方确认",
-      "city": "Mexico",
-      "country": "MX",
-      "source": "World Football Elo fixtures.tsv",
-      "eloFixture": {
-        "homeRank": 11,
-        "awayRank": 14,
-        "homeElo": 1912,
-        "awayElo": 1902,
-        "homeWinExpectation": 0.65
-      }
-    },
-    {
-      "id": "KO-2026-07-01-BE-SN",
-      "stage": "淘汰赛",
-      "round": "1/16决赛",
-      "group": "KO",
-      "home": "比利时",
-      "away": "塞内加尔",
-      "homeCode": "BE",
-      "awayCode": "SN",
-      "date": "2026-07-01",
-      "dateTime": "2026-07-01T12:00:00-04:00",
-      "timeTbd": true,
-      "stadium": "待官方确认",
-      "city": "USA",
-      "country": "US",
-      "source": "World Football Elo fixtures.tsv",
-      "eloFixture": {
-        "homeRank": 17,
-        "awayRank": 21,
-        "homeElo": 1884,
-        "awayElo": 1842,
-        "homeWinExpectation": 0.56
-      }
-    },
-    {
-      "id": "KO-2026-07-01-CD-EN",
-      "stage": "淘汰赛",
-      "round": "1/16决赛",
-      "group": "KO",
-      "home": "民主刚果",
-      "away": "英格兰",
-      "homeCode": "CD",
-      "awayCode": "EN",
-      "date": "2026-07-01",
-      "dateTime": "2026-07-01T12:00:00-04:00",
-      "timeTbd": true,
-      "stadium": "待官方确认",
-      "city": "USA",
-      "country": "US",
-      "source": "World Football Elo fixtures.tsv",
-      "eloFixture": {
-        "homeRank": 43,
-        "awayRank": 4,
-        "homeElo": 1712,
-        "awayElo": 2038,
-        "homeWinExpectation": 0.13
-      }
-    },
-    {
-      "id": "KO-2026-07-01-US-BA",
-      "stage": "淘汰赛",
-      "round": "1/16决赛",
-      "group": "KO",
-      "home": "美国",
-      "away": "波黑",
-      "homeCode": "US",
-      "awayCode": "BA",
-      "date": "2026-07-01",
-      "dateTime": "2026-07-01T12:00:00-04:00",
-      "timeTbd": true,
-      "stadium": "待官方确认",
-      "city": "USA",
-      "country": "US",
-      "source": "World Football Elo fixtures.tsv",
-      "eloFixture": {
-        "homeRank": 27,
-        "awayRank": 58,
-        "homeElo": 1781,
-        "awayElo": 1622,
-        "homeWinExpectation": 0.82
-      }
-    },
     {
       "id": "KO-2026-07-02-AT-ES",
       "stage": "淘汰赛",
@@ -115,7 +19,7 @@ globalThis.KnockoutSchedule = {
       "country": "US",
       "source": "World Football Elo fixtures.tsv",
       "eloFixture": {
-        "homeRank": 23,
+        "homeRank": 22,
         "awayRank": 2,
         "homeElo": 1836,
         "awayElo": 2144,
@@ -139,8 +43,8 @@ globalThis.KnockoutSchedule = {
       "country": "CA",
       "source": "World Football Elo fixtures.tsv",
       "eloFixture": {
-        "homeRank": 26,
-        "awayRank": 10,
+        "homeRank": 27,
+        "awayRank": 11,
         "homeElo": 1785,
         "awayElo": 1914,
         "homeWinExpectation": 0.32
@@ -163,7 +67,7 @@ globalThis.KnockoutSchedule = {
       "country": "CA",
       "source": "World Football Elo fixtures.tsv",
       "eloFixture": {
-        "homeRank": 13,
+        "homeRank": 14,
         "awayRank": 7,
         "homeElo": 1905,
         "awayElo": 1990,
@@ -284,7 +188,7 @@ globalThis.KnockoutSchedule = {
       "source": "World Football Elo fixtures.tsv",
       "eloFixture": {
         "homeRank": 3,
-        "awayRank": 24,
+        "awayRank": 23,
         "homeElo": 2134,
         "awayElo": 1823,
         "homeWinExpectation": 0.86
@@ -308,10 +212,58 @@ globalThis.KnockoutSchedule = {
       "source": "World Football Elo fixtures.tsv",
       "eloFixture": {
         "homeRank": 5,
-        "awayRank": 9,
+        "awayRank": 10,
         "homeElo": 2031,
         "awayElo": 1934,
         "homeWinExpectation": 0.64
+      }
+    },
+    {
+      "id": "KO-2026-07-05-MX-EN",
+      "stage": "淘汰赛",
+      "round": "淘汰赛",
+      "group": "KO",
+      "home": "墨西哥",
+      "away": "英格兰",
+      "homeCode": "MX",
+      "awayCode": "EN",
+      "date": "2026-07-05",
+      "dateTime": "2026-07-05T12:00:00-04:00",
+      "timeTbd": true,
+      "stadium": "待官方确认",
+      "city": "Mexico",
+      "country": "MX",
+      "source": "World Football Elo fixtures.tsv",
+      "eloFixture": {
+        "homeRank": 9,
+        "awayRank": 4,
+        "homeElo": 1943,
+        "awayElo": 2046,
+        "homeWinExpectation": 0.5
+      }
+    },
+    {
+      "id": "KO-2026-07-06-US-BE",
+      "stage": "淘汰赛",
+      "round": "淘汰赛",
+      "group": "KO",
+      "home": "美国",
+      "away": "比利时",
+      "homeCode": "US",
+      "awayCode": "BE",
+      "date": "2026-07-06",
+      "dateTime": "2026-07-06T12:00:00-04:00",
+      "timeTbd": true,
+      "stadium": "待官方确认",
+      "city": "USA",
+      "country": "US",
+      "source": "World Football Elo fixtures.tsv",
+      "eloFixture": {
+        "homeRank": 26,
+        "awayRank": 12,
+        "homeElo": 1798,
+        "awayElo": 1910,
+        "homeWinExpectation": 0.48
       }
     }
   ]
