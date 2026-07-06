@@ -1,31 +1,7 @@
 globalThis.KnockoutSchedule = {
-  "updatedAt": "2026-07-05T04:20:12.293048+00:00",
+  "updatedAt": "2026-07-06T04:38:47.566410+00:00",
   "source": "World Football Elo fixtures.tsv",
   "matches": [
-    {
-      "id": "KO-2026-07-05-BR-NO",
-      "stage": "淘汰赛",
-      "round": "淘汰赛",
-      "group": "KO",
-      "home": "巴西",
-      "away": "挪威",
-      "homeCode": "BR",
-      "awayCode": "NO",
-      "date": "2026-07-05",
-      "dateTime": "2026-07-05T12:00:00-04:00",
-      "timeTbd": true,
-      "stadium": "待官方确认",
-      "city": "USA",
-      "country": "US",
-      "source": "World Football Elo fixtures.tsv",
-      "eloFixture": {
-        "homeRank": 5,
-        "awayRank": 11,
-        "homeElo": 2031,
-        "awayElo": 1934,
-        "homeWinExpectation": 0.64
-      }
-    },
     {
       "id": "KO-2026-07-05-MX-EN",
       "stage": "淘汰赛",
@@ -43,7 +19,7 @@ globalThis.KnockoutSchedule = {
       "country": "MX",
       "source": "World Football Elo fixtures.tsv",
       "eloFixture": {
-        "homeRank": 9,
+        "homeRank": 10,
         "awayRank": 4,
         "homeElo": 1943,
         "awayElo": 2046,
@@ -67,7 +43,7 @@ globalThis.KnockoutSchedule = {
       "country": "US",
       "source": "World Football Elo fixtures.tsv",
       "eloFixture": {
-        "homeRank": 6,
+        "homeRank": 5,
         "awayRank": 1,
         "homeElo": 2013,
         "awayElo": 2159,
@@ -139,8 +115,8 @@ globalThis.KnockoutSchedule = {
       "country": "CA",
       "source": "World Football Elo fixtures.tsv",
       "eloFixture": {
-        "homeRank": 7,
-        "awayRank": 9,
+        "homeRank": 6,
+        "awayRank": 10,
         "homeElo": 2009,
         "awayElo": 1943,
         "homeWinExpectation": 0.59
