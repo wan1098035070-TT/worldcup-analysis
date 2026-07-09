@@ -1,5 +1,5 @@
 globalThis.KnockoutSchedule = {
-  "updatedAt": "2026-07-08T03:43:55.758601+00:00",
+  "updatedAt": "2026-07-09T04:13:13.806911+00:00",
   "source": "World Football Elo fixtures.tsv",
   "matches": [
     {
