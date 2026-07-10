@@ -1,31 +1,7 @@
 globalThis.KnockoutSchedule = {
-  "updatedAt": "2026-07-09T04:13:13.806911+00:00",
+  "updatedAt": "2026-07-10T04:13:52.675739+00:00",
   "source": "World Football Elo fixtures.tsv",
   "matches": [
-    {
-      "id": "KO-2026-07-09-FR-MA",
-      "stage": "淘汰赛",
-      "round": "淘汰赛",
-      "group": "KO",
-      "home": "法国",
-      "away": "摩洛哥",
-      "homeCode": "FR",
-      "awayCode": "MA",
-      "date": "2026-07-09",
-      "dateTime": "2026-07-09T12:00:00-04:00",
-      "timeTbd": true,
-      "stadium": "待官方确认",
-      "city": "USA",
-      "country": "US",
-      "source": "World Football Elo fixtures.tsv",
-      "eloFixture": {
-        "homeRank": 3,
-        "awayRank": 12,
-        "homeElo": 2143,
-        "awayElo": 1921,
-        "homeWinExpectation": 0.78
-      }
-    },
     {
       "id": "KO-2026-07-10-BE-ES",
       "stage": "淘汰赛",
@@ -67,7 +43,7 @@ globalThis.KnockoutSchedule = {
       "country": "US",
       "source": "World Football Elo fixtures.tsv",
       "eloFixture": {
-        "homeRank": 2,
+        "homeRank": 3,
         "awayRank": 11,
         "homeElo": 2156,
         "awayElo": 1949,
