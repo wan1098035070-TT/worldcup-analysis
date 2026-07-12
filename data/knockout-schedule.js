@@ -1,5 +1,5 @@
 globalThis.KnockoutSchedule = {
-  "updatedAt": "2026-07-11T03:42:22.974383+00:00",
+  "updatedAt": "2026-07-12T03:57:04.217101+00:00",
   "source": "World Football Elo fixtures.tsv",
   "matches": [
     {
@@ -24,30 +24,6 @@ globalThis.KnockoutSchedule = {
         "homeElo": 2156,
         "awayElo": 1949,
         "homeWinExpectation": 0.77
-      }
-    },
-    {
-      "id": "KO-2026-07-11-EN-NO",
-      "stage": "淘汰赛",
-      "round": "淘汰赛",
-      "group": "KO",
-      "home": "英格兰",
-      "away": "挪威",
-      "homeCode": "EN",
-      "awayCode": "NO",
-      "date": "2026-07-11",
-      "dateTime": "2026-07-11T12:00:00-04:00",
-      "timeTbd": true,
-      "stadium": "待官方确认",
-      "city": "USA",
-      "country": "US",
-      "source": "World Football Elo fixtures.tsv",
-      "eloFixture": {
-        "homeRank": 4,
-        "awayRank": 8,
-        "homeElo": 2076,
-        "awayElo": 1972,
-        "homeWinExpectation": 0.65
       }
     },
     {
