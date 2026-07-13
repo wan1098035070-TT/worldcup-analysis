@@ -1,31 +1,7 @@
 globalThis.KnockoutSchedule = {
-  "updatedAt": "2026-07-12T03:57:04.217101+00:00",
+  "updatedAt": "2026-07-13T03:59:24.494667+00:00",
   "source": "World Football Elo fixtures.tsv",
   "matches": [
-    {
-      "id": "KO-2026-07-11-AR-CH",
-      "stage": "淘汰赛",
-      "round": "淘汰赛",
-      "group": "KO",
-      "home": "阿根廷",
-      "away": "瑞士",
-      "homeCode": "AR",
-      "awayCode": "CH",
-      "date": "2026-07-11",
-      "dateTime": "2026-07-11T12:00:00-04:00",
-      "timeTbd": true,
-      "stadium": "待官方确认",
-      "city": "USA",
-      "country": "US",
-      "source": "World Football Elo fixtures.tsv",
-      "eloFixture": {
-        "homeRank": 3,
-        "awayRank": 10,
-        "homeElo": 2156,
-        "awayElo": 1949,
-        "homeWinExpectation": 0.77
-      }
-    },
     {
       "id": "KO-2026-07-14-FR-ES",
       "stage": "淘汰赛",
@@ -43,11 +19,35 @@ globalThis.KnockoutSchedule = {
       "country": "US",
       "source": "World Football Elo fixtures.tsv",
       "eloFixture": {
-        "homeRank": 2,
+        "homeRank": 3,
         "awayRank": 1,
         "homeElo": 2163,
         "awayElo": 2190,
         "homeWinExpectation": 0.46
+      }
+    },
+    {
+      "id": "KO-2026-07-15-AR-EN",
+      "stage": "淘汰赛",
+      "round": "淘汰赛",
+      "group": "KO",
+      "home": "阿根廷",
+      "away": "英格兰",
+      "homeCode": "AR",
+      "awayCode": "EN",
+      "date": "2026-07-15",
+      "dateTime": "2026-07-15T12:00:00-04:00",
+      "timeTbd": true,
+      "stadium": "待官方确认",
+      "city": "USA",
+      "country": "US",
+      "source": "World Football Elo fixtures.tsv",
+      "eloFixture": {
+        "homeRank": 2,
+        "awayRank": 4,
+        "homeElo": 2177,
+        "awayElo": 2097,
+        "homeWinExpectation": 0.61
       }
     }
   ]
