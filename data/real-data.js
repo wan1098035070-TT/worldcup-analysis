@@ -1,5 +1,5 @@
 globalThis.RealMatchData = {
-  "updatedAt": "2026-07-18T03:30:56.532312+00:00",
+  "updatedAt": "2026-07-19T03:53:55.921330+00:00",
   "sources": [
     {
       "name": "World Football Elo Ratings",
@@ -34,12 +34,12 @@ globalThis.RealMatchData = {
   "teams": {
     "法国": {
       "code": "FR",
-      "eloRank": 3,
-      "elo": 2121,
+      "eloRank": 4,
+      "elo": 2070,
       "recent": {
-        "matches": 9,
-        "gf": 2.22,
-        "ga": 0.78,
+        "matches": 10,
+        "gf": 2.4,
+        "ga": 1.3,
         "source": "World Football Elo latest.tsv"
       }
     },
@@ -67,12 +67,12 @@ globalThis.RealMatchData = {
     },
     "英格兰": {
       "code": "EN",
-      "eloRank": 4,
-      "elo": 2074,
+      "eloRank": 3,
+      "elo": 2125,
       "recent": {
-        "matches": 9,
-        "gf": 2.0,
-        "ga": 0.89,
+        "matches": 10,
+        "gf": 2.4,
+        "ga": 1.2,
         "source": "World Football Elo latest.tsv"
       }
     },
@@ -564,12 +564,12 @@ globalThis.RealMatchData = {
   "teamsByCode": {
     "FR": {
       "code": "FR",
-      "eloRank": 3,
-      "elo": 2121,
+      "eloRank": 4,
+      "elo": 2070,
       "recent": {
-        "matches": 9,
-        "gf": 2.22,
-        "ga": 0.78,
+        "matches": 10,
+        "gf": 2.4,
+        "ga": 1.3,
         "source": "World Football Elo latest.tsv"
       }
     },
@@ -597,12 +597,12 @@ globalThis.RealMatchData = {
     },
     "EN": {
       "code": "EN",
-      "eloRank": 4,
-      "elo": 2074,
+      "eloRank": 3,
+      "elo": 2125,
       "recent": {
-        "matches": 9,
-        "gf": 2.0,
-        "ga": 0.89,
+        "matches": 10,
+        "gf": 2.4,
+        "ga": 1.2,
         "source": "World Football Elo latest.tsv"
       }
     },
@@ -1092,19 +1092,6 @@ globalThis.RealMatchData = {
     }
   },
   "matches": {
-    "英格兰:法国": {
-      "eloFixture": {
-        "date": "2026-07-18",
-        "tournament": "WC",
-        "host": "US",
-        "homeRank": 4,
-        "awayRank": 3,
-        "homeElo": 2074,
-        "awayElo": 2121,
-        "homeWinExpectation": 0.43
-      },
-      "source": "World Football Elo fixtures.tsv"
-    },
     "阿根廷:西班牙": {
       "eloFixture": {
         "date": "2026-07-19",
@@ -1150,10 +1137,10 @@ globalThis.RealMatchData = {
         "tournament": "ENA",
         "host": "TR",
         "homeRank": 20,
-        "awayRank": 3,
+        "awayRank": 4,
         "homeElo": 1852,
-        "awayElo": 2121,
-        "homeWinExpectation": 0.27
+        "awayElo": 2070,
+        "homeWinExpectation": 0.34
       },
       "source": "World Football Elo fixtures.tsv"
     },
@@ -1188,11 +1175,11 @@ globalThis.RealMatchData = {
         "date": "2026-09-26",
         "tournament": "ENA",
         "host": "EN",
-        "homeRank": 4,
+        "homeRank": 3,
         "awayRank": 1,
-        "homeElo": 2074,
+        "homeElo": 2125,
         "awayElo": 2232,
-        "homeWinExpectation": 0.42
+        "homeWinExpectation": 0.49
       },
       "source": "World Football Elo fixtures.tsv"
     },
@@ -1215,10 +1202,10 @@ globalThis.RealMatchData = {
         "tournament": "ENA",
         "host": "BE",
         "homeRank": 10,
-        "awayRank": 3,
+        "awayRank": 4,
         "homeElo": 1948,
-        "awayElo": 2121,
-        "homeWinExpectation": 0.4
+        "awayElo": 2070,
+        "homeWinExpectation": 0.47
       },
       "source": "World Football Elo fixtures.tsv"
     },
@@ -1228,10 +1215,10 @@ globalThis.RealMatchData = {
         "tournament": "ENA",
         "host": "CZ",
         "homeRank": 50,
-        "awayRank": 4,
+        "awayRank": 3,
         "homeElo": 1680,
-        "awayElo": 2074,
-        "homeWinExpectation": 0.16
+        "awayElo": 2125,
+        "homeWinExpectation": 0.12
       },
       "source": "World Football Elo fixtures.tsv"
     },
@@ -1306,10 +1293,10 @@ globalThis.RealMatchData = {
         "tournament": "ENA",
         "host": "HR",
         "homeRank": 16,
-        "awayRank": 4,
+        "awayRank": 3,
         "homeElo": 1882,
-        "awayElo": 2074,
-        "homeWinExpectation": 0.37
+        "awayElo": 2125,
+        "homeWinExpectation": 0.31
       },
       "source": "World Football Elo fixtures.tsv"
     },
@@ -1344,11 +1331,11 @@ globalThis.RealMatchData = {
         "date": "2026-10-05",
         "tournament": "ENA",
         "host": "FR",
-        "homeRank": 3,
+        "homeRank": 4,
         "awayRank": 10,
-        "homeElo": 2121,
+        "homeElo": 2070,
         "awayElo": 1948,
-        "homeWinExpectation": 0.83
+        "homeWinExpectation": 0.78
       },
       "source": "World Football Elo fixtures.tsv"
     },
@@ -1370,11 +1357,11 @@ globalThis.RealMatchData = {
         "date": "2026-10-06",
         "tournament": "ENA",
         "host": "EN",
-        "homeRank": 4,
+        "homeRank": 3,
         "awayRank": 50,
-        "homeElo": 2074,
+        "homeElo": 2125,
         "awayElo": 1680,
-        "homeWinExpectation": 0.94
+        "homeWinExpectation": 0.96
       },
       "source": "World Football Elo fixtures.tsv"
     },
@@ -1396,11 +1383,11 @@ globalThis.RealMatchData = {
         "date": "2026-11-12",
         "tournament": "ENA",
         "host": "EN",
-        "homeRank": 4,
+        "homeRank": 3,
         "awayRank": 16,
-        "homeElo": 2074,
+        "homeElo": 2125,
         "awayElo": 1882,
-        "homeWinExpectation": 0.84
+        "homeWinExpectation": 0.88
       },
       "source": "World Football Elo fixtures.tsv"
     },
@@ -1448,11 +1435,11 @@ globalThis.RealMatchData = {
         "date": "2026-11-15",
         "tournament": "ENA",
         "host": "FR",
-        "homeRank": 3,
+        "homeRank": 4,
         "awayRank": 20,
-        "homeElo": 2121,
+        "homeElo": 2070,
         "awayElo": 1852,
-        "homeWinExpectation": 0.89
+        "homeWinExpectation": 0.86
       },
       "source": "World Football Elo fixtures.tsv"
     },
@@ -1462,10 +1449,10 @@ globalThis.RealMatchData = {
         "tournament": "ENA",
         "host": "ES",
         "homeRank": 1,
-        "awayRank": 4,
+        "awayRank": 3,
         "homeElo": 2232,
-        "awayElo": 2074,
-        "homeWinExpectation": 0.82
+        "awayElo": 2125,
+        "homeWinExpectation": 0.77
       },
       "source": "World Football Elo fixtures.tsv"
     },
@@ -1549,19 +1536,6 @@ globalThis.RealMatchData = {
     }
   },
   "matchesByCode": {
-    "EN:FR": {
-      "eloFixture": {
-        "date": "2026-07-18",
-        "tournament": "WC",
-        "host": "US",
-        "homeRank": 4,
-        "awayRank": 3,
-        "homeElo": 2074,
-        "awayElo": 2121,
-        "homeWinExpectation": 0.43
-      },
-      "source": "World Football Elo fixtures.tsv"
-    },
     "AR:ES": {
       "eloFixture": {
         "date": "2026-07-19",
@@ -1607,10 +1581,10 @@ globalThis.RealMatchData = {
         "tournament": "ENA",
         "host": "TR",
         "homeRank": 20,
-        "awayRank": 3,
+        "awayRank": 4,
         "homeElo": 1852,
-        "awayElo": 2121,
-        "homeWinExpectation": 0.27
+        "awayElo": 2070,
+        "homeWinExpectation": 0.34
       },
       "source": "World Football Elo fixtures.tsv"
     },
@@ -1645,11 +1619,11 @@ globalThis.RealMatchData = {
         "date": "2026-09-26",
         "tournament": "ENA",
         "host": "EN",
-        "homeRank": 4,
+        "homeRank": 3,
         "awayRank": 1,
-        "homeElo": 2074,
+        "homeElo": 2125,
         "awayElo": 2232,
-        "homeWinExpectation": 0.42
+        "homeWinExpectation": 0.49
       },
       "source": "World Football Elo fixtures.tsv"
     },
@@ -1672,10 +1646,10 @@ globalThis.RealMatchData = {
         "tournament": "ENA",
         "host": "BE",
         "homeRank": 10,
-        "awayRank": 3,
+        "awayRank": 4,
         "homeElo": 1948,
-        "awayElo": 2121,
-        "homeWinExpectation": 0.4
+        "awayElo": 2070,
+        "homeWinExpectation": 0.47
       },
       "source": "World Football Elo fixtures.tsv"
     },
@@ -1685,10 +1659,10 @@ globalThis.RealMatchData = {
         "tournament": "ENA",
         "host": "CZ",
         "homeRank": 50,
-        "awayRank": 4,
+        "awayRank": 3,
         "homeElo": 1680,
-        "awayElo": 2074,
-        "homeWinExpectation": 0.16
+        "awayElo": 2125,
+        "homeWinExpectation": 0.12
       },
       "source": "World Football Elo fixtures.tsv"
     },
@@ -1763,10 +1737,10 @@ globalThis.RealMatchData = {
         "tournament": "ENA",
         "host": "HR",
         "homeRank": 16,
-        "awayRank": 4,
+        "awayRank": 3,
         "homeElo": 1882,
-        "awayElo": 2074,
-        "homeWinExpectation": 0.37
+        "awayElo": 2125,
+        "homeWinExpectation": 0.31
       },
       "source": "World Football Elo fixtures.tsv"
     },
@@ -1801,11 +1775,11 @@ globalThis.RealMatchData = {
         "date": "2026-10-05",
         "tournament": "ENA",
         "host": "FR",
-        "homeRank": 3,
+        "homeRank": 4,
         "awayRank": 10,
-        "homeElo": 2121,
+        "homeElo": 2070,
         "awayElo": 1948,
-        "homeWinExpectation": 0.83
+        "homeWinExpectation": 0.78
       },
       "source": "World Football Elo fixtures.tsv"
     },
@@ -1827,11 +1801,11 @@ globalThis.RealMatchData = {
         "date": "2026-10-06",
         "tournament": "ENA",
         "host": "EN",
-        "homeRank": 4,
+        "homeRank": 3,
         "awayRank": 50,
-        "homeElo": 2074,
+        "homeElo": 2125,
         "awayElo": 1680,
-        "homeWinExpectation": 0.94
+        "homeWinExpectation": 0.96
       },
       "source": "World Football Elo fixtures.tsv"
     },
@@ -1853,11 +1827,11 @@ globalThis.RealMatchData = {
         "date": "2026-11-12",
         "tournament": "ENA",
         "host": "EN",
-        "homeRank": 4,
+        "homeRank": 3,
         "awayRank": 16,
-        "homeElo": 2074,
+        "homeElo": 2125,
         "awayElo": 1882,
-        "homeWinExpectation": 0.84
+        "homeWinExpectation": 0.88
       },
       "source": "World Football Elo fixtures.tsv"
     },
@@ -1905,11 +1879,11 @@ globalThis.RealMatchData = {
         "date": "2026-11-15",
         "tournament": "ENA",
         "host": "FR",
-        "homeRank": 3,
+        "homeRank": 4,
         "awayRank": 20,
-        "homeElo": 2121,
+        "homeElo": 2070,
         "awayElo": 1852,
-        "homeWinExpectation": 0.89
+        "homeWinExpectation": 0.86
       },
       "source": "World Football Elo fixtures.tsv"
     },
@@ -1919,10 +1893,10 @@ globalThis.RealMatchData = {
         "tournament": "ENA",
         "host": "ES",
         "homeRank": 1,
-        "awayRank": 4,
+        "awayRank": 3,
         "homeElo": 2232,
-        "awayElo": 2074,
-        "homeWinExpectation": 0.82
+        "awayElo": 2125,
+        "homeWinExpectation": 0.77
       },
       "source": "World Football Elo fixtures.tsv"
     },
