@@ -1,5 +1,5 @@
 globalThis.RealMatchData = {
-  "updatedAt": "2026-07-24T03:43:25.779141+00:00",
+  "updatedAt": "2026-07-25T03:36:06.942801+00:00",
   "sources": [
     {
       "name": "World Football Elo Ratings",
@@ -1170,6 +1170,19 @@ globalThis.RealMatchData = {
       },
       "source": "World Football Elo fixtures.tsv"
     },
+    "哥伦比亚:墨西哥": {
+      "eloFixture": {
+        "date": "2026-09-26",
+        "tournament": "F",
+        "host": "US",
+        "homeRank": 5,
+        "awayRank": 12,
+        "homeElo": 2003,
+        "awayElo": 1913,
+        "homeWinExpectation": 0.63
+      },
+      "source": "World Football Elo fixtures.tsv"
+    },
     "挪威:葡萄牙": {
       "eloFixture": {
         "date": "2026-09-27",
@@ -1297,6 +1310,19 @@ globalThis.RealMatchData = {
         "homeElo": 2259,
         "awayElo": 1680,
         "homeWinExpectation": 0.98
+      },
+      "source": "World Football Elo fixtures.tsv"
+    },
+    "美国:墨西哥": {
+      "eloFixture": {
+        "date": "2026-10-03",
+        "tournament": "F",
+        "host": "US",
+        "homeRank": 31,
+        "awayRank": 12,
+        "homeElo": 1747,
+        "awayElo": 1913,
+        "homeWinExpectation": 0.41
       },
       "source": "World Football Elo fixtures.tsv"
     },
@@ -1601,6 +1627,19 @@ globalThis.RealMatchData = {
       },
       "source": "World Football Elo fixtures.tsv"
     },
+    "CO:MX": {
+      "eloFixture": {
+        "date": "2026-09-26",
+        "tournament": "F",
+        "host": "US",
+        "homeRank": 5,
+        "awayRank": 12,
+        "homeElo": 2003,
+        "awayElo": 1913,
+        "homeWinExpectation": 0.63
+      },
+      "source": "World Football Elo fixtures.tsv"
+    },
     "NO:PT": {
       "eloFixture": {
         "date": "2026-09-27",
@@ -1728,6 +1767,19 @@ globalThis.RealMatchData = {
         "homeElo": 2259,
         "awayElo": 1680,
         "homeWinExpectation": 0.98
+      },
+      "source": "World Football Elo fixtures.tsv"
+    },
+    "US:MX": {
+      "eloFixture": {
+        "date": "2026-10-03",
+        "tournament": "F",
+        "host": "US",
+        "homeRank": 31,
+        "awayRank": 12,
+        "homeElo": 1747,
+        "awayElo": 1913,
+        "homeWinExpectation": 0.41
       },
       "source": "World Football Elo fixtures.tsv"
     },
