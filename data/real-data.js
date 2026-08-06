@@ -1,5 +1,5 @@
 globalThis.RealMatchData = {
-  "updatedAt": "2026-08-05T03:31:52.454464+00:00",
+  "updatedAt": "2026-08-06T03:35:38.241047+00:00",
   "sources": [
     {
       "name": "World Football Elo Ratings",
@@ -442,7 +442,7 @@ globalThis.RealMatchData = {
     "乌兹别克斯坦": {
       "code": "UZ",
       "eloRank": 56,
-      "elo": 1630,
+      "elo": 1631,
       "recent": {
         "matches": 5,
         "gf": 0.6,
@@ -972,7 +972,7 @@ globalThis.RealMatchData = {
     "UZ": {
       "code": "UZ",
       "eloRank": 56,
-      "elo": 1630,
+      "elo": 1631,
       "recent": {
         "matches": 5,
         "gf": 0.6,
@@ -1399,7 +1399,7 @@ globalThis.RealMatchData = {
         "homeRank": 40,
         "awayRank": 56,
         "homeElo": 1723,
-        "awayElo": 1630,
+        "awayElo": 1631,
         "homeWinExpectation": 0.75
       },
       "source": "World Football Elo fixtures.tsv"
@@ -1528,7 +1528,7 @@ globalThis.RealMatchData = {
         "host": "SA",
         "homeRank": 56,
         "awayRank": 57,
-        "homeElo": 1630,
+        "homeElo": 1631,
         "awayElo": 1628,
         "homeWinExpectation": 0.5
       },
@@ -1882,7 +1882,7 @@ globalThis.RealMatchData = {
         "homeRank": 40,
         "awayRank": 56,
         "homeElo": 1723,
-        "awayElo": 1630,
+        "awayElo": 1631,
         "homeWinExpectation": 0.75
       },
       "source": "World Football Elo fixtures.tsv"
@@ -2011,7 +2011,7 @@ globalThis.RealMatchData = {
         "host": "SA",
         "homeRank": 56,
         "awayRank": 57,
-        "homeElo": 1630,
+        "homeElo": 1631,
         "awayElo": 1628,
         "homeWinExpectation": 0.5
       },
