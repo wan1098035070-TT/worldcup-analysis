@@ -1,5 +1,5 @@
 globalThis.RealMatchData = {
-  "updatedAt": "2026-08-15T01:49:11.929189+00:00",
+  "updatedAt": "2026-08-16T01:56:39.559050+00:00",
   "sources": [
     {
       "name": "World Football Elo Ratings",
@@ -364,7 +364,7 @@ globalThis.RealMatchData = {
     },
     "卡塔尔": {
       "code": "QA",
-      "eloRank": 99,
+      "eloRank": 100,
       "elo": 1411,
       "recent": {
         "matches": 5,
@@ -894,7 +894,7 @@ globalThis.RealMatchData = {
     },
     "QA": {
       "code": "QA",
-      "eloRank": 99,
+      "eloRank": 100,
       "elo": 1411,
       "recent": {
         "matches": 5,
@@ -1618,7 +1618,7 @@ globalThis.RealMatchData = {
         "tournament": "AC",
         "host": "SA",
         "homeRank": 15,
-        "awayRank": 99,
+        "awayRank": 100,
         "homeElo": 1888,
         "awayElo": 1411,
         "homeWinExpectation": 0.94
@@ -2166,7 +2166,7 @@ globalThis.RealMatchData = {
         "tournament": "AC",
         "host": "SA",
         "homeRank": 15,
-        "awayRank": 99,
+        "awayRank": 100,
         "homeElo": 1888,
         "awayElo": 1411,
         "homeWinExpectation": 0.94
