@@ -1,5 +1,5 @@
 globalThis.RealMatchData = {
-  "updatedAt": "2026-08-18T01:50:05.501884+00:00",
+  "updatedAt": "2026-08-19T01:52:38.645371+00:00",
   "sources": [
     {
       "name": "World Football Elo Ratings",
@@ -364,7 +364,7 @@ globalThis.RealMatchData = {
     },
     "卡塔尔": {
       "code": "QA",
-      "eloRank": 101,
+      "eloRank": 100,
       "elo": 1411,
       "recent": {
         "matches": 5,
@@ -894,7 +894,7 @@ globalThis.RealMatchData = {
     },
     "QA": {
       "code": "QA",
-      "eloRank": 101,
+      "eloRank": 100,
       "elo": 1411,
       "recent": {
         "matches": 5,
@@ -1141,6 +1141,19 @@ globalThis.RealMatchData = {
         "homeElo": 1723,
         "awayElo": 1871,
         "homeWinExpectation": 0.43
+      },
+      "source": "World Football Elo fixtures.tsv"
+    },
+    "乌兹别克斯坦:伊朗": {
+      "eloFixture": {
+        "date": "2026-09-24",
+        "tournament": "F",
+        "host": "UZ",
+        "homeRank": 56,
+        "awayRank": 29,
+        "homeElo": 1631,
+        "awayElo": 1764,
+        "homeWinExpectation": 0.45
       },
       "source": "World Football Elo fixtures.tsv"
     },
@@ -1618,7 +1631,7 @@ globalThis.RealMatchData = {
         "tournament": "AC",
         "host": "SA",
         "homeRank": 15,
-        "awayRank": 101,
+        "awayRank": 100,
         "homeElo": 1888,
         "awayElo": 1411,
         "homeWinExpectation": 0.94
@@ -1689,6 +1702,19 @@ globalThis.RealMatchData = {
         "homeElo": 1723,
         "awayElo": 1871,
         "homeWinExpectation": 0.43
+      },
+      "source": "World Football Elo fixtures.tsv"
+    },
+    "UZ:IR": {
+      "eloFixture": {
+        "date": "2026-09-24",
+        "tournament": "F",
+        "host": "UZ",
+        "homeRank": 56,
+        "awayRank": 29,
+        "homeElo": 1631,
+        "awayElo": 1764,
+        "homeWinExpectation": 0.45
       },
       "source": "World Football Elo fixtures.tsv"
     },
@@ -2166,7 +2192,7 @@ globalThis.RealMatchData = {
         "tournament": "AC",
         "host": "SA",
         "homeRank": 15,
-        "awayRank": 101,
+        "awayRank": 100,
         "homeElo": 1888,
         "awayElo": 1411,
         "homeWinExpectation": 0.94
