@@ -1,5 +1,5 @@
 globalThis.RealMatchData = {
-  "updatedAt": "2026-08-21T01:56:46.692832+00:00",
+  "updatedAt": "2026-08-22T01:49:44.360784+00:00",
   "sources": [
     {
       "name": "World Football Elo Ratings",
@@ -222,7 +222,7 @@ globalThis.RealMatchData = {
     "美国": {
       "code": "US",
       "eloRank": 31,
-      "elo": 1747,
+      "elo": 1746,
       "recent": {
         "matches": 7,
         "gf": 2.14,
@@ -298,7 +298,7 @@ globalThis.RealMatchData = {
     },
     "苏格兰": {
       "code": "SQ",
-      "eloRank": 32,
+      "eloRank": 31,
       "elo": 1746,
       "recent": {
         "matches": 5,
@@ -752,7 +752,7 @@ globalThis.RealMatchData = {
     "US": {
       "code": "US",
       "eloRank": 31,
-      "elo": 1747,
+      "elo": 1746,
       "recent": {
         "matches": 7,
         "gf": 2.14,
@@ -828,7 +828,7 @@ globalThis.RealMatchData = {
     },
     "SQ": {
       "code": "SQ",
-      "eloRank": 32,
+      "eloRank": 31,
       "elo": 1746,
       "recent": {
         "matches": 5,
@@ -1292,7 +1292,7 @@ globalThis.RealMatchData = {
         "date": "2026-09-29",
         "tournament": "ENB",
         "host": "SQ",
-        "homeRank": 32,
+        "homeRank": 31,
         "awayRank": 11,
         "homeElo": 1746,
         "awayElo": 1928,
@@ -1411,7 +1411,7 @@ globalThis.RealMatchData = {
         "host": "US",
         "homeRank": 31,
         "awayRank": 12,
-        "homeElo": 1747,
+        "homeElo": 1746,
         "awayElo": 1914,
         "homeWinExpectation": 0.4
       },
@@ -1489,7 +1489,7 @@ globalThis.RealMatchData = {
         "host": "US",
         "homeRank": 31,
         "awayRank": 38,
-        "homeElo": 1747,
+        "homeElo": 1746,
         "awayElo": 1729,
         "homeWinExpectation": 0.66
       },
@@ -1605,7 +1605,7 @@ globalThis.RealMatchData = {
         "tournament": "ENB",
         "host": "CH",
         "homeRank": 11,
-        "awayRank": 32,
+        "awayRank": 31,
         "homeElo": 1928,
         "awayElo": 1746,
         "homeWinExpectation": 0.84
@@ -1866,7 +1866,7 @@ globalThis.RealMatchData = {
         "date": "2026-09-29",
         "tournament": "ENB",
         "host": "SQ",
-        "homeRank": 32,
+        "homeRank": 31,
         "awayRank": 11,
         "homeElo": 1746,
         "awayElo": 1928,
@@ -1985,7 +1985,7 @@ globalThis.RealMatchData = {
         "host": "US",
         "homeRank": 31,
         "awayRank": 12,
-        "homeElo": 1747,
+        "homeElo": 1746,
         "awayElo": 1914,
         "homeWinExpectation": 0.4
       },
@@ -2063,7 +2063,7 @@ globalThis.RealMatchData = {
         "host": "US",
         "homeRank": 31,
         "awayRank": 38,
-        "homeElo": 1747,
+        "homeElo": 1746,
         "awayElo": 1729,
         "homeWinExpectation": 0.66
       },
@@ -2179,7 +2179,7 @@ globalThis.RealMatchData = {
         "tournament": "ENB",
         "host": "CH",
         "homeRank": 11,
-        "awayRank": 32,
+        "awayRank": 31,
         "homeElo": 1928,
         "awayElo": 1746,
         "homeWinExpectation": 0.84
