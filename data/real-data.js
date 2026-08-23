@@ -1,5 +1,5 @@
 globalThis.RealMatchData = {
-  "updatedAt": "2026-08-22T01:49:44.360784+00:00",
+  "updatedAt": "2026-08-23T01:59:12.759046+00:00",
   "sources": [
     {
       "name": "World Football Elo Ratings",
@@ -529,7 +529,7 @@ globalThis.RealMatchData = {
     },
     "库拉索": {
       "code": "CW",
-      "eloRank": 91,
+      "eloRank": 92,
       "elo": 1438,
       "recent": {
         "matches": 5,
@@ -1059,7 +1059,7 @@ globalThis.RealMatchData = {
     },
     "CW": {
       "code": "CW",
-      "eloRank": 91,
+      "eloRank": 92,
       "elo": 1438,
       "recent": {
         "matches": 5,
