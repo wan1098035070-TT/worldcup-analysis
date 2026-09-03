@@ -1,5 +1,5 @@
 globalThis.RealMatchData = {
-  "updatedAt": "2026-09-02T04:33:32.550042+00:00",
+  "updatedAt": "2026-09-03T04:33:11.621219+00:00",
   "sources": [
     {
       "name": "World Football Elo Ratings",
@@ -1313,19 +1313,6 @@ globalThis.RealMatchData = {
       },
       "source": "World Football Elo fixtures.tsv"
     },
-    "阿根廷:乌兹别克斯坦": {
-      "eloFixture": {
-        "date": "2026-09-30",
-        "tournament": "F",
-        "host": "CN",
-        "homeRank": 2,
-        "awayRank": 56,
-        "homeElo": 2173,
-        "awayElo": 1630,
-        "homeWinExpectation": 0.96
-      },
-      "source": "World Football Elo fixtures.tsv"
-    },
     "日本:厄瓜多尔": {
       "eloFixture": {
         "date": "2026-10-01",
@@ -1897,19 +1884,6 @@ globalThis.RealMatchData = {
         "homeElo": 1596,
         "awayElo": 1561,
         "homeWinExpectation": 0.69
-      },
-      "source": "World Football Elo fixtures.tsv"
-    },
-    "AR:UZ": {
-      "eloFixture": {
-        "date": "2026-09-30",
-        "tournament": "F",
-        "host": "CN",
-        "homeRank": 2,
-        "awayRank": 56,
-        "homeElo": 2173,
-        "awayElo": 1630,
-        "homeWinExpectation": 0.96
       },
       "source": "World Football Elo fixtures.tsv"
     },
