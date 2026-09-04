@@ -1,5 +1,5 @@
 globalThis.RealMatchData = {
-  "updatedAt": "2026-09-03T04:33:11.621219+00:00",
+  "updatedAt": "2026-09-04T04:32:46.254224+00:00",
   "sources": [
     {
       "name": "World Football Elo Ratings",
@@ -1430,6 +1430,19 @@ globalThis.RealMatchData = {
       },
       "source": "World Football Elo fixtures.tsv"
     },
+    "埃及:南非": {
+      "eloFixture": {
+        "date": "2026-10-04",
+        "tournament": "F",
+        "host": "EG",
+        "homeRank": 34,
+        "awayRank": 73,
+        "homeElo": 1742,
+        "awayElo": 1560,
+        "homeWinExpectation": 0.84
+      },
+      "source": "World Football Elo fixtures.tsv"
+    },
     "法国:比利时": {
       "eloFixture": {
         "date": "2026-10-05",
@@ -1547,6 +1560,19 @@ globalThis.RealMatchData = {
       },
       "source": "World Football Elo fixtures.tsv"
     },
+    "巴西:日本": {
+      "eloFixture": {
+        "date": "2026-11-14",
+        "tournament": "FT",
+        "host": "SG",
+        "homeRank": 7,
+        "awayRank": 15,
+        "homeElo": 1993,
+        "awayElo": 1888,
+        "homeWinExpectation": 0.65
+      },
+      "source": "World Football Elo fixtures.tsv"
+    },
     "克罗地亚:捷克": {
       "eloFixture": {
         "date": "2026-11-15",
@@ -1609,6 +1635,19 @@ globalThis.RealMatchData = {
         "homeElo": 1928,
         "awayElo": 1746,
         "homeWinExpectation": 0.84
+      },
+      "source": "World Football Elo fixtures.tsv"
+    },
+    "日本:巴拉圭": {
+      "eloFixture": {
+        "date": "2026-11-17",
+        "tournament": "FT",
+        "host": "SG",
+        "homeRank": 15,
+        "awayRank": 24,
+        "homeElo": 1888,
+        "awayElo": 1814,
+        "homeWinExpectation": 0.6
       },
       "source": "World Football Elo fixtures.tsv"
     },
@@ -2004,6 +2043,19 @@ globalThis.RealMatchData = {
       },
       "source": "World Football Elo fixtures.tsv"
     },
+    "EG:ZA": {
+      "eloFixture": {
+        "date": "2026-10-04",
+        "tournament": "F",
+        "host": "EG",
+        "homeRank": 34,
+        "awayRank": 73,
+        "homeElo": 1742,
+        "awayElo": 1560,
+        "homeWinExpectation": 0.84
+      },
+      "source": "World Football Elo fixtures.tsv"
+    },
     "FR:BE": {
       "eloFixture": {
         "date": "2026-10-05",
@@ -2121,6 +2173,19 @@ globalThis.RealMatchData = {
       },
       "source": "World Football Elo fixtures.tsv"
     },
+    "BR:JP": {
+      "eloFixture": {
+        "date": "2026-11-14",
+        "tournament": "FT",
+        "host": "SG",
+        "homeRank": 7,
+        "awayRank": 15,
+        "homeElo": 1993,
+        "awayElo": 1888,
+        "homeWinExpectation": 0.65
+      },
+      "source": "World Football Elo fixtures.tsv"
+    },
     "HR:CZ": {
       "eloFixture": {
         "date": "2026-11-15",
@@ -2183,6 +2248,19 @@ globalThis.RealMatchData = {
         "homeElo": 1928,
         "awayElo": 1746,
         "homeWinExpectation": 0.84
+      },
+      "source": "World Football Elo fixtures.tsv"
+    },
+    "JP:PY": {
+      "eloFixture": {
+        "date": "2026-11-17",
+        "tournament": "FT",
+        "host": "SG",
+        "homeRank": 15,
+        "awayRank": 24,
+        "homeElo": 1888,
+        "awayElo": 1814,
+        "homeWinExpectation": 0.6
       },
       "source": "World Football Elo fixtures.tsv"
     },
