@@ -1,5 +1,5 @@
 globalThis.RealMatchData = {
-  "updatedAt": "2026-09-04T04:32:46.254224+00:00",
+  "updatedAt": "2026-09-05T04:28:24.299927+00:00",
   "sources": [
     {
       "name": "World Football Elo Ratings",
@@ -1092,19 +1092,6 @@ globalThis.RealMatchData = {
     }
   },
   "matches": {
-    "科特迪瓦:加纳": {
-      "eloFixture": {
-        "date": "2026-09-00",
-        "tournament": "FQ",
-        "host": "CI",
-        "homeRank": 39,
-        "awayRank": 68,
-        "homeElo": 1728,
-        "awayElo": 1571,
-        "homeWinExpectation": 0.81
-      },
-      "source": "World Football Elo fixtures.tsv"
-    },
     "荷兰:德国": {
       "eloFixture": {
         "date": "2026-09-24",
@@ -1115,6 +1102,19 @@ globalThis.RealMatchData = {
         "homeElo": 1971,
         "awayElo": 1907,
         "homeWinExpectation": 0.72
+      },
+      "source": "World Football Elo fixtures.tsv"
+    },
+    "科特迪瓦:加纳": {
+      "eloFixture": {
+        "date": "2026-09-24",
+        "tournament": "FQ",
+        "host": "CI",
+        "homeRank": 39,
+        "awayRank": 68,
+        "homeElo": 1728,
+        "awayElo": 1571,
+        "homeWinExpectation": 0.81
       },
       "source": "World Football Elo fixtures.tsv"
     },
@@ -1705,19 +1705,6 @@ globalThis.RealMatchData = {
     }
   },
   "matchesByCode": {
-    "CI:GH": {
-      "eloFixture": {
-        "date": "2026-09-00",
-        "tournament": "FQ",
-        "host": "CI",
-        "homeRank": 39,
-        "awayRank": 68,
-        "homeElo": 1728,
-        "awayElo": 1571,
-        "homeWinExpectation": 0.81
-      },
-      "source": "World Football Elo fixtures.tsv"
-    },
     "NL:DE": {
       "eloFixture": {
         "date": "2026-09-24",
@@ -1728,6 +1715,19 @@ globalThis.RealMatchData = {
         "homeElo": 1971,
         "awayElo": 1907,
         "homeWinExpectation": 0.72
+      },
+      "source": "World Football Elo fixtures.tsv"
+    },
+    "CI:GH": {
+      "eloFixture": {
+        "date": "2026-09-24",
+        "tournament": "FQ",
+        "host": "CI",
+        "homeRank": 39,
+        "awayRank": 68,
+        "homeElo": 1728,
+        "awayElo": 1571,
+        "homeWinExpectation": 0.81
       },
       "source": "World Football Elo fixtures.tsv"
     },
