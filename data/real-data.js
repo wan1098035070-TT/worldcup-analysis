@@ -1,5 +1,5 @@
 globalThis.RealMatchData = {
-  "updatedAt": "2026-09-11T04:39:40.779832+00:00",
+  "updatedAt": "2026-09-12T04:33:44.800077+00:00",
   "sources": [
     {
       "name": "World Football Elo Ratings",
@@ -1547,6 +1547,19 @@ globalThis.RealMatchData = {
       },
       "source": "World Football Elo fixtures.tsv"
     },
+    "卡塔尔:澳大利亚": {
+      "eloFixture": {
+        "date": "2026-11-13",
+        "tournament": "F",
+        "host": "QA",
+        "homeRank": 100,
+        "awayRank": 25,
+        "homeElo": 1411,
+        "awayElo": 1795,
+        "homeWinExpectation": 0.16
+      },
+      "source": "World Football Elo fixtures.tsv"
+    },
     "瑞典:波黑": {
       "eloFixture": {
         "date": "2026-11-14",
@@ -1648,6 +1661,19 @@ globalThis.RealMatchData = {
         "homeElo": 1888,
         "awayElo": 1814,
         "homeWinExpectation": 0.6
+      },
+      "source": "World Football Elo fixtures.tsv"
+    },
+    "约旦:澳大利亚": {
+      "eloFixture": {
+        "date": "2026-11-17",
+        "tournament": "F",
+        "host": "JO",
+        "homeRank": 57,
+        "awayRank": 25,
+        "homeElo": 1628,
+        "awayElo": 1795,
+        "homeWinExpectation": 0.4
       },
       "source": "World Football Elo fixtures.tsv"
     },
@@ -2160,6 +2186,19 @@ globalThis.RealMatchData = {
       },
       "source": "World Football Elo fixtures.tsv"
     },
+    "QA:AU": {
+      "eloFixture": {
+        "date": "2026-11-13",
+        "tournament": "F",
+        "host": "QA",
+        "homeRank": 100,
+        "awayRank": 25,
+        "homeElo": 1411,
+        "awayElo": 1795,
+        "homeWinExpectation": 0.16
+      },
+      "source": "World Football Elo fixtures.tsv"
+    },
     "SE:BA": {
       "eloFixture": {
         "date": "2026-11-14",
@@ -2261,6 +2300,19 @@ globalThis.RealMatchData = {
         "homeElo": 1888,
         "awayElo": 1814,
         "homeWinExpectation": 0.6
+      },
+      "source": "World Football Elo fixtures.tsv"
+    },
+    "JO:AU": {
+      "eloFixture": {
+        "date": "2026-11-17",
+        "tournament": "F",
+        "host": "JO",
+        "homeRank": 57,
+        "awayRank": 25,
+        "homeElo": 1628,
+        "awayElo": 1795,
+        "homeWinExpectation": 0.4
       },
       "source": "World Football Elo fixtures.tsv"
     },
