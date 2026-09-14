@@ -1,5 +1,5 @@
 globalThis.RealMatchData = {
-  "updatedAt": "2026-09-13T04:47:18.628284+00:00",
+  "updatedAt": "2026-09-14T04:55:57.644705+00:00",
   "sources": [
     {
       "name": "World Football Elo Ratings",
