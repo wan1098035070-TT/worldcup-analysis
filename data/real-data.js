@@ -1,5 +1,5 @@
 globalThis.RealMatchData = {
-  "updatedAt": "2026-09-21T04:55:18.911819+00:00",
+  "updatedAt": "2026-09-22T04:56:19.195495+00:00",
   "sources": [
     {
       "name": "World Football Elo Ratings",
@@ -101,7 +101,7 @@ globalThis.RealMatchData = {
     "荷兰": {
       "code": "NL",
       "eloRank": 8,
-      "elo": 1970,
+      "elo": 1971,
       "recent": {
         "matches": 6,
         "gf": 2.17,
@@ -631,7 +631,7 @@ globalThis.RealMatchData = {
     "NL": {
       "code": "NL",
       "eloRank": 8,
-      "elo": 1970,
+      "elo": 1971,
       "recent": {
         "matches": 6,
         "gf": 2.17,
@@ -1099,7 +1099,7 @@ globalThis.RealMatchData = {
         "host": "NL",
         "homeRank": 8,
         "awayRank": 13,
-        "homeElo": 1970,
+        "homeElo": 1971,
         "awayElo": 1907,
         "homeWinExpectation": 0.72
       },
@@ -1646,7 +1646,7 @@ globalThis.RealMatchData = {
         "homeRank": 13,
         "awayRank": 8,
         "homeElo": 1907,
-        "awayElo": 1970,
+        "awayElo": 1971,
         "homeWinExpectation": 0.55
       },
       "source": "World Football Elo fixtures.tsv"
@@ -1751,7 +1751,7 @@ globalThis.RealMatchData = {
         "host": "NL",
         "homeRank": 8,
         "awayRank": 13,
-        "homeElo": 1970,
+        "homeElo": 1971,
         "awayElo": 1907,
         "homeWinExpectation": 0.72
       },
@@ -2298,7 +2298,7 @@ globalThis.RealMatchData = {
         "homeRank": 13,
         "awayRank": 8,
         "homeElo": 1907,
-        "awayElo": 1970,
+        "awayElo": 1971,
         "homeWinExpectation": 0.55
       },
       "source": "World Football Elo fixtures.tsv"
