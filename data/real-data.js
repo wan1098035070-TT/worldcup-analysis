@@ -1,5 +1,5 @@
 globalThis.RealMatchData = {
-  "updatedAt": "2026-10-08T06:03:20.976940+00:00",
+  "updatedAt": "2026-10-09T06:08:04.148824+00:00",
   "sources": [
     {
       "name": "World Football Elo Ratings",
@@ -1313,6 +1313,19 @@ globalThis.RealMatchData = {
       },
       "source": "World Football Elo fixtures.tsv"
     },
+    "沙特阿拉伯:约旦": {
+      "eloFixture": {
+        "date": "2026-12-27",
+        "tournament": "F",
+        "host": "SA",
+        "homeRank": 56,
+        "awayRank": 59,
+        "homeElo": 1639,
+        "awayElo": 1622,
+        "homeWinExpectation": 0.66
+      },
+      "source": "World Football Elo fixtures.tsv"
+    },
     "乌兹别克斯坦:约旦": {
       "eloFixture": {
         "date": "2027-01-08",
@@ -1585,6 +1598,19 @@ globalThis.RealMatchData = {
         "homeElo": 1792,
         "awayElo": 1563,
         "homeWinExpectation": 0.87
+      },
+      "source": "World Football Elo fixtures.tsv"
+    },
+    "SA:JO": {
+      "eloFixture": {
+        "date": "2026-12-27",
+        "tournament": "F",
+        "host": "SA",
+        "homeRank": 56,
+        "awayRank": 59,
+        "homeElo": 1639,
+        "awayElo": 1622,
+        "homeWinExpectation": 0.66
       },
       "source": "World Football Elo fixtures.tsv"
     },
