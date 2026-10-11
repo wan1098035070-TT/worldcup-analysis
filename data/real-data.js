@@ -1,5 +1,5 @@
 globalThis.RealMatchData = {
-  "updatedAt": "2026-10-10T05:52:28.836213+00:00",
+  "updatedAt": "2026-10-11T05:46:00.303697+00:00",
   "sources": [
     {
       "name": "World Football Elo Ratings",
@@ -1200,12 +1200,12 @@ globalThis.RealMatchData = {
       "eloFixture": {
         "date": "2026-11-14",
         "tournament": "CNL",
-        "host": "HT",
+        "host": "JM",
         "homeRank": 67,
         "awayRank": 25,
         "homeElo": 1563,
         "awayElo": 1792,
-        "homeWinExpectation": 0.32
+        "homeWinExpectation": 0.21
       },
       "source": "World Football Elo fixtures.tsv"
     },
@@ -1514,12 +1514,12 @@ globalThis.RealMatchData = {
       "eloFixture": {
         "date": "2026-11-14",
         "tournament": "CNL",
-        "host": "HT",
+        "host": "JM",
         "homeRank": 67,
         "awayRank": 25,
         "homeElo": 1563,
         "awayElo": 1792,
-        "homeWinExpectation": 0.32
+        "homeWinExpectation": 0.21
       },
       "source": "World Football Elo fixtures.tsv"
     },
