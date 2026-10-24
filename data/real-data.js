@@ -1,5 +1,5 @@
 globalThis.RealMatchData = {
-  "updatedAt": "2026-10-23T04:48:27.566368+00:00",
+  "updatedAt": "2026-10-24T04:35:48.162027+00:00",
   "sources": [
     {
       "name": "World Football Elo Ratings",
@@ -1094,14 +1094,14 @@ globalThis.RealMatchData = {
   "matches": {
     "沙特阿拉伯:乌兹别克斯坦": {
       "eloFixture": {
-        "date": "2026-11-11",
+        "date": "2026-11-17",
         "tournament": "F",
-        "host": "SA",
+        "host": "QA",
         "homeRank": 56,
         "awayRank": 55,
         "homeElo": 1639,
         "awayElo": 1645,
-        "homeWinExpectation": 0.63
+        "homeWinExpectation": 0.49
       },
       "source": "World Football Elo fixtures.tsv"
     },
@@ -1183,6 +1183,19 @@ globalThis.RealMatchData = {
       },
       "source": "World Football Elo fixtures.tsv"
     },
+    "沙特阿拉伯:韩国": {
+      "eloFixture": {
+        "date": "2026-11-13",
+        "tournament": "F",
+        "host": "QA",
+        "homeRank": 56,
+        "awayRank": 34,
+        "homeElo": 1639,
+        "awayElo": 1730,
+        "homeWinExpectation": 0.37
+      },
+      "source": "World Football Elo fixtures.tsv"
+    },
     "瑞典:波黑": {
       "eloFixture": {
         "date": "2026-11-14",
@@ -1261,19 +1274,6 @@ globalThis.RealMatchData = {
       },
       "source": "World Football Elo fixtures.tsv"
     },
-    "沙特阿拉伯:韩国": {
-      "eloFixture": {
-        "date": "2026-11-15",
-        "tournament": "F",
-        "host": "SA",
-        "homeRank": 56,
-        "awayRank": 34,
-        "homeElo": 1639,
-        "awayElo": 1730,
-        "homeWinExpectation": 0.51
-      },
-      "source": "World Football Elo fixtures.tsv"
-    },
     "巴拿马:库拉索": {
       "eloFixture": {
         "date": "2026-11-15",
@@ -1339,6 +1339,19 @@ globalThis.RealMatchData = {
       },
       "source": "World Football Elo fixtures.tsv"
     },
+    "卡塔尔:韩国": {
+      "eloFixture": {
+        "date": "2026-11-17",
+        "tournament": "F",
+        "host": "QA",
+        "homeRank": 87,
+        "awayRank": 34,
+        "homeElo": 1469,
+        "awayElo": 1730,
+        "homeWinExpectation": 0.28
+      },
+      "source": "World Football Elo fixtures.tsv"
+    },
     "美国:海地": {
       "eloFixture": {
         "date": "2026-11-17",
@@ -1352,16 +1365,16 @@ globalThis.RealMatchData = {
       },
       "source": "World Football Elo fixtures.tsv"
     },
-    "沙特阿拉伯:约旦": {
+    "沙特阿拉伯:卡塔尔": {
       "eloFixture": {
         "date": "2026-12-27",
         "tournament": "F",
         "host": "SA",
         "homeRank": 56,
-        "awayRank": 59,
+        "awayRank": 87,
         "homeElo": 1639,
-        "awayElo": 1622,
-        "homeWinExpectation": 0.66
+        "awayElo": 1469,
+        "homeWinExpectation": 0.83
       },
       "source": "World Football Elo fixtures.tsv"
     },
@@ -1421,14 +1434,14 @@ globalThis.RealMatchData = {
   "matchesByCode": {
     "SA:UZ": {
       "eloFixture": {
-        "date": "2026-11-11",
+        "date": "2026-11-17",
         "tournament": "F",
-        "host": "SA",
+        "host": "QA",
         "homeRank": 56,
         "awayRank": 55,
         "homeElo": 1639,
         "awayElo": 1645,
-        "homeWinExpectation": 0.63
+        "homeWinExpectation": 0.49
       },
       "source": "World Football Elo fixtures.tsv"
     },
@@ -1510,6 +1523,19 @@ globalThis.RealMatchData = {
       },
       "source": "World Football Elo fixtures.tsv"
     },
+    "SA:KR": {
+      "eloFixture": {
+        "date": "2026-11-13",
+        "tournament": "F",
+        "host": "QA",
+        "homeRank": 56,
+        "awayRank": 34,
+        "homeElo": 1639,
+        "awayElo": 1730,
+        "homeWinExpectation": 0.37
+      },
+      "source": "World Football Elo fixtures.tsv"
+    },
     "SE:BA": {
       "eloFixture": {
         "date": "2026-11-14",
@@ -1588,19 +1614,6 @@ globalThis.RealMatchData = {
       },
       "source": "World Football Elo fixtures.tsv"
     },
-    "SA:KR": {
-      "eloFixture": {
-        "date": "2026-11-15",
-        "tournament": "F",
-        "host": "SA",
-        "homeRank": 56,
-        "awayRank": 34,
-        "homeElo": 1639,
-        "awayElo": 1730,
-        "homeWinExpectation": 0.51
-      },
-      "source": "World Football Elo fixtures.tsv"
-    },
     "PA:CW": {
       "eloFixture": {
         "date": "2026-11-15",
@@ -1666,6 +1679,19 @@ globalThis.RealMatchData = {
       },
       "source": "World Football Elo fixtures.tsv"
     },
+    "QA:KR": {
+      "eloFixture": {
+        "date": "2026-11-17",
+        "tournament": "F",
+        "host": "QA",
+        "homeRank": 87,
+        "awayRank": 34,
+        "homeElo": 1469,
+        "awayElo": 1730,
+        "homeWinExpectation": 0.28
+      },
+      "source": "World Football Elo fixtures.tsv"
+    },
     "US:HT": {
       "eloFixture": {
         "date": "2026-11-17",
@@ -1679,16 +1705,16 @@ globalThis.RealMatchData = {
       },
       "source": "World Football Elo fixtures.tsv"
     },
-    "SA:JO": {
+    "SA:QA": {
       "eloFixture": {
         "date": "2026-12-27",
         "tournament": "F",
         "host": "SA",
         "homeRank": 56,
-        "awayRank": 59,
+        "awayRank": 87,
         "homeElo": 1639,
-        "awayElo": 1622,
-        "homeWinExpectation": 0.66
+        "awayElo": 1469,
+        "homeWinExpectation": 0.83
       },
       "source": "World Football Elo fixtures.tsv"
     },
