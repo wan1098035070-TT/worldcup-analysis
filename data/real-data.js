@@ -1,5 +1,5 @@
 globalThis.RealMatchData = {
-  "updatedAt": "2026-11-03T06:46:11.792763+00:00",
+  "updatedAt": "2026-11-04T06:21:22.001506+00:00",
   "sources": [
     {
       "name": "World Football Elo Ratings",
@@ -1365,45 +1365,6 @@ globalThis.RealMatchData = {
       },
       "source": "World Football Elo fixtures.tsv"
     },
-    "乌兹别克斯坦:约旦": {
-      "eloFixture": {
-        "date": "2027-01-08",
-        "tournament": "AC",
-        "host": "SA",
-        "homeRank": 55,
-        "awayRank": 59,
-        "homeElo": 1645,
-        "awayElo": 1622,
-        "homeWinExpectation": 0.53
-      },
-      "source": "World Football Elo fixtures.tsv"
-    },
-    "伊拉克:澳大利亚": {
-      "eloFixture": {
-        "date": "2027-01-14",
-        "tournament": "AC",
-        "host": "SA",
-        "homeRank": 73,
-        "awayRank": 26,
-        "homeElo": 1546,
-        "awayElo": 1786,
-        "homeWinExpectation": 0.2
-      },
-      "source": "World Football Elo fixtures.tsv"
-    },
-    "日本:卡塔尔": {
-      "eloFixture": {
-        "date": "2027-01-20",
-        "tournament": "AC",
-        "host": "SA",
-        "homeRank": 13,
-        "awayRank": 87,
-        "homeElo": 1897,
-        "awayElo": 1469,
-        "homeWinExpectation": 0.92
-      },
-      "source": "World Football Elo fixtures.tsv"
-    },
     "加纳:科特迪瓦": {
       "eloFixture": {
         "date": "2027-03-00",
@@ -1414,6 +1375,45 @@ globalThis.RealMatchData = {
         "homeElo": 1512,
         "awayElo": 1723,
         "homeWinExpectation": 0.35
+      },
+      "source": "World Football Elo fixtures.tsv"
+    },
+    "乌兹别克斯坦:约旦": {
+      "eloFixture": {
+        "date": "2027-12-24",
+        "tournament": "AC",
+        "host": "SA",
+        "homeRank": 55,
+        "awayRank": 59,
+        "homeElo": 1645,
+        "awayElo": 1622,
+        "homeWinExpectation": 0.53
+      },
+      "source": "World Football Elo fixtures.tsv"
+    },
+    "澳大利亚:伊拉克": {
+      "eloFixture": {
+        "date": "2027-12-30",
+        "tournament": "AC",
+        "host": "SA",
+        "homeRank": 26,
+        "awayRank": 73,
+        "homeElo": 1786,
+        "awayElo": 1546,
+        "homeWinExpectation": 0.8
+      },
+      "source": "World Football Elo fixtures.tsv"
+    },
+    "日本:卡塔尔": {
+      "eloFixture": {
+        "date": "2028-01-05",
+        "tournament": "AC",
+        "host": "SA",
+        "homeRank": 13,
+        "awayRank": 87,
+        "homeElo": 1897,
+        "awayElo": 1469,
+        "homeWinExpectation": 0.92
       },
       "source": "World Football Elo fixtures.tsv"
     }
@@ -1692,45 +1692,6 @@ globalThis.RealMatchData = {
       },
       "source": "World Football Elo fixtures.tsv"
     },
-    "UZ:JO": {
-      "eloFixture": {
-        "date": "2027-01-08",
-        "tournament": "AC",
-        "host": "SA",
-        "homeRank": 55,
-        "awayRank": 59,
-        "homeElo": 1645,
-        "awayElo": 1622,
-        "homeWinExpectation": 0.53
-      },
-      "source": "World Football Elo fixtures.tsv"
-    },
-    "IQ:AU": {
-      "eloFixture": {
-        "date": "2027-01-14",
-        "tournament": "AC",
-        "host": "SA",
-        "homeRank": 73,
-        "awayRank": 26,
-        "homeElo": 1546,
-        "awayElo": 1786,
-        "homeWinExpectation": 0.2
-      },
-      "source": "World Football Elo fixtures.tsv"
-    },
-    "JP:QA": {
-      "eloFixture": {
-        "date": "2027-01-20",
-        "tournament": "AC",
-        "host": "SA",
-        "homeRank": 13,
-        "awayRank": 87,
-        "homeElo": 1897,
-        "awayElo": 1469,
-        "homeWinExpectation": 0.92
-      },
-      "source": "World Football Elo fixtures.tsv"
-    },
     "GH:CI": {
       "eloFixture": {
         "date": "2027-03-00",
@@ -1741,6 +1702,45 @@ globalThis.RealMatchData = {
         "homeElo": 1512,
         "awayElo": 1723,
         "homeWinExpectation": 0.35
+      },
+      "source": "World Football Elo fixtures.tsv"
+    },
+    "UZ:JO": {
+      "eloFixture": {
+        "date": "2027-12-24",
+        "tournament": "AC",
+        "host": "SA",
+        "homeRank": 55,
+        "awayRank": 59,
+        "homeElo": 1645,
+        "awayElo": 1622,
+        "homeWinExpectation": 0.53
+      },
+      "source": "World Football Elo fixtures.tsv"
+    },
+    "AU:IQ": {
+      "eloFixture": {
+        "date": "2027-12-30",
+        "tournament": "AC",
+        "host": "SA",
+        "homeRank": 26,
+        "awayRank": 73,
+        "homeElo": 1786,
+        "awayElo": 1546,
+        "homeWinExpectation": 0.8
+      },
+      "source": "World Football Elo fixtures.tsv"
+    },
+    "JP:QA": {
+      "eloFixture": {
+        "date": "2028-01-05",
+        "tournament": "AC",
+        "host": "SA",
+        "homeRank": 13,
+        "awayRank": 87,
+        "homeElo": 1897,
+        "awayElo": 1469,
+        "homeWinExpectation": 0.92
       },
       "source": "World Football Elo fixtures.tsv"
     }
