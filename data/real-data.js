@@ -1,5 +1,5 @@
 globalThis.RealMatchData = {
-  "updatedAt": "2026-11-06T06:43:54.339360+00:00",
+  "updatedAt": "2026-11-07T05:57:31.576791+00:00",
   "sources": [
     {
       "name": "World Football Elo Ratings",
@@ -332,7 +332,7 @@ globalThis.RealMatchData = {
     "挪威": {
       "code": "NO",
       "eloRank": 12,
-      "elo": 1900,
+      "elo": 1901,
       "recent": {
         "matches": 4,
         "gf": 1.5,
@@ -862,7 +862,7 @@ globalThis.RealMatchData = {
     "NO": {
       "code": "NO",
       "eloRank": 12,
-      "elo": 1900,
+      "elo": 1901,
       "recent": {
         "matches": 4,
         "gf": 1.5,
