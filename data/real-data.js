@@ -1,5 +1,5 @@
 globalThis.RealMatchData = {
-  "updatedAt": "2026-11-07T05:57:31.576791+00:00",
+  "updatedAt": "2026-11-08T05:59:34.556688+00:00",
   "sources": [
     {
       "name": "World Football Elo Ratings",
@@ -1300,6 +1300,19 @@ globalThis.RealMatchData = {
       },
       "source": "World Football Elo fixtures.tsv"
     },
+    "伊拉克:伊朗": {
+      "eloFixture": {
+        "date": "2026-11-17",
+        "tournament": "FT",
+        "host": "IQ",
+        "homeRank": 73,
+        "awayRank": 32,
+        "homeElo": 1546,
+        "awayElo": 1738,
+        "homeWinExpectation": 0.37
+      },
+      "source": "World Football Elo fixtures.tsv"
+    },
     "日本:巴拉圭": {
       "eloFixture": {
         "date": "2026-11-17",
@@ -1611,6 +1624,19 @@ globalThis.RealMatchData = {
         "homeElo": 1975,
         "awayElo": 1718,
         "homeWinExpectation": 0.89
+      },
+      "source": "World Football Elo fixtures.tsv"
+    },
+    "IQ:IR": {
+      "eloFixture": {
+        "date": "2026-11-17",
+        "tournament": "FT",
+        "host": "IQ",
+        "homeRank": 73,
+        "awayRank": 32,
+        "homeElo": 1546,
+        "awayElo": 1738,
+        "homeWinExpectation": 0.37
       },
       "source": "World Football Elo fixtures.tsv"
     },
