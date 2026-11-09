@@ -1,5 +1,5 @@
 globalThis.RealMatchData = {
-  "updatedAt": "2026-11-08T05:59:34.556688+00:00",
+  "updatedAt": "2026-11-09T06:26:46.111403+00:00",
   "sources": [
     {
       "name": "World Football Elo Ratings",
@@ -277,7 +277,7 @@ globalThis.RealMatchData = {
     "澳大利亚": {
       "code": "AU",
       "eloRank": 26,
-      "elo": 1786,
+      "elo": 1787,
       "recent": {
         "matches": 2,
         "gf": 1.5,
@@ -332,7 +332,7 @@ globalThis.RealMatchData = {
     "挪威": {
       "code": "NO",
       "eloRank": 12,
-      "elo": 1901,
+      "elo": 1900,
       "recent": {
         "matches": 4,
         "gf": 1.5,
@@ -807,7 +807,7 @@ globalThis.RealMatchData = {
     "AU": {
       "code": "AU",
       "eloRank": 26,
-      "elo": 1786,
+      "elo": 1787,
       "recent": {
         "matches": 2,
         "gf": 1.5,
@@ -862,7 +862,7 @@ globalThis.RealMatchData = {
     "NO": {
       "code": "NO",
       "eloRank": 12,
-      "elo": 1901,
+      "elo": 1900,
       "recent": {
         "matches": 4,
         "gf": 1.5,
@@ -1165,7 +1165,7 @@ globalThis.RealMatchData = {
         "homeRank": 87,
         "awayRank": 26,
         "homeElo": 1469,
-        "awayElo": 1786,
+        "awayElo": 1787,
         "homeWinExpectation": 0.22
       },
       "source": "World Football Elo fixtures.tsv"
@@ -1334,7 +1334,7 @@ globalThis.RealMatchData = {
         "homeRank": 59,
         "awayRank": 26,
         "homeElo": 1622,
-        "awayElo": 1786,
+        "awayElo": 1787,
         "homeWinExpectation": 0.41
       },
       "source": "World Football Elo fixtures.tsv"
@@ -1398,7 +1398,7 @@ globalThis.RealMatchData = {
         "host": "SA",
         "homeRank": 26,
         "awayRank": 73,
-        "homeElo": 1786,
+        "homeElo": 1787,
         "awayElo": 1546,
         "homeWinExpectation": 0.8
       },
@@ -1492,7 +1492,7 @@ globalThis.RealMatchData = {
         "homeRank": 87,
         "awayRank": 26,
         "homeElo": 1469,
-        "awayElo": 1786,
+        "awayElo": 1787,
         "homeWinExpectation": 0.22
       },
       "source": "World Football Elo fixtures.tsv"
@@ -1661,7 +1661,7 @@ globalThis.RealMatchData = {
         "homeRank": 59,
         "awayRank": 26,
         "homeElo": 1622,
-        "awayElo": 1786,
+        "awayElo": 1787,
         "homeWinExpectation": 0.41
       },
       "source": "World Football Elo fixtures.tsv"
@@ -1725,7 +1725,7 @@ globalThis.RealMatchData = {
         "host": "SA",
         "homeRank": 26,
         "awayRank": 73,
-        "homeElo": 1786,
+        "homeElo": 1787,
         "awayElo": 1546,
         "homeWinExpectation": 0.8
       },
