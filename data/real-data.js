@@ -1,5 +1,5 @@
 globalThis.RealMatchData = {
-  "updatedAt": "2026-11-10T07:16:54.401616+00:00",
+  "updatedAt": "2026-11-11T06:18:15.670420+00:00",
   "sources": [
     {
       "name": "World Football Elo Ratings",
@@ -222,7 +222,7 @@ globalThis.RealMatchData = {
     "美国": {
       "code": "US",
       "eloRank": 25,
-      "elo": 1793,
+      "elo": 1792,
       "recent": {
         "matches": 4,
         "gf": 3.0,
@@ -332,7 +332,7 @@ globalThis.RealMatchData = {
     "挪威": {
       "code": "NO",
       "eloRank": 12,
-      "elo": 1900,
+      "elo": 1901,
       "recent": {
         "matches": 4,
         "gf": 1.5,
@@ -752,7 +752,7 @@ globalThis.RealMatchData = {
     "US": {
       "code": "US",
       "eloRank": 25,
-      "elo": 1793,
+      "elo": 1792,
       "recent": {
         "matches": 4,
         "gf": 3.0,
@@ -862,7 +862,7 @@ globalThis.RealMatchData = {
     "NO": {
       "code": "NO",
       "eloRank": 12,
-      "elo": 1900,
+      "elo": 1901,
       "recent": {
         "matches": 4,
         "gf": 1.5,
@@ -1216,7 +1216,7 @@ globalThis.RealMatchData = {
         "host": "US",
         "homeRank": 25,
         "awayRank": 67,
-        "homeElo": 1793,
+        "homeElo": 1792,
         "awayElo": 1563,
         "homeWinExpectation": 0.87
       },
@@ -1543,7 +1543,7 @@ globalThis.RealMatchData = {
         "host": "US",
         "homeRank": 25,
         "awayRank": 67,
-        "homeElo": 1793,
+        "homeElo": 1792,
         "awayElo": 1563,
         "homeWinExpectation": 0.87
       },
