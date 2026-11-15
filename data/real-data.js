@@ -1,5 +1,5 @@
 globalThis.RealMatchData = {
-  "updatedAt": "2026-11-14T06:21:27.204799+00:00",
+  "updatedAt": "2026-11-15T06:30:50.881993+00:00",
   "sources": [
     {
       "name": "World Football Elo Ratings",
@@ -57,11 +57,11 @@ globalThis.RealMatchData = {
     "阿根廷": {
       "code": "AR",
       "eloRank": 2,
-      "elo": 2175,
+      "elo": 2157,
       "recent": {
-        "matches": 3,
-        "gf": 4.67,
-        "ga": 0.0,
+        "matches": 4,
+        "gf": 3.75,
+        "ga": 0.5,
         "source": "World Football Elo latest.tsv"
       }
     },
@@ -79,22 +79,22 @@ globalThis.RealMatchData = {
     "葡萄牙": {
       "code": "PT",
       "eloRank": 5,
-      "elo": 2055,
+      "elo": 1996,
       "recent": {
-        "matches": 4,
-        "gf": 2.25,
-        "ga": 1.0,
+        "matches": 5,
+        "gf": 2.0,
+        "ga": 1.6,
         "source": "World Football Elo latest.tsv"
       }
     },
     "巴西": {
       "code": "BR",
-      "eloRank": 6,
-      "elo": 2001,
+      "eloRank": 8,
+      "elo": 1982,
       "recent": {
-        "matches": 3,
-        "gf": 3.0,
-        "ga": 1.0,
+        "matches": 4,
+        "gf": 2.75,
+        "ga": 1.5,
         "source": "World Football Elo latest.tsv"
       }
     },
@@ -111,7 +111,7 @@ globalThis.RealMatchData = {
     },
     "摩洛哥": {
       "code": "MA",
-      "eloRank": 14,
+      "eloRank": 16,
       "elo": 1898,
       "recent": {
         "matches": 4,
@@ -133,7 +133,7 @@ globalThis.RealMatchData = {
     },
     "德国": {
       "code": "DE",
-      "eloRank": 12,
+      "eloRank": 13,
       "elo": 1916,
       "recent": {
         "matches": 5,
@@ -144,7 +144,7 @@ globalThis.RealMatchData = {
     },
     "克罗地亚": {
       "code": "HR",
-      "eloRank": 18,
+      "eloRank": 19,
       "elo": 1852,
       "recent": {
         "matches": 5,
@@ -155,12 +155,12 @@ globalThis.RealMatchData = {
     },
     "哥伦比亚": {
       "code": "CO",
-      "eloRank": 7,
-      "elo": 1990,
+      "eloRank": 6,
+      "elo": 1992,
       "recent": {
-        "matches": 3,
+        "matches": 4,
         "gf": 1.0,
-        "ga": 0.67,
+        "ga": 0.5,
         "source": "World Football Elo latest.tsv"
       }
     },
@@ -177,7 +177,7 @@ globalThis.RealMatchData = {
     },
     "墨西哥": {
       "code": "MX",
-      "eloRank": 16,
+      "eloRank": 18,
       "elo": 1868,
       "recent": {
         "matches": 4,
@@ -188,23 +188,23 @@ globalThis.RealMatchData = {
     },
     "乌拉圭": {
       "code": "UY",
-      "eloRank": 19,
-      "elo": 1851,
+      "eloRank": 17,
+      "elo": 1869,
       "recent": {
-        "matches": 3,
-        "gf": 3.67,
-        "ga": 1.67,
+        "matches": 4,
+        "gf": 3.25,
+        "ga": 1.5,
         "source": "World Football Elo latest.tsv"
       }
     },
     "日本": {
       "code": "JP",
-      "eloRank": 15,
-      "elo": 1897,
+      "eloRank": 13,
+      "elo": 1916,
       "recent": {
-        "matches": 4,
-        "gf": 1.75,
-        "ga": 0.75,
+        "matches": 5,
+        "gf": 2.0,
+        "ga": 1.0,
         "source": "World Football Elo latest.tsv"
       }
     },
@@ -221,40 +221,40 @@ globalThis.RealMatchData = {
     },
     "美国": {
       "code": "US",
-      "eloRank": 25,
-      "elo": 1792,
+      "eloRank": 24,
+      "elo": 1803,
       "recent": {
-        "matches": 4,
-        "gf": 3.0,
-        "ga": 0.75,
+        "matches": 5,
+        "gf": 3.6,
+        "ga": 0.6,
         "source": "World Football Elo latest.tsv"
       }
     },
     "伊朗": {
       "code": "IR",
       "eloRank": 32,
-      "elo": 1738,
+      "elo": 1748,
       "recent": {
-        "matches": 2,
-        "gf": 0.5,
-        "ga": 2.5,
+        "matches": 3,
+        "gf": 1.0,
+        "ga": 1.67,
         "source": "World Football Elo latest.tsv"
       }
     },
     "奥地利": {
       "code": "AT",
       "eloRank": 21,
-      "elo": 1841,
+      "elo": 1849,
       "recent": {
-        "matches": 4,
-        "gf": 2.25,
-        "ga": 1.25,
+        "matches": 5,
+        "gf": 2.0,
+        "ga": 1.0,
         "source": "World Football Elo latest.tsv"
       }
     },
     "韩国": {
       "code": "KR",
-      "eloRank": 41,
+      "eloRank": 40,
       "elo": 1717,
       "recent": {
         "matches": 5,
@@ -265,18 +265,18 @@ globalThis.RealMatchData = {
     },
     "厄瓜多尔": {
       "code": "EC",
-      "eloRank": 20,
-      "elo": 1849,
+      "eloRank": 19,
+      "elo": 1852,
       "recent": {
-        "matches": 3,
-        "gf": 0.33,
-        "ga": 1.33,
+        "matches": 4,
+        "gf": 0.75,
+        "ga": 1.0,
         "source": "World Football Elo latest.tsv"
       }
     },
     "澳大利亚": {
       "code": "AU",
-      "eloRank": 24,
+      "eloRank": 25,
       "elo": 1794,
       "recent": {
         "matches": 3,
@@ -287,7 +287,7 @@ globalThis.RealMatchData = {
     },
     "土耳其": {
       "code": "TR",
-      "eloRank": 29,
+      "eloRank": 30,
       "elo": 1753,
       "recent": {
         "matches": 5,
@@ -310,17 +310,17 @@ globalThis.RealMatchData = {
     "瑞典": {
       "code": "SE",
       "eloRank": 28,
-      "elo": 1774,
+      "elo": 1784,
       "recent": {
-        "matches": 4,
-        "gf": 1.75,
-        "ga": 0.75,
+        "matches": 5,
+        "gf": 2.0,
+        "ga": 1.0,
         "source": "World Football Elo latest.tsv"
       }
     },
     "埃及": {
       "code": "EG",
-      "eloRank": 40,
+      "eloRank": 39,
       "elo": 1719,
       "recent": {
         "matches": 4,
@@ -331,23 +331,23 @@ globalThis.RealMatchData = {
     },
     "挪威": {
       "code": "NO",
-      "eloRank": 13,
-      "elo": 1901,
+      "eloRank": 15,
+      "elo": 1909,
       "recent": {
-        "matches": 4,
-        "gf": 1.5,
-        "ga": 2.0,
+        "matches": 5,
+        "gf": 1.8,
+        "ga": 1.8,
         "source": "World Football Elo latest.tsv"
       }
     },
     "阿尔及利亚": {
       "code": "DZ",
-      "eloRank": 30,
-      "elo": 1744,
+      "eloRank": 33,
+      "elo": 1746,
       "recent": {
-        "matches": 3,
-        "gf": 2.33,
-        "ga": 1.33,
+        "matches": 4,
+        "gf": 2.0,
+        "ga": 1.0,
         "source": "World Football Elo latest.tsv"
       }
     },
@@ -364,7 +364,7 @@ globalThis.RealMatchData = {
     },
     "卡塔尔": {
       "code": "QA",
-      "eloRank": 89,
+      "eloRank": 88,
       "elo": 1461,
       "recent": {
         "matches": 5,
@@ -375,7 +375,7 @@ globalThis.RealMatchData = {
     },
     "科特迪瓦": {
       "code": "CI",
-      "eloRank": 34,
+      "eloRank": 35,
       "elo": 1728,
       "recent": {
         "matches": 4,
@@ -397,12 +397,12 @@ globalThis.RealMatchData = {
     },
     "加拿大": {
       "code": "CA",
-      "eloRank": 31,
-      "elo": 1739,
+      "eloRank": 30,
+      "elo": 1753,
       "recent": {
-        "matches": 3,
-        "gf": 1.0,
-        "ga": 0.33,
+        "matches": 4,
+        "gf": 1.5,
+        "ga": 0.75,
         "source": "World Football Elo latest.tsv"
       }
     },
@@ -496,7 +496,7 @@ globalThis.RealMatchData = {
     },
     "加纳": {
       "code": "GH",
-      "eloRank": 80,
+      "eloRank": 79,
       "elo": 1514,
       "recent": {
         "matches": 3,
@@ -507,18 +507,18 @@ globalThis.RealMatchData = {
     },
     "波黑": {
       "code": "BA",
-      "eloRank": 49,
-      "elo": 1672,
+      "eloRank": 50,
+      "elo": 1662,
       "recent": {
-        "matches": 4,
-        "gf": 1.5,
-        "ga": 0.75,
+        "matches": 5,
+        "gf": 1.6,
+        "ga": 1.2,
         "source": "World Football Elo latest.tsv"
       }
     },
     "佛得角": {
       "code": "CV",
-      "eloRank": 68,
+      "eloRank": 69,
       "elo": 1566,
       "recent": {
         "matches": 3,
@@ -540,12 +540,12 @@ globalThis.RealMatchData = {
     },
     "海地": {
       "code": "HT",
-      "eloRank": 69,
-      "elo": 1563,
+      "eloRank": 72,
+      "elo": 1552,
       "recent": {
-        "matches": 4,
-        "gf": 2.25,
-        "ga": 1.25,
+        "matches": 5,
+        "gf": 1.8,
+        "ga": 2.2,
         "source": "World Football Elo latest.tsv"
       }
     },
@@ -587,11 +587,11 @@ globalThis.RealMatchData = {
     "AR": {
       "code": "AR",
       "eloRank": 2,
-      "elo": 2175,
+      "elo": 2157,
       "recent": {
-        "matches": 3,
-        "gf": 4.67,
-        "ga": 0.0,
+        "matches": 4,
+        "gf": 3.75,
+        "ga": 0.5,
         "source": "World Football Elo latest.tsv"
       }
     },
@@ -609,22 +609,22 @@ globalThis.RealMatchData = {
     "PT": {
       "code": "PT",
       "eloRank": 5,
-      "elo": 2055,
+      "elo": 1996,
       "recent": {
-        "matches": 4,
-        "gf": 2.25,
-        "ga": 1.0,
+        "matches": 5,
+        "gf": 2.0,
+        "ga": 1.6,
         "source": "World Football Elo latest.tsv"
       }
     },
     "BR": {
       "code": "BR",
-      "eloRank": 6,
-      "elo": 2001,
+      "eloRank": 8,
+      "elo": 1982,
       "recent": {
-        "matches": 3,
-        "gf": 3.0,
-        "ga": 1.0,
+        "matches": 4,
+        "gf": 2.75,
+        "ga": 1.5,
         "source": "World Football Elo latest.tsv"
       }
     },
@@ -641,7 +641,7 @@ globalThis.RealMatchData = {
     },
     "MA": {
       "code": "MA",
-      "eloRank": 14,
+      "eloRank": 16,
       "elo": 1898,
       "recent": {
         "matches": 4,
@@ -663,7 +663,7 @@ globalThis.RealMatchData = {
     },
     "DE": {
       "code": "DE",
-      "eloRank": 12,
+      "eloRank": 13,
       "elo": 1916,
       "recent": {
         "matches": 5,
@@ -674,7 +674,7 @@ globalThis.RealMatchData = {
     },
     "HR": {
       "code": "HR",
-      "eloRank": 18,
+      "eloRank": 19,
       "elo": 1852,
       "recent": {
         "matches": 5,
@@ -685,12 +685,12 @@ globalThis.RealMatchData = {
     },
     "CO": {
       "code": "CO",
-      "eloRank": 7,
-      "elo": 1990,
+      "eloRank": 6,
+      "elo": 1992,
       "recent": {
-        "matches": 3,
+        "matches": 4,
         "gf": 1.0,
-        "ga": 0.67,
+        "ga": 0.5,
         "source": "World Football Elo latest.tsv"
       }
     },
@@ -707,7 +707,7 @@ globalThis.RealMatchData = {
     },
     "MX": {
       "code": "MX",
-      "eloRank": 16,
+      "eloRank": 18,
       "elo": 1868,
       "recent": {
         "matches": 4,
@@ -718,23 +718,23 @@ globalThis.RealMatchData = {
     },
     "UY": {
       "code": "UY",
-      "eloRank": 19,
-      "elo": 1851,
+      "eloRank": 17,
+      "elo": 1869,
       "recent": {
-        "matches": 3,
-        "gf": 3.67,
-        "ga": 1.67,
+        "matches": 4,
+        "gf": 3.25,
+        "ga": 1.5,
         "source": "World Football Elo latest.tsv"
       }
     },
     "JP": {
       "code": "JP",
-      "eloRank": 15,
-      "elo": 1897,
+      "eloRank": 13,
+      "elo": 1916,
       "recent": {
-        "matches": 4,
-        "gf": 1.75,
-        "ga": 0.75,
+        "matches": 5,
+        "gf": 2.0,
+        "ga": 1.0,
         "source": "World Football Elo latest.tsv"
       }
     },
@@ -751,40 +751,40 @@ globalThis.RealMatchData = {
     },
     "US": {
       "code": "US",
-      "eloRank": 25,
-      "elo": 1792,
+      "eloRank": 24,
+      "elo": 1803,
       "recent": {
-        "matches": 4,
-        "gf": 3.0,
-        "ga": 0.75,
+        "matches": 5,
+        "gf": 3.6,
+        "ga": 0.6,
         "source": "World Football Elo latest.tsv"
       }
     },
     "IR": {
       "code": "IR",
       "eloRank": 32,
-      "elo": 1738,
+      "elo": 1748,
       "recent": {
-        "matches": 2,
-        "gf": 0.5,
-        "ga": 2.5,
+        "matches": 3,
+        "gf": 1.0,
+        "ga": 1.67,
         "source": "World Football Elo latest.tsv"
       }
     },
     "AT": {
       "code": "AT",
       "eloRank": 21,
-      "elo": 1841,
+      "elo": 1849,
       "recent": {
-        "matches": 4,
-        "gf": 2.25,
-        "ga": 1.25,
+        "matches": 5,
+        "gf": 2.0,
+        "ga": 1.0,
         "source": "World Football Elo latest.tsv"
       }
     },
     "KR": {
       "code": "KR",
-      "eloRank": 41,
+      "eloRank": 40,
       "elo": 1717,
       "recent": {
         "matches": 5,
@@ -795,18 +795,18 @@ globalThis.RealMatchData = {
     },
     "EC": {
       "code": "EC",
-      "eloRank": 20,
-      "elo": 1849,
+      "eloRank": 19,
+      "elo": 1852,
       "recent": {
-        "matches": 3,
-        "gf": 0.33,
-        "ga": 1.33,
+        "matches": 4,
+        "gf": 0.75,
+        "ga": 1.0,
         "source": "World Football Elo latest.tsv"
       }
     },
     "AU": {
       "code": "AU",
-      "eloRank": 24,
+      "eloRank": 25,
       "elo": 1794,
       "recent": {
         "matches": 3,
@@ -817,7 +817,7 @@ globalThis.RealMatchData = {
     },
     "TR": {
       "code": "TR",
-      "eloRank": 29,
+      "eloRank": 30,
       "elo": 1753,
       "recent": {
         "matches": 5,
@@ -840,17 +840,17 @@ globalThis.RealMatchData = {
     "SE": {
       "code": "SE",
       "eloRank": 28,
-      "elo": 1774,
+      "elo": 1784,
       "recent": {
-        "matches": 4,
-        "gf": 1.75,
-        "ga": 0.75,
+        "matches": 5,
+        "gf": 2.0,
+        "ga": 1.0,
         "source": "World Football Elo latest.tsv"
       }
     },
     "EG": {
       "code": "EG",
-      "eloRank": 40,
+      "eloRank": 39,
       "elo": 1719,
       "recent": {
         "matches": 4,
@@ -861,23 +861,23 @@ globalThis.RealMatchData = {
     },
     "NO": {
       "code": "NO",
-      "eloRank": 13,
-      "elo": 1901,
+      "eloRank": 15,
+      "elo": 1909,
       "recent": {
-        "matches": 4,
-        "gf": 1.5,
-        "ga": 2.0,
+        "matches": 5,
+        "gf": 1.8,
+        "ga": 1.8,
         "source": "World Football Elo latest.tsv"
       }
     },
     "DZ": {
       "code": "DZ",
-      "eloRank": 30,
-      "elo": 1744,
+      "eloRank": 33,
+      "elo": 1746,
       "recent": {
-        "matches": 3,
-        "gf": 2.33,
-        "ga": 1.33,
+        "matches": 4,
+        "gf": 2.0,
+        "ga": 1.0,
         "source": "World Football Elo latest.tsv"
       }
     },
@@ -894,7 +894,7 @@ globalThis.RealMatchData = {
     },
     "QA": {
       "code": "QA",
-      "eloRank": 89,
+      "eloRank": 88,
       "elo": 1461,
       "recent": {
         "matches": 5,
@@ -905,7 +905,7 @@ globalThis.RealMatchData = {
     },
     "CI": {
       "code": "CI",
-      "eloRank": 34,
+      "eloRank": 35,
       "elo": 1728,
       "recent": {
         "matches": 4,
@@ -927,12 +927,12 @@ globalThis.RealMatchData = {
     },
     "CA": {
       "code": "CA",
-      "eloRank": 31,
-      "elo": 1739,
+      "eloRank": 30,
+      "elo": 1753,
       "recent": {
-        "matches": 3,
-        "gf": 1.0,
-        "ga": 0.33,
+        "matches": 4,
+        "gf": 1.5,
+        "ga": 0.75,
         "source": "World Football Elo latest.tsv"
       }
     },
@@ -1026,7 +1026,7 @@ globalThis.RealMatchData = {
     },
     "GH": {
       "code": "GH",
-      "eloRank": 80,
+      "eloRank": 79,
       "elo": 1514,
       "recent": {
         "matches": 3,
@@ -1037,18 +1037,18 @@ globalThis.RealMatchData = {
     },
     "BA": {
       "code": "BA",
-      "eloRank": 49,
-      "elo": 1672,
+      "eloRank": 50,
+      "elo": 1662,
       "recent": {
-        "matches": 4,
-        "gf": 1.5,
-        "ga": 0.75,
+        "matches": 5,
+        "gf": 1.6,
+        "ga": 1.2,
         "source": "World Football Elo latest.tsv"
       }
     },
     "CV": {
       "code": "CV",
-      "eloRank": 68,
+      "eloRank": 69,
       "elo": 1566,
       "recent": {
         "matches": 3,
@@ -1070,12 +1070,12 @@ globalThis.RealMatchData = {
     },
     "HT": {
       "code": "HT",
-      "eloRank": 69,
-      "elo": 1563,
+      "eloRank": 72,
+      "elo": 1552,
       "recent": {
-        "matches": 4,
-        "gf": 2.25,
-        "ga": 1.25,
+        "matches": 5,
+        "gf": 1.8,
+        "ga": 2.2,
         "source": "World Football Elo latest.tsv"
       }
     },
@@ -1092,64 +1092,12 @@ globalThis.RealMatchData = {
     }
   },
   "matches": {
-    "阿根廷:乌拉圭": {
-      "eloFixture": {
-        "date": "2026-11-13",
-        "tournament": "F",
-        "host": "AR",
-        "homeRank": 2,
-        "awayRank": 19,
-        "homeElo": 2175,
-        "awayElo": 1851,
-        "homeWinExpectation": 0.92
-      },
-      "source": "World Football Elo fixtures.tsv"
-    },
-    "瑞典:波黑": {
-      "eloFixture": {
-        "date": "2026-11-14",
-        "tournament": "ENB",
-        "host": "SE",
-        "homeRank": 28,
-        "awayRank": 49,
-        "homeElo": 1774,
-        "awayElo": 1672,
-        "homeWinExpectation": 0.76
-      },
-      "source": "World Football Elo fixtures.tsv"
-    },
-    "巴西:日本": {
-      "eloFixture": {
-        "date": "2026-11-14",
-        "tournament": "FT",
-        "host": "SG",
-        "homeRank": 6,
-        "awayRank": 15,
-        "homeElo": 2001,
-        "awayElo": 1897,
-        "homeWinExpectation": 0.65
-      },
-      "source": "World Football Elo fixtures.tsv"
-    },
-    "美国:海地": {
-      "eloFixture": {
-        "date": "2026-11-17",
-        "tournament": "CNL",
-        "host": "US",
-        "homeRank": 25,
-        "awayRank": 69,
-        "homeElo": 1792,
-        "awayElo": 1563,
-        "homeWinExpectation": 0.87
-      },
-      "source": "World Football Elo fixtures.tsv"
-    },
     "克罗地亚:捷克": {
       "eloFixture": {
         "date": "2026-11-15",
         "tournament": "ENA",
         "host": "HR",
-        "homeRank": 18,
+        "homeRank": 19,
         "awayRank": 53,
         "homeElo": 1852,
         "awayElo": 1653,
@@ -1163,7 +1111,7 @@ globalThis.RealMatchData = {
         "tournament": "ENA",
         "host": "FR",
         "homeRank": 4,
-        "awayRank": 29,
+        "awayRank": 30,
         "homeElo": 2066,
         "awayElo": 1753,
         "homeWinExpectation": 0.92
@@ -1201,7 +1149,7 @@ globalThis.RealMatchData = {
         "date": "2026-11-16",
         "tournament": "ENA",
         "host": "DE",
-        "homeRank": 12,
+        "homeRank": 13,
         "awayRank": 7,
         "homeElo": 1916,
         "awayElo": 1990,
@@ -1222,6 +1170,19 @@ globalThis.RealMatchData = {
       },
       "source": "World Football Elo fixtures.tsv"
     },
+    "澳大利亚:约旦": {
+      "eloFixture": {
+        "date": "2026-11-17",
+        "tournament": "F",
+        "host": "QA",
+        "homeRank": 25,
+        "awayRank": 62,
+        "homeElo": 1794,
+        "awayElo": 1622,
+        "homeWinExpectation": 0.73
+      },
+      "source": "World Football Elo fixtures.tsv"
+    },
     "伊拉克:伊朗": {
       "eloFixture": {
         "date": "2026-11-17",
@@ -1230,8 +1191,8 @@ globalThis.RealMatchData = {
         "homeRank": 75,
         "awayRank": 32,
         "homeElo": 1534,
-        "awayElo": 1738,
-        "homeWinExpectation": 0.35
+        "awayElo": 1748,
+        "homeWinExpectation": 0.34
       },
       "source": "World Football Elo fixtures.tsv"
     },
@@ -1240,24 +1201,11 @@ globalThis.RealMatchData = {
         "date": "2026-11-17",
         "tournament": "FT",
         "host": "SG",
-        "homeRank": 15,
+        "homeRank": 13,
         "awayRank": 22,
-        "homeElo": 1897,
+        "homeElo": 1916,
         "awayElo": 1838,
-        "homeWinExpectation": 0.58
-      },
-      "source": "World Football Elo fixtures.tsv"
-    },
-    "约旦:澳大利亚": {
-      "eloFixture": {
-        "date": "2026-11-17",
-        "tournament": "F",
-        "host": "JO",
-        "homeRank": 62,
-        "awayRank": 24,
-        "homeElo": 1622,
-        "awayElo": 1794,
-        "homeWinExpectation": 0.4
+        "homeWinExpectation": 0.61
       },
       "source": "World Football Elo fixtures.tsv"
     },
@@ -1266,8 +1214,8 @@ globalThis.RealMatchData = {
         "date": "2026-11-17",
         "tournament": "F",
         "host": "QA",
-        "homeRank": 89,
-        "awayRank": 41,
+        "homeRank": 88,
+        "awayRank": 40,
         "homeElo": 1461,
         "awayElo": 1717,
         "homeWinExpectation": 0.29
@@ -1287,13 +1235,26 @@ globalThis.RealMatchData = {
       },
       "source": "World Football Elo fixtures.tsv"
     },
+    "美国:海地": {
+      "eloFixture": {
+        "date": "2026-11-17",
+        "tournament": "CNL",
+        "host": "US",
+        "homeRank": 24,
+        "awayRank": 72,
+        "homeElo": 1803,
+        "awayElo": 1552,
+        "homeWinExpectation": 0.88
+      },
+      "source": "World Football Elo fixtures.tsv"
+    },
     "加纳:科特迪瓦": {
       "eloFixture": {
         "date": "2027-03-00",
         "tournament": "FQ",
         "host": "GH",
-        "homeRank": 80,
-        "awayRank": 34,
+        "homeRank": 79,
+        "awayRank": 35,
         "homeElo": 1514,
         "awayElo": 1728,
         "homeWinExpectation": 0.34
@@ -1318,7 +1279,7 @@ globalThis.RealMatchData = {
         "date": "2027-12-30",
         "tournament": "AC",
         "host": "SA",
-        "homeRank": 24,
+        "homeRank": 25,
         "awayRank": 75,
         "homeElo": 1794,
         "awayElo": 1534,
@@ -1331,74 +1292,22 @@ globalThis.RealMatchData = {
         "date": "2028-01-05",
         "tournament": "AC",
         "host": "SA",
-        "homeRank": 15,
-        "awayRank": 89,
-        "homeElo": 1897,
+        "homeRank": 13,
+        "awayRank": 88,
+        "homeElo": 1916,
         "awayElo": 1461,
-        "homeWinExpectation": 0.92
+        "homeWinExpectation": 0.93
       },
       "source": "World Football Elo fixtures.tsv"
     }
   },
   "matchesByCode": {
-    "AR:UY": {
-      "eloFixture": {
-        "date": "2026-11-13",
-        "tournament": "F",
-        "host": "AR",
-        "homeRank": 2,
-        "awayRank": 19,
-        "homeElo": 2175,
-        "awayElo": 1851,
-        "homeWinExpectation": 0.92
-      },
-      "source": "World Football Elo fixtures.tsv"
-    },
-    "SE:BA": {
-      "eloFixture": {
-        "date": "2026-11-14",
-        "tournament": "ENB",
-        "host": "SE",
-        "homeRank": 28,
-        "awayRank": 49,
-        "homeElo": 1774,
-        "awayElo": 1672,
-        "homeWinExpectation": 0.76
-      },
-      "source": "World Football Elo fixtures.tsv"
-    },
-    "BR:JP": {
-      "eloFixture": {
-        "date": "2026-11-14",
-        "tournament": "FT",
-        "host": "SG",
-        "homeRank": 6,
-        "awayRank": 15,
-        "homeElo": 2001,
-        "awayElo": 1897,
-        "homeWinExpectation": 0.65
-      },
-      "source": "World Football Elo fixtures.tsv"
-    },
-    "US:HT": {
-      "eloFixture": {
-        "date": "2026-11-17",
-        "tournament": "CNL",
-        "host": "US",
-        "homeRank": 25,
-        "awayRank": 69,
-        "homeElo": 1792,
-        "awayElo": 1563,
-        "homeWinExpectation": 0.87
-      },
-      "source": "World Football Elo fixtures.tsv"
-    },
     "HR:CZ": {
       "eloFixture": {
         "date": "2026-11-15",
         "tournament": "ENA",
         "host": "HR",
-        "homeRank": 18,
+        "homeRank": 19,
         "awayRank": 53,
         "homeElo": 1852,
         "awayElo": 1653,
@@ -1412,7 +1321,7 @@ globalThis.RealMatchData = {
         "tournament": "ENA",
         "host": "FR",
         "homeRank": 4,
-        "awayRank": 29,
+        "awayRank": 30,
         "homeElo": 2066,
         "awayElo": 1753,
         "homeWinExpectation": 0.92
@@ -1450,7 +1359,7 @@ globalThis.RealMatchData = {
         "date": "2026-11-16",
         "tournament": "ENA",
         "host": "DE",
-        "homeRank": 12,
+        "homeRank": 13,
         "awayRank": 7,
         "homeElo": 1916,
         "awayElo": 1990,
@@ -1471,6 +1380,19 @@ globalThis.RealMatchData = {
       },
       "source": "World Football Elo fixtures.tsv"
     },
+    "AU:JO": {
+      "eloFixture": {
+        "date": "2026-11-17",
+        "tournament": "F",
+        "host": "QA",
+        "homeRank": 25,
+        "awayRank": 62,
+        "homeElo": 1794,
+        "awayElo": 1622,
+        "homeWinExpectation": 0.73
+      },
+      "source": "World Football Elo fixtures.tsv"
+    },
     "IQ:IR": {
       "eloFixture": {
         "date": "2026-11-17",
@@ -1479,8 +1401,8 @@ globalThis.RealMatchData = {
         "homeRank": 75,
         "awayRank": 32,
         "homeElo": 1534,
-        "awayElo": 1738,
-        "homeWinExpectation": 0.35
+        "awayElo": 1748,
+        "homeWinExpectation": 0.34
       },
       "source": "World Football Elo fixtures.tsv"
     },
@@ -1489,24 +1411,11 @@ globalThis.RealMatchData = {
         "date": "2026-11-17",
         "tournament": "FT",
         "host": "SG",
-        "homeRank": 15,
+        "homeRank": 13,
         "awayRank": 22,
-        "homeElo": 1897,
+        "homeElo": 1916,
         "awayElo": 1838,
-        "homeWinExpectation": 0.58
-      },
-      "source": "World Football Elo fixtures.tsv"
-    },
-    "JO:AU": {
-      "eloFixture": {
-        "date": "2026-11-17",
-        "tournament": "F",
-        "host": "JO",
-        "homeRank": 62,
-        "awayRank": 24,
-        "homeElo": 1622,
-        "awayElo": 1794,
-        "homeWinExpectation": 0.4
+        "homeWinExpectation": 0.61
       },
       "source": "World Football Elo fixtures.tsv"
     },
@@ -1515,8 +1424,8 @@ globalThis.RealMatchData = {
         "date": "2026-11-17",
         "tournament": "F",
         "host": "QA",
-        "homeRank": 89,
-        "awayRank": 41,
+        "homeRank": 88,
+        "awayRank": 40,
         "homeElo": 1461,
         "awayElo": 1717,
         "homeWinExpectation": 0.29
@@ -1536,13 +1445,26 @@ globalThis.RealMatchData = {
       },
       "source": "World Football Elo fixtures.tsv"
     },
+    "US:HT": {
+      "eloFixture": {
+        "date": "2026-11-17",
+        "tournament": "CNL",
+        "host": "US",
+        "homeRank": 24,
+        "awayRank": 72,
+        "homeElo": 1803,
+        "awayElo": 1552,
+        "homeWinExpectation": 0.88
+      },
+      "source": "World Football Elo fixtures.tsv"
+    },
     "GH:CI": {
       "eloFixture": {
         "date": "2027-03-00",
         "tournament": "FQ",
         "host": "GH",
-        "homeRank": 80,
-        "awayRank": 34,
+        "homeRank": 79,
+        "awayRank": 35,
         "homeElo": 1514,
         "awayElo": 1728,
         "homeWinExpectation": 0.34
@@ -1567,7 +1489,7 @@ globalThis.RealMatchData = {
         "date": "2027-12-30",
         "tournament": "AC",
         "host": "SA",
-        "homeRank": 24,
+        "homeRank": 25,
         "awayRank": 75,
         "homeElo": 1794,
         "awayElo": 1534,
@@ -1580,11 +1502,11 @@ globalThis.RealMatchData = {
         "date": "2028-01-05",
         "tournament": "AC",
         "host": "SA",
-        "homeRank": 15,
-        "awayRank": 89,
-        "homeElo": 1897,
+        "homeRank": 13,
+        "awayRank": 88,
+        "homeElo": 1916,
         "awayElo": 1461,
-        "homeWinExpectation": 0.92
+        "homeWinExpectation": 0.93
       },
       "source": "World Football Elo fixtures.tsv"
     }
