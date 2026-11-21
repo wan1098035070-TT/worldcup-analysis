@@ -1,5 +1,5 @@
 globalThis.RealMatchData = {
-  "updatedAt": "2026-11-20T07:13:44.082310+00:00",
+  "updatedAt": "2026-11-21T07:06:05.302571+00:00",
   "sources": [
     {
       "name": "World Football Elo Ratings",
@@ -1092,6 +1092,58 @@ globalThis.RealMatchData = {
     }
   },
   "matches": {
+    "比利时:德国": {
+      "eloFixture": {
+        "date": "2027-03-25",
+        "tournament": "ENL",
+        "host": "BE",
+        "homeRank": 6,
+        "awayRank": 10,
+        "homeElo": 1994,
+        "awayElo": 1953,
+        "homeWinExpectation": 0.69
+      },
+      "source": "World Football Elo fixtures.tsv"
+    },
+    "荷兰:葡萄牙": {
+      "eloFixture": {
+        "date": "2027-03-25",
+        "tournament": "ENL",
+        "host": "NL",
+        "homeRank": 10,
+        "awayRank": 5,
+        "homeElo": 1953,
+        "awayElo": 2005,
+        "homeWinExpectation": 0.57
+      },
+      "source": "World Football Elo fixtures.tsv"
+    },
+    "挪威:英格兰": {
+      "eloFixture": {
+        "date": "2027-03-25",
+        "tournament": "ENL",
+        "host": "NO",
+        "homeRank": 12,
+        "awayRank": 2,
+        "homeElo": 1935,
+        "awayElo": 2182,
+        "homeWinExpectation": 0.3
+      },
+      "source": "World Football Elo fixtures.tsv"
+    },
+    "西班牙:法国": {
+      "eloFixture": {
+        "date": "2027-03-25",
+        "tournament": "ENL",
+        "host": "ES",
+        "homeRank": 1,
+        "awayRank": 4,
+        "homeElo": 2258,
+        "awayElo": 2069,
+        "homeWinExpectation": 0.84
+      },
+      "source": "World Football Elo fixtures.tsv"
+    },
     "加拿大:巴拿马": {
       "eloFixture": {
         "date": "2027-03-25",
@@ -1118,9 +1170,61 @@ globalThis.RealMatchData = {
       },
       "source": "World Football Elo fixtures.tsv"
     },
+    "英格兰:挪威": {
+      "eloFixture": {
+        "date": "2027-03-28",
+        "tournament": "ENA",
+        "host": "EN",
+        "homeRank": 2,
+        "awayRank": 12,
+        "homeElo": 2182,
+        "awayElo": 1935,
+        "homeWinExpectation": 0.88
+      },
+      "source": "World Football Elo fixtures.tsv"
+    },
+    "法国:西班牙": {
+      "eloFixture": {
+        "date": "2027-03-28",
+        "tournament": "ENA",
+        "host": "FR",
+        "homeRank": 4,
+        "awayRank": 1,
+        "homeElo": 2069,
+        "awayElo": 2258,
+        "homeWinExpectation": 0.37
+      },
+      "source": "World Football Elo fixtures.tsv"
+    },
+    "德国:比利时": {
+      "eloFixture": {
+        "date": "2027-03-28",
+        "tournament": "ENA",
+        "host": "DE",
+        "homeRank": 10,
+        "awayRank": 6,
+        "homeElo": 1953,
+        "awayElo": 1994,
+        "homeWinExpectation": 0.58
+      },
+      "source": "World Football Elo fixtures.tsv"
+    },
+    "葡萄牙:荷兰": {
+      "eloFixture": {
+        "date": "2027-03-28",
+        "tournament": "ENA",
+        "host": "PT",
+        "homeRank": 5,
+        "awayRank": 10,
+        "homeElo": 2005,
+        "awayElo": 1953,
+        "homeWinExpectation": 0.71
+      },
+      "source": "World Football Elo fixtures.tsv"
+    },
     "加纳:科特迪瓦": {
       "eloFixture": {
-        "date": "2027-03-00",
+        "date": "2027-03-28",
         "tournament": "FQ",
         "host": "GH",
         "homeRank": 79,
@@ -1172,6 +1276,58 @@ globalThis.RealMatchData = {
     }
   },
   "matchesByCode": {
+    "BE:DE": {
+      "eloFixture": {
+        "date": "2027-03-25",
+        "tournament": "ENL",
+        "host": "BE",
+        "homeRank": 6,
+        "awayRank": 10,
+        "homeElo": 1994,
+        "awayElo": 1953,
+        "homeWinExpectation": 0.69
+      },
+      "source": "World Football Elo fixtures.tsv"
+    },
+    "NL:PT": {
+      "eloFixture": {
+        "date": "2027-03-25",
+        "tournament": "ENL",
+        "host": "NL",
+        "homeRank": 10,
+        "awayRank": 5,
+        "homeElo": 1953,
+        "awayElo": 2005,
+        "homeWinExpectation": 0.57
+      },
+      "source": "World Football Elo fixtures.tsv"
+    },
+    "NO:EN": {
+      "eloFixture": {
+        "date": "2027-03-25",
+        "tournament": "ENL",
+        "host": "NO",
+        "homeRank": 12,
+        "awayRank": 2,
+        "homeElo": 1935,
+        "awayElo": 2182,
+        "homeWinExpectation": 0.3
+      },
+      "source": "World Football Elo fixtures.tsv"
+    },
+    "ES:FR": {
+      "eloFixture": {
+        "date": "2027-03-25",
+        "tournament": "ENL",
+        "host": "ES",
+        "homeRank": 1,
+        "awayRank": 4,
+        "homeElo": 2258,
+        "awayElo": 2069,
+        "homeWinExpectation": 0.84
+      },
+      "source": "World Football Elo fixtures.tsv"
+    },
     "CA:PA": {
       "eloFixture": {
         "date": "2027-03-25",
@@ -1198,9 +1354,61 @@ globalThis.RealMatchData = {
       },
       "source": "World Football Elo fixtures.tsv"
     },
+    "EN:NO": {
+      "eloFixture": {
+        "date": "2027-03-28",
+        "tournament": "ENA",
+        "host": "EN",
+        "homeRank": 2,
+        "awayRank": 12,
+        "homeElo": 2182,
+        "awayElo": 1935,
+        "homeWinExpectation": 0.88
+      },
+      "source": "World Football Elo fixtures.tsv"
+    },
+    "FR:ES": {
+      "eloFixture": {
+        "date": "2027-03-28",
+        "tournament": "ENA",
+        "host": "FR",
+        "homeRank": 4,
+        "awayRank": 1,
+        "homeElo": 2069,
+        "awayElo": 2258,
+        "homeWinExpectation": 0.37
+      },
+      "source": "World Football Elo fixtures.tsv"
+    },
+    "DE:BE": {
+      "eloFixture": {
+        "date": "2027-03-28",
+        "tournament": "ENA",
+        "host": "DE",
+        "homeRank": 10,
+        "awayRank": 6,
+        "homeElo": 1953,
+        "awayElo": 1994,
+        "homeWinExpectation": 0.58
+      },
+      "source": "World Football Elo fixtures.tsv"
+    },
+    "PT:NL": {
+      "eloFixture": {
+        "date": "2027-03-28",
+        "tournament": "ENA",
+        "host": "PT",
+        "homeRank": 5,
+        "awayRank": 10,
+        "homeElo": 2005,
+        "awayElo": 1953,
+        "homeWinExpectation": 0.71
+      },
+      "source": "World Football Elo fixtures.tsv"
+    },
     "GH:CI": {
       "eloFixture": {
-        "date": "2027-03-00",
+        "date": "2027-03-28",
         "tournament": "FQ",
         "host": "GH",
         "homeRank": 79,
