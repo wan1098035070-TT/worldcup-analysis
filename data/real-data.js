@@ -1,5 +1,5 @@
 globalThis.RealMatchData = {
-  "updatedAt": "2026-11-26T08:16:02.684170+00:00",
+  "updatedAt": "2026-11-27T08:31:32.661487+00:00",
   "sources": [
     {
       "name": "World Football Elo Ratings",
@@ -33,1430 +33,296 @@ globalThis.RealMatchData = {
   ],
   "teams": {
     "法国": {
-      "code": "FR",
-      "eloRank": 4,
-      "elo": 2069,
-      "recent": {
-        "matches": 6,
-        "gf": 1.67,
-        "ga": 1.0,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "FR"
     },
     "西班牙": {
-      "code": "ES",
-      "eloRank": 1,
-      "elo": 2258,
-      "recent": {
-        "matches": 6,
-        "gf": 2.67,
-        "ga": 1.33,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "ES"
     },
     "阿根廷": {
-      "code": "AR",
-      "eloRank": 3,
-      "elo": 2158,
-      "recent": {
-        "matches": 5,
-        "gf": 4.4,
-        "ga": 0.4,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "AR"
     },
     "英格兰": {
-      "code": "EN",
-      "eloRank": 2,
-      "elo": 2182,
-      "recent": {
-        "matches": 6,
-        "gf": 3.17,
-        "ga": 1.0,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "EN"
     },
     "葡萄牙": {
-      "code": "PT",
-      "eloRank": 5,
-      "elo": 2005,
-      "recent": {
-        "matches": 6,
-        "gf": 2.17,
-        "ga": 1.67,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "PT"
     },
     "巴西": {
-      "code": "BR",
-      "eloRank": 8,
-      "elo": 1983,
-      "recent": {
-        "matches": 5,
-        "gf": 3.6,
-        "ga": 1.2,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "BR"
     },
     "荷兰": {
-      "code": "NL",
-      "eloRank": 10,
-      "elo": 1953,
-      "recent": {
-        "matches": 6,
-        "gf": 2.33,
-        "ga": 1.67,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "NL"
     },
     "摩洛哥": {
-      "code": "MA",
-      "eloRank": 14,
-      "elo": 1899,
-      "recent": {
-        "matches": 5,
-        "gf": 2.2,
-        "ga": 0.4,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "MA"
     },
     "比利时": {
-      "code": "BE",
-      "eloRank": 6,
-      "elo": 1994,
-      "recent": {
-        "matches": 6,
-        "gf": 2.0,
-        "ga": 1.17,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "BE"
     },
     "德国": {
-      "code": "DE",
-      "eloRank": 10,
-      "elo": 1953,
-      "recent": {
-        "matches": 6,
-        "gf": 1.83,
-        "ga": 0.5,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "DE"
     },
     "克罗地亚": {
-      "code": "HR",
-      "eloRank": 18,
-      "elo": 1858,
-      "recent": {
-        "matches": 6,
-        "gf": 1.17,
-        "ga": 2.83,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "HR"
     },
     "哥伦比亚": {
-      "code": "CO",
-      "eloRank": 7,
-      "elo": 1987,
-      "recent": {
-        "matches": 5,
-        "gf": 0.8,
-        "ga": 0.4,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "CO"
     },
     "塞内加尔": {
-      "code": "SN",
-      "eloRank": 23,
-      "elo": 1812,
-      "recent": {
-        "matches": 5,
-        "gf": 2.2,
-        "ga": 0.8,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "SN"
     },
     "墨西哥": {
-      "code": "MX",
-      "eloRank": 21,
-      "elo": 1841,
-      "recent": {
-        "matches": 6,
-        "gf": 0.83,
-        "ga": 1.67,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "MX"
     },
     "乌拉圭": {
-      "code": "UY",
-      "eloRank": 17,
-      "elo": 1870,
-      "recent": {
-        "matches": 5,
-        "gf": 3.6,
-        "ga": 1.2,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "UY"
     },
     "日本": {
-      "code": "JP",
-      "eloRank": 15,
-      "elo": 1898,
-      "recent": {
-        "matches": 6,
-        "gf": 1.83,
-        "ga": 1.17,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "JP"
     },
     "瑞士": {
-      "code": "CH",
-      "eloRank": 9,
-      "elo": 1976,
-      "recent": {
-        "matches": 6,
-        "gf": 2.5,
-        "ga": 0.17,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "CH"
     },
     "美国": {
-      "code": "US",
-      "eloRank": 24,
-      "elo": 1810,
-      "recent": {
-        "matches": 6,
-        "gf": 3.33,
-        "ga": 0.5,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "US"
     },
     "伊朗": {
-      "code": "IR",
-      "eloRank": 33,
-      "elo": 1743,
-      "recent": {
-        "matches": 4,
-        "gf": 1.0,
-        "ga": 1.5,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "IR"
     },
     "奥地利": {
-      "code": "AT",
-      "eloRank": 22,
-      "elo": 1838,
-      "recent": {
-        "matches": 6,
-        "gf": 1.83,
-        "ga": 1.0,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "AT"
     },
     "韩国": {
-      "code": "KR",
-      "eloRank": 36,
-      "elo": 1723,
-      "recent": {
-        "matches": 6,
-        "gf": 1.5,
-        "ga": 1.17,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "KR"
     },
     "厄瓜多尔": {
-      "code": "EC",
-      "eloRank": 19,
-      "elo": 1856,
-      "recent": {
-        "matches": 5,
-        "gf": 1.0,
-        "ga": 0.8,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "EC"
     },
     "澳大利亚": {
-      "code": "AU",
-      "eloRank": 28,
-      "elo": 1772,
-      "recent": {
-        "matches": 4,
-        "gf": 1.5,
-        "ga": 1.75,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "AU"
     },
     "土耳其": {
-      "code": "TR",
-      "eloRank": 31,
-      "elo": 1750,
-      "recent": {
-        "matches": 6,
-        "gf": 0.67,
-        "ga": 2.5,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "TR"
     },
     "苏格兰": {
-      "code": "SQ",
-      "eloRank": 40,
-      "elo": 1715,
-      "recent": {
-        "matches": 6,
-        "gf": 0.83,
-        "ga": 1.67,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "SQ"
     },
     "瑞典": {
-      "code": "SE",
-      "eloRank": 27,
-      "elo": 1783,
-      "recent": {
-        "matches": 6,
-        "gf": 1.83,
-        "ga": 1.0,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "SE"
     },
     "埃及": {
-      "code": "EG",
-      "eloRank": 41,
-      "elo": 1703,
-      "recent": {
-        "matches": 5,
-        "gf": 2.0,
-        "ga": 0.2,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "EG"
     },
     "挪威": {
-      "code": "NO",
-      "eloRank": 12,
-      "elo": 1935,
-      "recent": {
-        "matches": 6,
-        "gf": 2.0,
-        "ga": 1.83,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "NO"
     },
     "阿尔及利亚": {
-      "code": "DZ",
-      "eloRank": 45,
-      "elo": 1688,
-      "recent": {
-        "matches": 5,
-        "gf": 1.6,
-        "ga": 1.4,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "DZ"
     },
     "捷克": {
-      "code": "CZ",
-      "eloRank": 56,
-      "elo": 1647,
-      "recent": {
-        "matches": 6,
-        "gf": 0.5,
-        "ga": 2.33,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "CZ"
     },
     "卡塔尔": {
-      "code": "QA",
-      "eloRank": 89,
-      "elo": 1455,
-      "recent": {
-        "matches": 6,
-        "gf": 0.67,
-        "ga": 0.83,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "QA"
     },
     "科特迪瓦": {
-      "code": "CI",
-      "eloRank": 39,
-      "elo": 1719,
-      "recent": {
-        "matches": 5,
-        "gf": 1.6,
-        "ga": 0.8,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "CI"
     },
     "突尼斯": {
-      "code": "TN",
-      "eloRank": 84,
-      "elo": 1488,
-      "recent": {
-        "matches": 4,
-        "gf": 1.0,
-        "ga": 1.5,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "TN"
     },
     "加拿大": {
-      "code": "CA",
-      "eloRank": 29,
-      "elo": 1762,
-      "recent": {
-        "matches": 5,
-        "gf": 2.0,
-        "ga": 0.8,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "CA"
     },
     "巴拉圭": {
-      "code": "PY",
-      "eloRank": 19,
-      "elo": 1856,
-      "recent": {
-        "matches": 4,
-        "gf": 2.25,
-        "ga": 0.5,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "PY"
     },
     "沙特阿拉伯": {
-      "code": "SA",
-      "eloRank": 59,
-      "elo": 1642,
-      "recent": {
-        "matches": 7,
-        "gf": 1.71,
-        "ga": 0.57,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "SA"
     },
     "伊拉克": {
-      "code": "IQ",
-      "eloRank": 74,
-      "elo": 1539,
-      "recent": {
-        "matches": 5,
-        "gf": 1.0,
-        "ga": 1.2,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "IQ"
     },
     "乌兹别克斯坦": {
-      "code": "UZ",
-      "eloRank": 57,
-      "elo": 1646,
-      "recent": {
-        "matches": 5,
-        "gf": 2.2,
-        "ga": 1.6,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "UZ"
     },
     "南非": {
-      "code": "ZA",
-      "eloRank": 64,
-      "elo": 1593,
-      "recent": {
-        "matches": 5,
-        "gf": 2.4,
-        "ga": 0.8,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "ZA"
     },
     "民主刚果": {
-      "code": "CD",
-      "eloRank": 46,
-      "elo": 1675,
-      "recent": {
-        "matches": 6,
-        "gf": 1.5,
-        "ga": 1.0,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "CD"
     },
     "巴拿马": {
-      "code": "PA",
-      "eloRank": 51,
-      "elo": 1661,
-      "recent": {
-        "matches": 5,
-        "gf": 1.0,
-        "ga": 0.6,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "PA"
     },
     "约旦": {
-      "code": "JO",
-      "eloRank": 58,
-      "elo": 1644,
-      "recent": {
-        "matches": 3,
-        "gf": 1.0,
-        "ga": 0.33,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "JO"
     },
     "加纳": {
-      "code": "GH",
-      "eloRank": 79,
-      "elo": 1515,
-      "recent": {
-        "matches": 4,
-        "gf": 1.25,
-        "ga": 1.5,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "GH"
     },
     "波黑": {
-      "code": "BA",
-      "eloRank": 48,
-      "elo": 1672,
-      "recent": {
-        "matches": 6,
-        "gf": 1.67,
-        "ga": 1.17,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "BA"
     },
     "佛得角": {
-      "code": "CV",
-      "eloRank": 77,
-      "elo": 1521,
-      "recent": {
-        "matches": 4,
-        "gf": 1.5,
-        "ga": 2.25,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "CV"
     },
     "库拉索": {
-      "code": "CW",
-      "eloRank": 85,
-      "elo": 1484,
-      "recent": {
-        "matches": 6,
-        "gf": 2.0,
-        "ga": 1.17,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "CW"
     },
     "海地": {
-      "code": "HT",
-      "eloRank": 73,
-      "elo": 1545,
-      "recent": {
-        "matches": 6,
-        "gf": 1.5,
-        "ga": 2.17,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "HT"
     },
     "新西兰": {
-      "code": "NZ",
-      "eloRank": 71,
-      "elo": 1563,
-      "recent": {
-        "matches": 6,
-        "gf": 2.5,
-        "ga": 0.83,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "NZ"
     }
   },
   "teamsByCode": {
     "FR": {
-      "code": "FR",
-      "eloRank": 4,
-      "elo": 2069,
-      "recent": {
-        "matches": 6,
-        "gf": 1.67,
-        "ga": 1.0,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "FR"
     },
     "ES": {
-      "code": "ES",
-      "eloRank": 1,
-      "elo": 2258,
-      "recent": {
-        "matches": 6,
-        "gf": 2.67,
-        "ga": 1.33,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "ES"
     },
     "AR": {
-      "code": "AR",
-      "eloRank": 3,
-      "elo": 2158,
-      "recent": {
-        "matches": 5,
-        "gf": 4.4,
-        "ga": 0.4,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "AR"
     },
     "EN": {
-      "code": "EN",
-      "eloRank": 2,
-      "elo": 2182,
-      "recent": {
-        "matches": 6,
-        "gf": 3.17,
-        "ga": 1.0,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "EN"
     },
     "PT": {
-      "code": "PT",
-      "eloRank": 5,
-      "elo": 2005,
-      "recent": {
-        "matches": 6,
-        "gf": 2.17,
-        "ga": 1.67,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "PT"
     },
     "BR": {
-      "code": "BR",
-      "eloRank": 8,
-      "elo": 1983,
-      "recent": {
-        "matches": 5,
-        "gf": 3.6,
-        "ga": 1.2,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "BR"
     },
     "NL": {
-      "code": "NL",
-      "eloRank": 10,
-      "elo": 1953,
-      "recent": {
-        "matches": 6,
-        "gf": 2.33,
-        "ga": 1.67,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "NL"
     },
     "MA": {
-      "code": "MA",
-      "eloRank": 14,
-      "elo": 1899,
-      "recent": {
-        "matches": 5,
-        "gf": 2.2,
-        "ga": 0.4,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "MA"
     },
     "BE": {
-      "code": "BE",
-      "eloRank": 6,
-      "elo": 1994,
-      "recent": {
-        "matches": 6,
-        "gf": 2.0,
-        "ga": 1.17,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "BE"
     },
     "DE": {
-      "code": "DE",
-      "eloRank": 10,
-      "elo": 1953,
-      "recent": {
-        "matches": 6,
-        "gf": 1.83,
-        "ga": 0.5,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "DE"
     },
     "HR": {
-      "code": "HR",
-      "eloRank": 18,
-      "elo": 1858,
-      "recent": {
-        "matches": 6,
-        "gf": 1.17,
-        "ga": 2.83,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "HR"
     },
     "CO": {
-      "code": "CO",
-      "eloRank": 7,
-      "elo": 1987,
-      "recent": {
-        "matches": 5,
-        "gf": 0.8,
-        "ga": 0.4,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "CO"
     },
     "SN": {
-      "code": "SN",
-      "eloRank": 23,
-      "elo": 1812,
-      "recent": {
-        "matches": 5,
-        "gf": 2.2,
-        "ga": 0.8,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "SN"
     },
     "MX": {
-      "code": "MX",
-      "eloRank": 21,
-      "elo": 1841,
-      "recent": {
-        "matches": 6,
-        "gf": 0.83,
-        "ga": 1.67,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "MX"
     },
     "UY": {
-      "code": "UY",
-      "eloRank": 17,
-      "elo": 1870,
-      "recent": {
-        "matches": 5,
-        "gf": 3.6,
-        "ga": 1.2,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "UY"
     },
     "JP": {
-      "code": "JP",
-      "eloRank": 15,
-      "elo": 1898,
-      "recent": {
-        "matches": 6,
-        "gf": 1.83,
-        "ga": 1.17,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "JP"
     },
     "CH": {
-      "code": "CH",
-      "eloRank": 9,
-      "elo": 1976,
-      "recent": {
-        "matches": 6,
-        "gf": 2.5,
-        "ga": 0.17,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "CH"
     },
     "US": {
-      "code": "US",
-      "eloRank": 24,
-      "elo": 1810,
-      "recent": {
-        "matches": 6,
-        "gf": 3.33,
-        "ga": 0.5,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "US"
     },
     "IR": {
-      "code": "IR",
-      "eloRank": 33,
-      "elo": 1743,
-      "recent": {
-        "matches": 4,
-        "gf": 1.0,
-        "ga": 1.5,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "IR"
     },
     "AT": {
-      "code": "AT",
-      "eloRank": 22,
-      "elo": 1838,
-      "recent": {
-        "matches": 6,
-        "gf": 1.83,
-        "ga": 1.0,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "AT"
     },
     "KR": {
-      "code": "KR",
-      "eloRank": 36,
-      "elo": 1723,
-      "recent": {
-        "matches": 6,
-        "gf": 1.5,
-        "ga": 1.17,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "KR"
     },
     "EC": {
-      "code": "EC",
-      "eloRank": 19,
-      "elo": 1856,
-      "recent": {
-        "matches": 5,
-        "gf": 1.0,
-        "ga": 0.8,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "EC"
     },
     "AU": {
-      "code": "AU",
-      "eloRank": 28,
-      "elo": 1772,
-      "recent": {
-        "matches": 4,
-        "gf": 1.5,
-        "ga": 1.75,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "AU"
     },
     "TR": {
-      "code": "TR",
-      "eloRank": 31,
-      "elo": 1750,
-      "recent": {
-        "matches": 6,
-        "gf": 0.67,
-        "ga": 2.5,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "TR"
     },
     "SQ": {
-      "code": "SQ",
-      "eloRank": 40,
-      "elo": 1715,
-      "recent": {
-        "matches": 6,
-        "gf": 0.83,
-        "ga": 1.67,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "SQ"
     },
     "SE": {
-      "code": "SE",
-      "eloRank": 27,
-      "elo": 1783,
-      "recent": {
-        "matches": 6,
-        "gf": 1.83,
-        "ga": 1.0,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "SE"
     },
     "EG": {
-      "code": "EG",
-      "eloRank": 41,
-      "elo": 1703,
-      "recent": {
-        "matches": 5,
-        "gf": 2.0,
-        "ga": 0.2,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "EG"
     },
     "NO": {
-      "code": "NO",
-      "eloRank": 12,
-      "elo": 1935,
-      "recent": {
-        "matches": 6,
-        "gf": 2.0,
-        "ga": 1.83,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "NO"
     },
     "DZ": {
-      "code": "DZ",
-      "eloRank": 45,
-      "elo": 1688,
-      "recent": {
-        "matches": 5,
-        "gf": 1.6,
-        "ga": 1.4,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "DZ"
     },
     "CZ": {
-      "code": "CZ",
-      "eloRank": 56,
-      "elo": 1647,
-      "recent": {
-        "matches": 6,
-        "gf": 0.5,
-        "ga": 2.33,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "CZ"
     },
     "QA": {
-      "code": "QA",
-      "eloRank": 89,
-      "elo": 1455,
-      "recent": {
-        "matches": 6,
-        "gf": 0.67,
-        "ga": 0.83,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "QA"
     },
     "CI": {
-      "code": "CI",
-      "eloRank": 39,
-      "elo": 1719,
-      "recent": {
-        "matches": 5,
-        "gf": 1.6,
-        "ga": 0.8,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "CI"
     },
     "TN": {
-      "code": "TN",
-      "eloRank": 84,
-      "elo": 1488,
-      "recent": {
-        "matches": 4,
-        "gf": 1.0,
-        "ga": 1.5,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "TN"
     },
     "CA": {
-      "code": "CA",
-      "eloRank": 29,
-      "elo": 1762,
-      "recent": {
-        "matches": 5,
-        "gf": 2.0,
-        "ga": 0.8,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "CA"
     },
     "PY": {
-      "code": "PY",
-      "eloRank": 19,
-      "elo": 1856,
-      "recent": {
-        "matches": 4,
-        "gf": 2.25,
-        "ga": 0.5,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "PY"
     },
     "SA": {
-      "code": "SA",
-      "eloRank": 59,
-      "elo": 1642,
-      "recent": {
-        "matches": 7,
-        "gf": 1.71,
-        "ga": 0.57,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "SA"
     },
     "IQ": {
-      "code": "IQ",
-      "eloRank": 74,
-      "elo": 1539,
-      "recent": {
-        "matches": 5,
-        "gf": 1.0,
-        "ga": 1.2,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "IQ"
     },
     "UZ": {
-      "code": "UZ",
-      "eloRank": 57,
-      "elo": 1646,
-      "recent": {
-        "matches": 5,
-        "gf": 2.2,
-        "ga": 1.6,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "UZ"
     },
     "ZA": {
-      "code": "ZA",
-      "eloRank": 64,
-      "elo": 1593,
-      "recent": {
-        "matches": 5,
-        "gf": 2.4,
-        "ga": 0.8,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "ZA"
     },
     "CD": {
-      "code": "CD",
-      "eloRank": 46,
-      "elo": 1675,
-      "recent": {
-        "matches": 6,
-        "gf": 1.5,
-        "ga": 1.0,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "CD"
     },
     "PA": {
-      "code": "PA",
-      "eloRank": 51,
-      "elo": 1661,
-      "recent": {
-        "matches": 5,
-        "gf": 1.0,
-        "ga": 0.6,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "PA"
     },
     "JO": {
-      "code": "JO",
-      "eloRank": 58,
-      "elo": 1644,
-      "recent": {
-        "matches": 3,
-        "gf": 1.0,
-        "ga": 0.33,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "JO"
     },
     "GH": {
-      "code": "GH",
-      "eloRank": 79,
-      "elo": 1515,
-      "recent": {
-        "matches": 4,
-        "gf": 1.25,
-        "ga": 1.5,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "GH"
     },
     "BA": {
-      "code": "BA",
-      "eloRank": 48,
-      "elo": 1672,
-      "recent": {
-        "matches": 6,
-        "gf": 1.67,
-        "ga": 1.17,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "BA"
     },
     "CV": {
-      "code": "CV",
-      "eloRank": 77,
-      "elo": 1521,
-      "recent": {
-        "matches": 4,
-        "gf": 1.5,
-        "ga": 2.25,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "CV"
     },
     "CW": {
-      "code": "CW",
-      "eloRank": 85,
-      "elo": 1484,
-      "recent": {
-        "matches": 6,
-        "gf": 2.0,
-        "ga": 1.17,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "CW"
     },
     "HT": {
-      "code": "HT",
-      "eloRank": 73,
-      "elo": 1545,
-      "recent": {
-        "matches": 6,
-        "gf": 1.5,
-        "ga": 2.17,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "HT"
     },
     "NZ": {
-      "code": "NZ",
-      "eloRank": 71,
-      "elo": 1563,
-      "recent": {
-        "matches": 6,
-        "gf": 2.5,
-        "ga": 0.83,
-        "source": "World Football Elo latest.tsv"
-      }
+      "code": "NZ"
     }
   },
-  "matches": {
-    "比利时:德国": {
-      "eloFixture": {
-        "date": "2027-03-25",
-        "tournament": "ENL",
-        "host": "BE",
-        "homeRank": 6,
-        "awayRank": 10,
-        "homeElo": 1994,
-        "awayElo": 1953,
-        "homeWinExpectation": 0.69
-      },
-      "source": "World Football Elo fixtures.tsv"
-    },
-    "西班牙:法国": {
-      "eloFixture": {
-        "date": "2027-03-25",
-        "tournament": "ENL",
-        "host": "ES",
-        "homeRank": 1,
-        "awayRank": 4,
-        "homeElo": 2258,
-        "awayElo": 2069,
-        "homeWinExpectation": 0.84
-      },
-      "source": "World Football Elo fixtures.tsv"
-    },
-    "加拿大:巴拿马": {
-      "eloFixture": {
-        "date": "2027-03-25",
-        "tournament": "CNL",
-        "host": "US",
-        "homeRank": 29,
-        "awayRank": 51,
-        "homeElo": 1762,
-        "awayElo": 1661,
-        "homeWinExpectation": 0.64
-      },
-      "source": "World Football Elo fixtures.tsv"
-    },
-    "美国:墨西哥": {
-      "eloFixture": {
-        "date": "2027-03-25",
-        "tournament": "CNL",
-        "host": "US",
-        "homeRank": 24,
-        "awayRank": 21,
-        "homeElo": 1810,
-        "awayElo": 1841,
-        "homeWinExpectation": 0.6
-      },
-      "source": "World Football Elo fixtures.tsv"
-    },
-    "荷兰:葡萄牙": {
-      "eloFixture": {
-        "date": "2027-03-27",
-        "tournament": "ENL",
-        "host": "NL",
-        "homeRank": 10,
-        "awayRank": 5,
-        "homeElo": 1953,
-        "awayElo": 2005,
-        "homeWinExpectation": 0.57
-      },
-      "source": "World Football Elo fixtures.tsv"
-    },
-    "挪威:英格兰": {
-      "eloFixture": {
-        "date": "2027-03-27",
-        "tournament": "ENL",
-        "host": "NO",
-        "homeRank": 12,
-        "awayRank": 2,
-        "homeElo": 1935,
-        "awayElo": 2182,
-        "homeWinExpectation": 0.3
-      },
-      "source": "World Football Elo fixtures.tsv"
-    },
-    "法国:西班牙": {
-      "eloFixture": {
-        "date": "2027-03-28",
-        "tournament": "ENA",
-        "host": "FR",
-        "homeRank": 4,
-        "awayRank": 1,
-        "homeElo": 2069,
-        "awayElo": 2258,
-        "homeWinExpectation": 0.37
-      },
-      "source": "World Football Elo fixtures.tsv"
-    },
-    "德国:比利时": {
-      "eloFixture": {
-        "date": "2027-03-28",
-        "tournament": "ENA",
-        "host": "DE",
-        "homeRank": 10,
-        "awayRank": 6,
-        "homeElo": 1953,
-        "awayElo": 1994,
-        "homeWinExpectation": 0.58
-      },
-      "source": "World Football Elo fixtures.tsv"
-    },
-    "加纳:科特迪瓦": {
-      "eloFixture": {
-        "date": "2027-03-28",
-        "tournament": "FQ",
-        "host": "GH",
-        "homeRank": 79,
-        "awayRank": 39,
-        "homeElo": 1515,
-        "awayElo": 1719,
-        "homeWinExpectation": 0.35
-      },
-      "source": "World Football Elo fixtures.tsv"
-    },
-    "英格兰:挪威": {
-      "eloFixture": {
-        "date": "2027-03-30",
-        "tournament": "ENA",
-        "host": "EN",
-        "homeRank": 2,
-        "awayRank": 12,
-        "homeElo": 2182,
-        "awayElo": 1935,
-        "homeWinExpectation": 0.88
-      },
-      "source": "World Football Elo fixtures.tsv"
-    },
-    "葡萄牙:荷兰": {
-      "eloFixture": {
-        "date": "2027-03-30",
-        "tournament": "ENA",
-        "host": "PT",
-        "homeRank": 5,
-        "awayRank": 10,
-        "homeElo": 2005,
-        "awayElo": 1953,
-        "homeWinExpectation": 0.71
-      },
-      "source": "World Football Elo fixtures.tsv"
-    },
-    "乌兹别克斯坦:约旦": {
-      "eloFixture": {
-        "date": "2027-12-24",
-        "tournament": "AC",
-        "host": "SA",
-        "homeRank": 57,
-        "awayRank": 58,
-        "homeElo": 1646,
-        "awayElo": 1644,
-        "homeWinExpectation": 0.5
-      },
-      "source": "World Football Elo fixtures.tsv"
-    },
-    "澳大利亚:伊拉克": {
-      "eloFixture": {
-        "date": "2027-12-30",
-        "tournament": "AC",
-        "host": "SA",
-        "homeRank": 28,
-        "awayRank": 74,
-        "homeElo": 1772,
-        "awayElo": 1539,
-        "homeWinExpectation": 0.79
-      },
-      "source": "World Football Elo fixtures.tsv"
-    },
-    "日本:卡塔尔": {
-      "eloFixture": {
-        "date": "2028-01-05",
-        "tournament": "AC",
-        "host": "SA",
-        "homeRank": 15,
-        "awayRank": 89,
-        "homeElo": 1898,
-        "awayElo": 1455,
-        "homeWinExpectation": 0.93
-      },
-      "source": "World Football Elo fixtures.tsv"
-    }
-  },
-  "matchesByCode": {
-    "BE:DE": {
-      "eloFixture": {
-        "date": "2027-03-25",
-        "tournament": "ENL",
-        "host": "BE",
-        "homeRank": 6,
-        "awayRank": 10,
-        "homeElo": 1994,
-        "awayElo": 1953,
-        "homeWinExpectation": 0.69
-      },
-      "source": "World Football Elo fixtures.tsv"
-    },
-    "ES:FR": {
-      "eloFixture": {
-        "date": "2027-03-25",
-        "tournament": "ENL",
-        "host": "ES",
-        "homeRank": 1,
-        "awayRank": 4,
-        "homeElo": 2258,
-        "awayElo": 2069,
-        "homeWinExpectation": 0.84
-      },
-      "source": "World Football Elo fixtures.tsv"
-    },
-    "CA:PA": {
-      "eloFixture": {
-        "date": "2027-03-25",
-        "tournament": "CNL",
-        "host": "US",
-        "homeRank": 29,
-        "awayRank": 51,
-        "homeElo": 1762,
-        "awayElo": 1661,
-        "homeWinExpectation": 0.64
-      },
-      "source": "World Football Elo fixtures.tsv"
-    },
-    "US:MX": {
-      "eloFixture": {
-        "date": "2027-03-25",
-        "tournament": "CNL",
-        "host": "US",
-        "homeRank": 24,
-        "awayRank": 21,
-        "homeElo": 1810,
-        "awayElo": 1841,
-        "homeWinExpectation": 0.6
-      },
-      "source": "World Football Elo fixtures.tsv"
-    },
-    "NL:PT": {
-      "eloFixture": {
-        "date": "2027-03-27",
-        "tournament": "ENL",
-        "host": "NL",
-        "homeRank": 10,
-        "awayRank": 5,
-        "homeElo": 1953,
-        "awayElo": 2005,
-        "homeWinExpectation": 0.57
-      },
-      "source": "World Football Elo fixtures.tsv"
-    },
-    "NO:EN": {
-      "eloFixture": {
-        "date": "2027-03-27",
-        "tournament": "ENL",
-        "host": "NO",
-        "homeRank": 12,
-        "awayRank": 2,
-        "homeElo": 1935,
-        "awayElo": 2182,
-        "homeWinExpectation": 0.3
-      },
-      "source": "World Football Elo fixtures.tsv"
-    },
-    "FR:ES": {
-      "eloFixture": {
-        "date": "2027-03-28",
-        "tournament": "ENA",
-        "host": "FR",
-        "homeRank": 4,
-        "awayRank": 1,
-        "homeElo": 2069,
-        "awayElo": 2258,
-        "homeWinExpectation": 0.37
-      },
-      "source": "World Football Elo fixtures.tsv"
-    },
-    "DE:BE": {
-      "eloFixture": {
-        "date": "2027-03-28",
-        "tournament": "ENA",
-        "host": "DE",
-        "homeRank": 10,
-        "awayRank": 6,
-        "homeElo": 1953,
-        "awayElo": 1994,
-        "homeWinExpectation": 0.58
-      },
-      "source": "World Football Elo fixtures.tsv"
-    },
-    "GH:CI": {
-      "eloFixture": {
-        "date": "2027-03-28",
-        "tournament": "FQ",
-        "host": "GH",
-        "homeRank": 79,
-        "awayRank": 39,
-        "homeElo": 1515,
-        "awayElo": 1719,
-        "homeWinExpectation": 0.35
-      },
-      "source": "World Football Elo fixtures.tsv"
-    },
-    "EN:NO": {
-      "eloFixture": {
-        "date": "2027-03-30",
-        "tournament": "ENA",
-        "host": "EN",
-        "homeRank": 2,
-        "awayRank": 12,
-        "homeElo": 2182,
-        "awayElo": 1935,
-        "homeWinExpectation": 0.88
-      },
-      "source": "World Football Elo fixtures.tsv"
-    },
-    "PT:NL": {
-      "eloFixture": {
-        "date": "2027-03-30",
-        "tournament": "ENA",
-        "host": "PT",
-        "homeRank": 5,
-        "awayRank": 10,
-        "homeElo": 2005,
-        "awayElo": 1953,
-        "homeWinExpectation": 0.71
-      },
-      "source": "World Football Elo fixtures.tsv"
-    },
-    "UZ:JO": {
-      "eloFixture": {
-        "date": "2027-12-24",
-        "tournament": "AC",
-        "host": "SA",
-        "homeRank": 57,
-        "awayRank": 58,
-        "homeElo": 1646,
-        "awayElo": 1644,
-        "homeWinExpectation": 0.5
-      },
-      "source": "World Football Elo fixtures.tsv"
-    },
-    "AU:IQ": {
-      "eloFixture": {
-        "date": "2027-12-30",
-        "tournament": "AC",
-        "host": "SA",
-        "homeRank": 28,
-        "awayRank": 74,
-        "homeElo": 1772,
-        "awayElo": 1539,
-        "homeWinExpectation": 0.79
-      },
-      "source": "World Football Elo fixtures.tsv"
-    },
-    "JP:QA": {
-      "eloFixture": {
-        "date": "2028-01-05",
-        "tournament": "AC",
-        "host": "SA",
-        "homeRank": 15,
-        "awayRank": 89,
-        "homeElo": 1898,
-        "awayElo": 1455,
-        "homeWinExpectation": 0.93
-      },
-      "source": "World Football Elo fixtures.tsv"
-    }
-  }
+  "matches": {},
+  "matchesByCode": {}
 };
